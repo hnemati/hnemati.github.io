@@ -1,10 +1,4 @@
  
-body{ font: 100% "Trebuchet MS", sans-serif; margin: 10px;}
-    textarea { font-size: 8pt; width: 500px; height: 150px; }
-    #bibtex_errors { margin-top:10px; color: red;}
-    h1 { font-size: 12pt; margin-top:20px; }
-    #bibtex_input {width:700px; height:700px; }
-    
     .bibtexCodeLink
     {
       background-color: #DDFFDD;
