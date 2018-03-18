@@ -80,7 +80,7 @@ ol li
 { padding-bottom: 20px;}
 
 #header
-{ background: #6F655F url(header.png);
+{ background: #6F655F url(../img/trees1.jpg);
   height: 270px;
   border-bottom: 1px solid #FFF;}
 
@@ -320,6 +320,6 @@ table tr th, table tr td
   text-align: left;}
   
 table tr td
-{ background: #E5E5DB;
+{ background: #FFFFFF;
   color: #47433F;
   border-top: 1px solid #FFF;}
