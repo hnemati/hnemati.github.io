@@ -14,8 +14,14 @@ p
 { padding: 0 0 20px 0;
   line-height: 1.7em;}
 
-img
-{ border: 0;}
+#about img {
+  height: 175px;
+  width: 120px;
+  float: left;
+  border: 2px dashed #62868E;
+  padding:1px;
+
+}
 
 h1, h2, h3, h4, h5, h6 
 { font: normal 179% 'century gothic', arial, sans-serif;

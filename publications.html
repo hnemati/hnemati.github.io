@@ -35,7 +35,8 @@
     <h2> Selected Publications </h2>
       <div id="content">
         <!-- insert the page content here -->
-      <textarea hidden name="bibtex_input" id="bibtex_input" cols=50 rows=20>
+      <textarea hidden name="bibtex_input" id="bibtex_input" cols=50 rows=20>   
+ 
 @inproceedings{DBLP:conf/post,
   author    = {Hamed Nemati and
                Christoph Baumann and
@@ -191,6 +192,20 @@
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
+@article{DBLP:journals/ics/afzali2012,
+  author    = {Hammad Afzali and
+               Hamed Nemati and
+               Reza Azmi},
+  title     = {Private Key Based Query on Encrypted Data},
+  journal   = {Journal of  THE ISC INTERNATIONAL JOURNAL OF INFORMATION SECURITY},
+  volume    = {4},
+  number    = {1},
+  pages     = {41--50},
+  year      = {2012},
+  url       = {http://www.sid.ir/En/Journal/ViewPaper.aspx?ID=346694},
+  doi       = {10.22042/isecure.2015.4.1.5},
+}
+
 @inproceedings{DBLP:conf/worldcis/BorgheiAGN11,
   author    = {Elahe Borghei and
                Reza Azmi and
@@ -226,13 +241,11 @@
 }
       </textarea>
 
+      <!--script> $("#bibtex_input").load("biblio.bib");</script-->
 
+  <div id="bibtex_errors"></div>
 
-<div id="bibtex_errors"></div>
-
-
-
-<div class="bibtex_template">
+  <div class="bibtex_template">
     <li>
     <a class="url"><span class="title"></span></a></br>
     <span class="author"></span></br>
@@ -253,9 +266,7 @@
   </li>
 
  </div>
-
-<ol id="bibtex_display">
-</ol>
+ <ol id="bibtex_display"> </ol>
 
   
       </div>
