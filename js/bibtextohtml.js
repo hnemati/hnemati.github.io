@@ -56,6 +56,7 @@ comments by François Schwarzentruber
  * 
  * 
  */
+
 function BibtexParser() {
 /*position in the text that is parsed*/
   this.pos = 0;
@@ -429,9 +430,6 @@ function bibtex_js_draw() {
   $(".bibtex_template").hide();
   bibtexShow($("#bibtex_input").val(), $("#bibtex_display"));
 }
-
-
-
 
 
 // check whether or not jquery is present
