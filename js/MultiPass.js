@@ -35,13 +35,7 @@
 				'<td class="input"><input id="nameURL" onkeyup="onNameURL();" type="text" /></td>'+
 				'<td class="output"><input id="generatedPassword" type="text" size="11" readonly="true" /></td>'+
 			'</tr>'+
-			'</table>'+
-			'<table class="about"><tr>'+
-				'<td class="credit">Code:</td>'+
-				'<td class="credit"><a href="MultiPass.js">MultiPass.js</a></td>'+
-				'<td class="credit"><a href="MultiPass.css">MultiPass.css</a></td>'+
-				'<td class="credit"><a href="b64_md5.js">b64_md5.js</a>*</td>'+
-			'</tr></table>';
+			'</table>';
 		
 		// Input areas
 		var inputs = {
