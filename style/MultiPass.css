@@ -1,0 +1,50 @@
+div#MultiPass {
+	background-color:#ddd;
+	border:1px solid #aaa;
+	padding:5px;
+	width:350px;
+	margin-left:auto;
+	margin-right:auto
+}
+
+div#MultiPass table {
+	width:100%;
+	padding:5px;
+}
+div#MultiPass table.passwords {
+	background-color:#ccc;
+	border:1px solid #999;
+}
+#MultiPass td {
+	font-size:11px;
+	padding:1px 5px;
+	width:auto;
+}
+#MultiPass td.label {
+	text-align:right;
+	width:60px;
+}
+#MultiPass input {
+	font-size:12px;
+}
+#MultiPass td.input {
+	width:100%;
+}
+#MultiPass td.input input {
+	width:100%;
+}
+#MultiPass td.output input {
+	font-family: 'lucida console', 'sans mono', courier;
+	text-align:center;
+}
+#MultiPass table.about {
+	margin:0 auto;
+	width:80%;
+	border-top:1px solid #aaa;
+	padding:0;
+}
+#MultiPass table.about td.credit {
+	text-align:center;
+	font-size:10px;
+	font-style:italic;
+}

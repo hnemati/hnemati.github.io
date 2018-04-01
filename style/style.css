@@ -150,7 +150,7 @@ ul#menu li a
   background: #484848 url(tab.png) no-repeat 100% 0;} 
 
 ul#menu li.selected
-{ margin: 3px 2px 0 0;
+{ margin: 3px 3px 0 0;
   background: #FCFDF4 url(tab_selected.png) no-repeat 0 0;}
 
 ul#menu li.selected a, ul#menu li.selected a:hover
