@@ -12,7 +12,8 @@ body
 
 p
 { padding: 0 0 20px 0;
-  line-height: 1.7em;}
+  line-height: 1.7em;
+}
 
 #about img {
   height: 175px;
@@ -52,7 +53,7 @@ h6
 a, a:hover
 { outline: none;
   text-decoration: underline;
-  color: #40D8FE;}
+  color: #37ABC8;}
 
 a:hover
 { text-decoration: none;
@@ -175,7 +176,7 @@ ul#menu li a:hover
   overflow: hidden;
   margin: 0 auto 0 auto;
   padding: 0px 10px 20px 40px;
-  background: #FCFDF4;} 
+  background: #FFFFFF;} 
 
 #sidebar_container
 { float: right;
@@ -227,6 +228,13 @@ ul#menu li a:hover
   width: 613px;
   padding: 0;}
 
+
+#contentt
+{ text-align: left;
+  width: 800px;
+  padding: 0;
+} 
+  
 #content ul
 { margin: 2px 0 22px 0px;}
 
@@ -326,6 +334,20 @@ table tr th, table tr td
   text-align: left;}
   
 table tr td
-{ background: #fcfdf4;
+{ background: #FFFFFF;
   color: #47433F;
   border-top: 1px solid #FFF;}
+
+div.mainpage-section {
+  border-style: none;
+  border-width: 1px;
+  border-radius: 25px;
+  border-top: ridge 1px;
+  border-bottom: ridge 1px;
+  padding-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin: 15px;
+  margin-bottom: 50px
+}
