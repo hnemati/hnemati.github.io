@@ -34,13 +34,33 @@
     <div id="site_content">
       <div class="mainpage-section" id="contentt">
       <br />
-       <h2> Selected Publications </h2>
+       <h2> Publications </h2>
         <!-- insert the page content here -->
       <textarea hidden name="bibtex_input" id="bibtex_input" cols=50 rows=20>   
+@inproceedings{KBRef2018,
+  author    = {With: Christoph Baumann and
+               Roberto Guanciale and
+               Mads Dam},
+  title     = {Verifying System Level Information Flow Using Confidentiality-Preserving Refinement},
+  booktitle = {Submitted to CSF},
+  year      = {2019},
+  url       = {}
+}
+
+@inproceedings{proconda,
+  author    = {With: Marie-Therese Walter and
+               David Pfaff and
+               Stefan N{\"u}rnberger and
+               Michael Backes},
+  title     = {ProConDa: Taming the Root Cause of Control Flow Attacks},
+  booktitle = {Submitted to USENIX Security},
+  year      = {2019},
+  url       = {}
+}
+
 @inproceedings{llvm2018,
-  author    = {Ajay Brahmakshatriya and
+  author    = {With: Ajay Brahmakshatriya and
               Piyus Kedia and
-              Hamed Nemati and
               Derrick McKee and
               Pratik Bhatu and
               Deepak Garg and
@@ -53,30 +73,18 @@
 }
 
 @inproceedings{CPRef2019,
-  author    = {Roberto Guanciale and
+  author    = {With: Roberto Guanciale and
                Christoph Baumann and               
-               Hamed Nemati and
                Mads Dam},
   title     = {Confidentiality-Preserving Refinement},
-  booktitle = {PriSC 2019},
+  booktitle = {PriSC},
   year      = {2019},
   url       = {https://popl19.sigplan.org/track/prisc-2019}
 }
 
-@inproceedings{KBRef2018,
-  author    = {Christoph Baumann and
-               Roberto Guanciale and
-               Hamed Nemati and
-               Mads Dam},
-  title     = {Verifying System Level Information Flow Using Confidentiality-Preserving Refinement},
-  booktitle = {In Submission},
-  year      = {2018},
-  url       = {}
-}
 
 @inproceedings{DBLP:conf/post/NematiBGD18,
-  author    = {Hamed Nemati and
-               Christoph Baumann and
+  author    = {With: Christoph Baumann and
                Roberto Guanciale and
                Mads Dam},
   title     = {Formal Verification of Integrity-Preserving Countermeasures Against
@@ -108,8 +116,7 @@
 }
 
 @article{DBLP:journals/jcs/GuancialeNDB16,
-  author    = {Roberto Guanciale and
-               Hamed Nemati and
+  author    = {With: Roberto Guanciale and
                Mads Dam and
                Christoph Baumann},
   title     = {Provably secure memory isolation for Linux on {ARM}},
@@ -126,8 +133,7 @@
 }
 
 @inproceedings{DBLP:conf/sp/GuancialeNBD16,
-  author    = {Roberto Guanciale and
-               Hamed Nemati and
+  author    = {With: Roberto Guanciale and
                Christoph Baumann and
                Mads Dam},
   title     = {Cache Storage Channels: Alias-Driven Attacks and Verified Countermeasures},
@@ -144,8 +150,7 @@
 }
 
 @inproceedings{DBLP:conf/esorics/ChfoukaNGDE15,
-  author    = {Hind Chfouka and
-               Hamed Nemati and
+  author    = {With: Hind Chfouka and
                Roberto Guanciale and
                Mads Dam and
                Patrik Ekdahl},
@@ -164,8 +169,7 @@
 }
 
 @inproceedings{DBLP:conf/sofsem/NematiGD15,
-  author    = {Hamed Nemati and
-               Roberto Guanciale and
+  author    = {With: Roberto Guanciale and
                Mads Dam},
   title     = {Trustworthy Virtualization of the ARMv7 Memory Subsystem},
   booktitle = {{SOFSEM} 2015: Theory and Practice of Computer Science - 41st International
@@ -183,8 +187,7 @@
 }
 
 @inproceedings{DBLP:conf/trust/NematiDGDV15,
-  author    = {Hamed Nemati and
-               Mads Dam and
+  author    = {With: Mads Dam and
                Roberto Guanciale and
                Viktor Do and
                Arash Vahidi},
@@ -202,9 +205,8 @@
 }
 
 @inproceedings{DBLP:conf/ccs/DamGN13,
-  author    = {Mads Dam and
-               Roberto Guanciale and
-               Hamed Nemati},
+  author    = {With Mads Dam and
+               Roberto Guanciale},
   title     = {Machine code verification of a tiny {ARM} hypervisor},
   booktitle = {TrustED'13, Proceedings of the 2013 {ACM} Workshop on Trustworthy
                Embedded Devices, Co-located with {CCS} 2013, November 4, 2013, Berlin,
@@ -220,11 +222,10 @@
 }
 
 @inproceedings{DBLP:conf/ccs/DamGKNS13,
-  author    = {Mads Dam and
+  author    = {With: Mads Dam and
                Roberto Guanciale and
                Narges Khakpour and
-               Hamed Nemati and
-               Oliver Schwarz},
+                Oliver Schwarz},
   title     = {Formal verification of information flow security for a simple arm-based
                separation kernel},
   booktitle = {2013 {ACM} {SIGSAC} Conference on Computer and Communications Security,
@@ -240,8 +241,7 @@
 }
 
 @article{DBLP:journals/ics/afzali2012,
-  author    = {Hammad Afzali and
-               Hamed Nemati and
+  author    = {With: Hammad Afzali and
                Reza Azmi},
   title     = {Private Key Based Query on Encrypted Data},
   journal   = {Journal of  THE ISC INTERNATIONAL JOURNAL OF INFORMATION SECURITY},
@@ -253,11 +253,20 @@
   doi       = {10.22042/isecure.2015.4.1.5},
 }
 
+@inproceedings{ISCEE15_017,
+  author    = {With Hammad Afzali and
+               Reza Azmi},
+  title     = {Reconstruction of OS Critical Data-Structure Using VMM},
+  booktitle = {15th Iran Electrical Engeenring Conference,
+               {ICEE} 2012, Iran, [In Farsi].},
+  year      = {2012},
+  url       = {https://bit.ly/2FnwLEy},
+}
+
 @inproceedings{DBLP:conf/worldcis/BorgheiAGN11,
-  author    = {Elahe Borghei and
+  author    = {With: Elahe Borghei and
                Reza Azmi and
-               Alireza Ghahremanian and
-               Hamed Nemati},
+               Alireza Ghahremanian},
   title     = {Virtual machine based security architecture},
   booktitle = {2011 World Congress on Internet Security, WorldCIS 2011, London, UK,
                February 21-23, 2011},
@@ -271,9 +280,8 @@
 }
 
 @inproceedings{DBLP:conf/icitst/RezaeiMNA10,
-  author    = {Masoud Rezaei and
+  author    = {With: Mohammad Rezaei and
                Nafise Sadat Moosavi and
-               Hamed Nemati and
                Reza Azmi},
   title     = {TCvisor: {A} hypervisor level secure storage},
   booktitle = {5th International Conference for Internet Technology and Secured Transactions,
@@ -286,6 +294,17 @@
   biburl    = {https://dblp.org/rec/bib/conf/icitst/RezaeiMNA10},
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
+
+@inproceedings{ISCC07_031,
+  author    = {With: Reza Azmi and
+               Alireza Ghahramanian},
+  title     = {Intrusion Detection Using VMM},
+  booktitle = {7th International ISC Conference on Information Security and Cryptology,
+               {ISCC} 2010, Iran, [In Farsi].},
+  year      = {2010},
+  url       = {https://bit.ly/2ForuvE},
+}
+
       </textarea>
 
       <!--script> $("#bibtex_input").load("biblio.bib");</script-->
