@@ -14,7 +14,7 @@
   <script>
     // from https://forums.tumult.com/t/replace-inner-html-with-text-from-an-external-file/2129/3
     var txtFile = new XMLHttpRequest();
-    txtFile.open("GET", "https://hnemati.github.io/biblio.bib", true);
+    txtFile.open("GET", "biblio.bib", false);
     txtFile.onreadystatechange = function () {
         if (txtFile.readyState === 4) {  // Makes sure the document is ready to parse.
             if (txtFile.status === 200) {  // Makes sure it's found the file.
