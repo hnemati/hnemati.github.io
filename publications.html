@@ -10,6 +10,28 @@
   <link rel="stylesheet" type="text/css" href="style/stylebiblio.css">
   <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
   <script type="text/javascript" src="js/bibtextohtml.js"></script>
+  
+  <script>
+    // from https://forums.tumult.com/t/replace-inner-html-with-text-from-an-external-file/2129/3
+    var txtFile = new XMLHttpRequest();
+    txtFile.open("GET", "https://hnemati.github.io/biblio.bib", true);
+    txtFile.onreadystatechange = function () {
+        if (txtFile.readyState === 4) {  // Makes sure the document is ready to parse.
+            if (txtFile.status === 200) {  // Makes sure it's found the file.
+                allText = txtFile.responseText;
+                var customTextElement = document.getElementById('bibtex_input');
+                customTextElement.innerHTML = txtFile.responseText;                
+            }
+        }
+    }
+
+    function loadScript(address) {
+        var script = document.createElement('script');
+        script.src = address;
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+    txtFile.send(null);
+  </script>
 </head>
 
 <body>
@@ -37,274 +59,6 @@
        <h2> Publications </h2>
         <!-- insert the page content here -->
       <textarea hidden name="bibtex_input" id="bibtex_input" cols=50 rows=20>   
-@inproceedings{KBRef2018,
-  author    = {With: Christoph Baumann and
-               Roberto Guanciale and
-               Mads Dam},
-  title     = {Verifying System Level Information Flow Using Confidentiality-Preserving Refinement},
-  booktitle = {Submitted to CSF},
-  year      = {2019},
-  url       = {}
-}
-
-@inproceedings{proconda,
-  author    = {With: Marie-Therese Walter and
-               David Pfaff and
-               Stefan N{\"u}rnberger and
-               Michael Backes},
-  title     = {ProConDa: Taming the Root Cause of Control Flow Attacks},
-  booktitle = {Submitted to USENIX Security},
-  year      = {2019},
-  url       = {}
-}
-
-@inproceedings{llvm2018,
-  author    = {With: Ajay Brahmakshatriya and
-              Piyus Kedia and
-              Derrick McKee and
-              Pratik Bhatu and
-              Deepak Garg and
-              Akash Lal and
-              Aseem Rastogi},
-  title     = {CONFLLVM: Compiler-Based Information Flow Control in Low-Level Code},
-  booktitle = {EuroSys 2019 (To Apper)},
-  year      = {2019},
-  url       = {paper/paper.pdf}
-}
-
-@inproceedings{CPRef2019,
-  author    = {With: Roberto Guanciale and
-               Christoph Baumann and               
-               Mads Dam},
-  title     = {Confidentiality-Preserving Refinement},
-  booktitle = {PriSC},
-  year      = {2019},
-  url       = {https://popl19.sigplan.org/track/prisc-2019}
-}
-
-
-@inproceedings{DBLP:conf/post/NematiBGD18,
-  author    = {With: Christoph Baumann and
-               Roberto Guanciale and
-               Mads Dam},
-  title     = {Formal Verification of Integrity-Preserving Countermeasures Against
-               Cache Storage Side-Channels},
-  booktitle = {Principles of Security and Trust - 7th International Conference, {POST}
-               2018, Held as Part of the European Joint Conferences on Theory and
-               Practice of Software, {ETAPS} 2018, Thessaloniki, Greece, April 14-20,
-               2018, Proceedings},
-  pages     = {109--133},
-  year      = {2018},
-  crossref  = {DBLP:conf/post/2018},
-  url       = {https://doi.org/10.1007/978-3-319-89722-6_5},
-  doi       = {10.1007/978-3-319-89722-6_5},
-  timestamp = {Mon, 16 Apr 2018 13:28:26 +0200},
-  biburl    = {https://dblp.org/rec/bib/conf/post/NematiBGD18},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-      
-@phdthesis{DBLP:phd/basesearch/Nemati17,
-  author    = {Hamed Nemati},
-  title     = {Secure System Virtualization: End-to-End Verification of Memory Isolation},
-  school    = {Royal Institute of Technology, Stockholm, Sweden},
-  year      = {2017},
-  url       = {paper/phd-thesis.pdf},
-  urn       = {urn:nbn:se:kth:diva-213030},
-  timestamp = {Fri, 20 Oct 2017 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/bib/phd/basesearch/Nemati17},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@article{DBLP:journals/jcs/GuancialeNDB16,
-  author    = {With: Roberto Guanciale and
-               Mads Dam and
-               Christoph Baumann},
-  title     = {Provably secure memory isolation for Linux on {ARM}},
-  journal   = {Journal of Computer Security},
-  volume    = {24},
-  number    = {6},
-  pages     = {793--837},
-  year      = {2016},
-  url       = {https://doi.org/10.3233/JCS-160558},
-  doi       = {10.3233/JCS-160558},
-  timestamp = {Fri, 26 May 2017 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/bib/journals/jcs/GuancialeNDB16},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/sp/GuancialeNBD16,
-  author    = {With: Roberto Guanciale and
-               Christoph Baumann and
-               Mads Dam},
-  title     = {Cache Storage Channels: Alias-Driven Attacks and Verified Countermeasures},
-  booktitle = {{IEEE} Symposium on Security and Privacy, {SP} 2016, San Jose, CA,
-               USA, May 22-26, 2016},
-  pages     = {38--55},
-  year      = {2016},
-  crossref  = {DBLP:conf/sp/2016},
-  url       = {https://doi.org/10.1109/SP.2016.11},
-  doi       = {10.1109/SP.2016.11},
-  timestamp = {Fri, 26 May 2017 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/bib/conf/sp/GuancialeNBD16},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/esorics/ChfoukaNGDE15,
-  author    = {With: Hind Chfouka and
-               Roberto Guanciale and
-               Mads Dam and
-               Patrik Ekdahl},
-  title     = {Trustworthy Prevention of Code Injection in Linux on Embedded Devices},
-  booktitle = {Computer Security - {ESORICS} 2015 - 20th European Symposium on Research
-               in Computer Security, Vienna, Austria, September 21-25, 2015, Proceedings,
-               Part {I}},
-  pages     = {90--107},
-  year      = {2015},
-  crossref  = {DBLP:conf/esorics/2015-1},
-  url       = {https://doi.org/10.1007/978-3-319-24174-6_5},
-  doi       = {10.1007/978-3-319-24174-6_5},
-  timestamp = {Tue, 23 May 2017 01:07:16 +0200},
-  biburl    = {https://dblp.org/rec/bib/conf/esorics/ChfoukaNGDE15},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/sofsem/NematiGD15,
-  author    = {With: Roberto Guanciale and
-               Mads Dam},
-  title     = {Trustworthy Virtualization of the ARMv7 Memory Subsystem},
-  booktitle = {{SOFSEM} 2015: Theory and Practice of Computer Science - 41st International
-               Conference on Current Trends in Theory and Practice of Computer Science,
-               Pec pod Sn{\v{e}}{\v{z}}kou, Czech Republic, January 24-29, 2015.
-               Proceedings},
-  pages     = {578--589},
-  year      = {2015},
-  crossref  = {DBLP:conf/sofsem/2015},
-  url       = {https://doi.org/10.1007/978-3-662-46078-8_48},
-  doi       = {10.1007/978-3-662-46078-8_48},
-  timestamp = {Thu, 15 Jun 2017 21:37:45 +0200},
-  biburl    = {https://dblp.org/rec/bib/conf/sofsem/NematiGD15},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/trust/NematiDGDV15,
-  author    = {With: Mads Dam and
-               Roberto Guanciale and
-               Viktor Do and
-               Arash Vahidi},
-  title     = {Trustworthy Memory Isolation of Linux on Embedded Devices},
-  booktitle = {Trust and Trustworthy Computing - 8th International Conference, {TRUST}
-               2015, Heraklion, Greece, August 24-26, 2015, Proceedings},
-  pages     = {125--142},
-  year      = {2015},
-  crossref  = {DBLP:conf/trust/2015},
-  url       = {https://doi.org/10.1007/978-3-319-22846-4_8},
-  doi       = {10.1007/978-3-319-22846-4_8},
-  timestamp = {Tue, 23 May 2017 01:08:12 +0200},
-  biburl    = {https://dblp.org/rec/bib/conf/trust/NematiDGDV15},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ccs/DamGN13,
-  author    = {With Mads Dam and
-               Roberto Guanciale},
-  title     = {Machine code verification of a tiny {ARM} hypervisor},
-  booktitle = {TrustED'13, Proceedings of the 2013 {ACM} Workshop on Trustworthy
-               Embedded Devices, Co-located with {CCS} 2013, November 4, 2013, Berlin,
-               Germany},
-  pages     = {3--12},
-  year      = {2013},
-  crossref  = {DBLP:conf/ccs/2013trusted},
-  url       = {http://doi.acm.org/10.1145/2517300.2517302},
-  doi       = {10.1145/2517300.2517302},
-  timestamp = {Fri, 31 Jan 2014 10:38:00 +0100},
-  biburl    = {https://dblp.org/rec/bib/conf/ccs/DamGN13},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/ccs/DamGKNS13,
-  author    = {With: Mads Dam and
-               Roberto Guanciale and
-               Narges Khakpour and
-                Oliver Schwarz},
-  title     = {Formal verification of information flow security for a simple arm-based
-               separation kernel},
-  booktitle = {2013 {ACM} {SIGSAC} Conference on Computer and Communications Security,
-               CCS'13, Berlin, Germany, November 4-8, 2013},
-  pages     = {223--234},
-  year      = {2013},
-  crossref  = {DBLP:conf/ccs/2013},
-  url       = {http://doi.acm.org/10.1145/2508859.2516702},
-  doi       = {10.1145/2508859.2516702},
-  timestamp = {Fri, 08 Nov 2013 09:43:20 +0100},
-  biburl    = {https://dblp.org/rec/bib/conf/ccs/DamGKNS13},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@article{DBLP:journals/ics/afzali2012,
-  author    = {With: Hammad Afzali and
-               Reza Azmi},
-  title     = {Private Key Based Query on Encrypted Data},
-  journal   = {Journal of  THE ISC INTERNATIONAL JOURNAL OF INFORMATION SECURITY},
-  volume    = {4},
-  number    = {1},
-  pages     = {41--50},
-  year      = {2012},
-  url       = {http://www.sid.ir/En/Journal/ViewPaper.aspx?ID=346694},
-  doi       = {10.22042/isecure.2015.4.1.5},
-}
-
-@inproceedings{ISCEE15_017,
-  author    = {With Hammad Afzali and
-               Reza Azmi},
-  title     = {Reconstruction of OS Critical Data-Structure Using VMM},
-  booktitle = {15th Iran Electrical Engeenring Conference,
-               {ICEE} 2012, Iran, [In Farsi].},
-  year      = {2012},
-  url       = {https://bit.ly/2FnwLEy},
-}
-
-@inproceedings{DBLP:conf/worldcis/BorgheiAGN11,
-  author    = {With: Elahe Borghei and
-               Reza Azmi and
-               Alireza Ghahremanian},
-  title     = {Virtual machine based security architecture},
-  booktitle = {2011 World Congress on Internet Security, WorldCIS 2011, London, UK,
-               February 21-23, 2011},
-  pages     = {210--215},
-  year      = {2011},
-  crossref  = {DBLP:conf/worldcis/2011},
-  url       = {http://ieeexplore.ieee.org/document/5749853/},
-  timestamp = {Sat, 29 Apr 2017 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/bib/conf/worldcis/BorgheiAGN11},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{DBLP:conf/icitst/RezaeiMNA10,
-  author    = {With: Mohammad Rezaei and
-               Nafise Sadat Moosavi and
-               Reza Azmi},
-  title     = {TCvisor: {A} hypervisor level secure storage},
-  booktitle = {5th International Conference for Internet Technology and Secured Transactions,
-               {ICITST} 2010, London, United Kingdom, November 8-10, 2010},
-  pages     = {1--9},
-  year      = {2010},
-  crossref  = {DBLP:conf/icitst/2010},
-  url       = {http://ieeexplore.ieee.org/document/5678529/},
-  timestamp = {Sat, 29 Apr 2017 01:00:00 +0200},
-  biburl    = {https://dblp.org/rec/bib/conf/icitst/RezaeiMNA10},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-
-@inproceedings{ISCC07_031,
-  author    = {With: Reza Azmi and
-               Alireza Ghahramanian},
-  title     = {Intrusion Detection Using VMM},
-  booktitle = {7th International ISC Conference on Information Security and Cryptology,
-               {ISCC} 2010, Iran, [In Farsi].},
-  year      = {2010},
-  url       = {https://bit.ly/2ForuvE},
-}
-
       </textarea>
 
       <!--script> $("#bibtex_input").load("biblio.bib");</script-->
