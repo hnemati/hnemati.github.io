@@ -8,9 +8,11 @@
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
   <link rel="stylesheet" type="text/css" href="style/style.css" />
   <link rel="stylesheet" type="text/css" href="style/stylebiblio.css">
+   <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+   <script type="text/javascript" src="js/bibtextohtml.js"></script>
 </head>
 
-<body>
+<body onload="bibtex_js_draw();">
   <div id="main">
     <div id="header">
       <div id="logo">
@@ -34,32 +36,6 @@
       <br />
        <h2> Publications </h2>
           <textarea  id="bibtex_input" cols=90 rows=10>   </textarea>
-          <script>
-            var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
-            function doCORSRequest(options, printResult) {
-                var x = new XMLHttpRequest();
-                x.open(options.method, cors_api_url + options.url);
-                x.onload = x.onerror = function() {
-                printResult(
-                    (x.responseText || '')
-                );
-                };
-
-                x.send(options.data);
-            }
-
-            // Bind event
-                var outputField = document.getElementById('bibtex_input');
-
-                doCORSRequest({
-                    method: 'GET',
-                    url: 'https://raw.githubusercontent.com/hnemati/hnemati.github.io/master/biblio.bib',
-                    
-                }, function printResult(result) {
-                    outputField.value = result;
-                });
-
-        </script>
    
    <div id="bibtex_errors"></div>
    <div class="bibtex_template">   
@@ -82,8 +58,7 @@
      </br></br>
     </li>
    </div>
-   <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-   <script type="text/javascript" src="js/bibtextohtml.js"></script>
+
  
    <ol id="bibtex_display"> </ol>
 

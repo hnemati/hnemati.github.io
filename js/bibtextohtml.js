@@ -431,6 +431,28 @@ function bibtex_js_draw() {
   bibtexShow($("#bibtex_input").val(), $("#bibtex_display"));
 }
 
+var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+function doCORSRequest(options, printResult) {
+  var x = new XMLHttpRequest();
+  x.open(options.method, cors_api_url + options.url);
+  x.onload = x.onerror = function() {
+  printResult(
+    (x.responseText || '')
+   );
+  };
+  x.send(options.data);
+}
+function loadFile() {
+// Bind event
+  var outputField = document.getElementById('bibtex_input');
+  doCORSRequest({
+   method: 'GET',
+   url: 'https://raw.githubusercontent.com/hnemati/hnemati.github.io/master/biblio.bib',
+  }, function printResult(result) {
+       outputField.value = result;
+     })
+};
+
 
 // check whether or not jquery is present
 if (typeof jQuery == 'undefined') {  
@@ -444,7 +466,6 @@ if (typeof jQuery == 'undefined') {
     if ($(".bibtex_template").size() == 0) {
       $("body").append("<span class=\"tag\"></span><div class=\"bibtex_template\"><div class=\"if author\" style=\"font-weight: bold;\">\n  <span class=\"if year\">\n    <span class=\"year\"></span>, \n  </span>\n  <span class=\"author\"></span>\n  <span class=\"if url\" style=\"margin-left: 20px\">\n    <a class=\"url\" style=\"color:black; font-size:10px\">(view online)</a>\n  </span>\n</div>\n<div style=\"margin-left: 10px; margin-bottom:5px;\">\n  <span class=\"title\"></span>\n</div></div>");
     }
-
-    bibtex_js_draw();
+    loadFile();
   });
 }
