@@ -51,14 +51,14 @@
 	background-color: white;
 	z-index:1001;
 	-moz-opacity: 0.8;
-	opacity:.80;
+	opacity:0.7;
 	filter: alpha(opacity=80);
     }
 
   #loading {
 	display: none;
 	position: absolute;
-	top: 30%;
+	top: 40%;
 	left: 40%;
 	padding: 16px;
     width: 500px;
