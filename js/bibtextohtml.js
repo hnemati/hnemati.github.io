@@ -468,5 +468,10 @@ if (typeof jQuery == 'undefined') {
       $("body").append("<span class=\"tag\"></span><div class=\"bibtex_template\"><div class=\"if author\" style=\"font-weight: bold;\">\n  <span class=\"if year\">\n    <span class=\"year\"></span>, \n  </span>\n  <span class=\"author\"></span>\n  <span class=\"if url\" style=\"margin-left: 20px\">\n    <a class=\"url\" style=\"color:black; font-size:10px\">(view online)</a>\n  </span>\n</div>\n<div style=\"margin-left: 10px; margin-bottom:5px;\">\n  <span class=\"title\"></span>\n</div></div>");
     };
     loadFile(bibtex_js_draw);
+    var overlay = new ItpOverlay();
+	overlay.show("body");
+	  setTimeout (function(){
+	        	   overlay.hide("body");
+	             } , 2000 );
   });
 }
