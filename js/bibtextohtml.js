@@ -304,6 +304,15 @@ returns an array of the form [ key, val ]*/
   }
 }
 
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+
 function BibtexDisplay() {
   this.fixValue = function (value) {
     value = value.replace(/\\glqq\s?/g, "&bdquo;");
@@ -342,12 +351,9 @@ function BibtexDisplay() {
       
       if(entry["YEAR"] != yearOfPreviousEntry)
       {
-	output.append("<div class='yearpublication'>" + entry["YEAR"] + "</div>");
-	yearOfPreviousEntry = entry["YEAR"];
+	    output.append("<div class='yearpublication'>" + entry["YEAR"] + "</div>");
+	    yearOfPreviousEntry = entry["YEAR"];
       }
-      
-      
-      
       
       // find template
       var tpl = $(".bibtex_template").clone().removeClass('bibtex_template');
@@ -396,19 +402,15 @@ function BibtexDisplay() {
       bibTexCode =  entry['BIBTEXCODE'];
       
       
-      
-      
       tpl.find('.bibtexCodeLink').attr("bibtexcode", bibTexCode);
       
       tpl.find('.bibtexCodeLink').click(function() 
 	{
-	  alert($(this).attr("bibtexcode"));
-	  
+      var alrt = document.getElementById('overtext');
+	  alrt.innerText = ($(this).attr("bibtexcode"));
+      openNav();
 	}
       );
-      
-      
-      
       output.append(tpl);
       tpl.show();
     }
@@ -416,7 +418,6 @@ function BibtexDisplay() {
     // remove old entries
     old.remove();
   }
-
 }
 
 
@@ -424,7 +425,6 @@ function bibtexShow(bibtexCode, div)
 {
   (new BibtexDisplay()).displayBibtex(bibtexCode, div);
 }
-
 
 function bibtex_js_draw() {
   $(".bibtex_template").hide();
@@ -466,7 +466,6 @@ function loadFile(callback) {
      })
 };
 
-
 // check whether or not jquery is present
 if (typeof jQuery == 'undefined') {  
   // an interesting idea is loading jquery here. this might be added
@@ -475,9 +474,9 @@ if (typeof jQuery == 'undefined') {
 } else {
   // draw bibtex when loaded
   $(document).ready(function () {
-    // check for template, add default
+    // check for template, add default //<a class=\"aurl\" style=\"color:black; font-size:10px\">(abs online)</a>\n
     if ($(".bibtex_template").size() == 0) {
-      $("body").append("<span class=\"tag\"></span><div class=\"bibtex_template\"><div class=\"if author\" style=\"font-weight: bold;\">\n  <span class=\"if year\">\n    <span class=\"year\"></span>, \n  </span>\n  <span class=\"author\"></span>\n  <span class=\"if url\" style=\"margin-left: 20px\">\n    <a class=\"url\" style=\"color:black; font-size:10px\">(view online)</a>\n  </span>\n</div>\n<div style=\"margin-left: 10px; margin-bottom:5px;\">\n  <span class=\"title\"></span>\n</div></div>");
+      $("body").append("<span class=\"tag\"></span><div class=\"bibtex_template\"><div class=\"if author\" style=\"font-weight: bold;\">\n  <span class=\"if year\">\n    <span class=\"year\"></span>, \n  </span>\n  <span class=\"author\"></span>\n   <span class=\"if url\" style=\"margin-left: 20px\">\n    <a class=\"url\" style=\"color:black; font-size:10px\">(view online)</a>\n  </span>\n</div>\n<div style=\"margin-left: 10px; margin-bottom:5px;\">\n  <span class=\"title\"></span>\n</div></div>");
     };
     loadFile(bibtex_js_draw);
   });

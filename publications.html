@@ -7,7 +7,8 @@
       <meta name="keywords" content="website keywords, website keywords" />
       <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
       <link rel="stylesheet" type="text/css" href="style/style.css" />
-      <link rel="stylesheet" type="text/css" href="style/stylebiblio.css">
+      <link rel="stylesheet" type="text/css" href="style/stylebiblio.css" />
+      <link rel="stylesheet" type="text/css" href="style/overlay.css" />
       <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
       <script type="text/javascript" src="js/bibtextohtml.js"></script>
       <script type="text/javascript" src="js/itpoverlay.js"></script>
@@ -32,6 +33,10 @@
          </div>
          <div id="content_header"></div>
          <div id="site_content">
+            <div id="myNav" class="overlay">
+               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+               <div id="overlay-content"><p id="overtext"> </p></div>
+            </div>
             <div class="mainpage-section" id="contentt">
                <br />
                <h2> Publications </h2>
