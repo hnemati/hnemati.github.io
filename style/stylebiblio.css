@@ -61,8 +61,8 @@
 	top: 40%;
 	left: 40%;
 	padding: 16px;
-    width: 500px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
 	z-index:1002;
 	overflow: auto;
     background-image: url(../img/ajax_loader.gif);

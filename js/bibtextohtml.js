@@ -434,14 +434,26 @@ function bibtex_js_draw() {
 var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 function doCORSRequest(options, printResult) {
   var x = new XMLHttpRequest();
-  x.open(options.method, cors_api_url + options.url);
+  var overlay = new ItpOverlay();
+
+  x.open(options.method, cors_api_url + options.url, true);
   x.onload = x.onerror = function() {
   printResult(
     (x.responseText || '')
    );
   };
+  
+  x.onloadstart = function(e) {
+    overlay.show("body");
+  };
+  
+  x.onloadend = function(e) {
+    overlay.hide("body");
+  };
+  
   x.send(options.data);
 }
+
 function loadFile(callback) {
 // Bind event
   var outputField = document.getElementById('bibtex_input');
@@ -468,10 +480,5 @@ if (typeof jQuery == 'undefined') {
       $("body").append("<span class=\"tag\"></span><div class=\"bibtex_template\"><div class=\"if author\" style=\"font-weight: bold;\">\n  <span class=\"if year\">\n    <span class=\"year\"></span>, \n  </span>\n  <span class=\"author\"></span>\n  <span class=\"if url\" style=\"margin-left: 20px\">\n    <a class=\"url\" style=\"color:black; font-size:10px\">(view online)</a>\n  </span>\n</div>\n<div style=\"margin-left: 10px; margin-bottom:5px;\">\n  <span class=\"title\"></span>\n</div></div>");
     };
     loadFile(bibtex_js_draw);
-    var overlay = new ItpOverlay();
-	overlay.show("body");
-	  setTimeout (function(){
-	        	   overlay.hide("body");
-	             } , 2000 );
   });
 }
