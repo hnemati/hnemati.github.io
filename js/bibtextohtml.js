@@ -407,7 +407,7 @@ function BibtexDisplay() {
       tpl.find('.bibtexCodeLink').click(function() 
 	{
       var alrt = document.getElementById('overtext');
-	  alrt.innerText = ($(this).attr("bibtexcode"));
+	  alrt.value = ($(this).attr("bibtexcode"));
       openNav();
 	}
       );
