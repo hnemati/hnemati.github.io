@@ -449,12 +449,13 @@ function doCORSRequest(options, printResult) {
   
   x.onloadend = function(e) {
     overlay.hide("body");
+    bibtex_js_draw();
   };
   
   x.send(options.data);
 }
 
-function loadFile(callback) {
+function loadFile() {
 // Bind event
   var outputField = document.getElementById('bibtex_input');
   doCORSRequest({
@@ -462,7 +463,6 @@ function loadFile(callback) {
    url: 'https://raw.githubusercontent.com/hnemati/hnemati.github.io/master/biblio.bib',
   }, function printResult(result) {
        outputField.value = result;
-       callback()
      })
 };
 
@@ -478,6 +478,6 @@ if (typeof jQuery == 'undefined') {
     if ($(".bibtex_template").size() == 0) {
       $("body").append("<span class=\"tag\"></span><div class=\"bibtex_template\"><div class=\"if author\" style=\"font-weight: bold;\">\n  <span class=\"if year\">\n    <span class=\"year\"></span>, \n  </span>\n  <span class=\"author\"></span>\n   <span class=\"if url\" style=\"margin-left: 20px\">\n    <a class=\"url\" style=\"color:black; font-size:10px\">(view online)</a>\n  </span>\n</div>\n<div style=\"margin-left: 10px; margin-bottom:5px;\">\n  <span class=\"title\"></span>\n</div></div>");
     };
-    loadFile(bibtex_js_draw);
+    loadFile();
   });
 }
