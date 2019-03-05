@@ -433,7 +433,15 @@ function bibtex_js_draw() {
 
 var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 function doCORSRequest(options, printResult) {
-  var x = new XMLHttpRequest();
+  
+  if (window.XMLHttpRequest) {
+      // code for IE7+, Firefox, Chrome, Opera, Safari
+      x = new XMLHttpRequest();
+  }
+  else {
+      // code for IE6, IE5
+      x = new ActiveXObject("Microsoft.XMLHTTP");
+  }
   var overlay = new ItpOverlay();
 
   x.open(options.method, cors_api_url + options.url, true);
