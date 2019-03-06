@@ -53,7 +53,7 @@ h6
 a, a:hover
 { outline: none;
   text-decoration: underline;
-  color: #37ABC8;}
+  color: black;}
 
 a:hover
 { text-decoration: none;
@@ -350,4 +350,17 @@ div.mainpage-section {
   padding-bottom: 10px;
   margin: 15px;
   margin-bottom: 25px
+}
+
+.bibtexCodeLink {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #00BFFF;
+  color: white;
+  padding: 1px 2px 1px 2px;
+  border-radius: 3px;
+  border-top: 1px solid #00BFFF;
+  border-right: 1px solid #00BFFF;
+  border-bottom: 1px solid #00BFFF;
+  border-left: 1px solid #00BFFF;
 }

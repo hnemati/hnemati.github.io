@@ -57,6 +57,8 @@ comments by François Schwarzentruber
  * 
  */
 
+// var abst = {};
+
 function BibtexParser() {
 /*position in the text that is parsed*/
   this.pos = 0;
@@ -406,6 +408,7 @@ function BibtexDisplay() {
       
       tpl.find('.bibtexCodeLink').click(function() 
 	{
+//       alert($(this).attr("bibtexcode").substring($(this).attr("bibtexcode").lastIndexOf("abstract") + 13,$(this).attr("bibtexcode").length - 3));
       var alrt = document.getElementById('overtext');
 	  alrt.value = ($(this).attr("bibtexcode"));
       openNav();
@@ -484,7 +487,7 @@ if (typeof jQuery == 'undefined') {
   $(document).ready(function () {
     // check for template, add default //<a class=\"aurl\" style=\"color:black; font-size:10px\">(abs online)</a>\n
     if ($(".bibtex_template").size() == 0) {
-      $("body").append("<span class=\"tag\"></span><div class=\"bibtex_template\"><div class=\"if author\" style=\"font-weight: bold;\">\n  <span class=\"if year\">\n    <span class=\"year\"></span>, \n  </span>\n  <span class=\"author\"></span>\n   <span class=\"if url\" style=\"margin-left: 20px\">\n    <a class=\"url\" style=\"color:black; font-size:10px\">(view online)</a>\n  </span>\n</div>\n<div style=\"margin-left: 10px; margin-bottom:5px;\">\n  <span class=\"title\"></span>\n</div></div>");
+      $("body").append("<span class=\"tag\"></span><div class=\"bibtex_template\"><div class=\"if author\" style=\"font-weight: bold;\">\n  <span class=\"if year\">\n    <span class=\"year\"></span>, \n  </span>\n  <span class=\"author\"></span>\n  <span class=\"abstract\"></span>\n  <span class=\"if url\" style=\"margin-left: 20px\">\n    <a class=\"url\" style=\"color:black; font-size:10px\">(view online)</a>\n  </span>\n</div>\n<div style=\"margin-left: 10px; margin-bottom:5px;\">\n  <span class=\"title\"></span>\n</div></div>");
     };
     loadFile();
   });
