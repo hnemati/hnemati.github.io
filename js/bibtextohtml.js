@@ -402,39 +402,28 @@ function BibtexDisplay() {
       }
       
       bibTexCode =  entry['BIBTEXCODE'];
-      
-      
-      tpl.find('.bibtexCodeLink').attr("bibtexcode", bibTexCode);
-      
-      tpl.find('.bibtexCodeLink').click(function() 
-      {
-        var alrt = document.getElementById('overtext');
-	    alrt.value = ($(this).attr("bibtexcode"));
-        openNav();
-	   }
-      );
+    
       tpl.find('.bibtexCodeLink').attr("bibtexcode", bibTexCode);
       tpl.find('.bibtexCodeLink').click(function() 
-	  {
-       var alrt = document.getElementById('overtext');
-       var ttl = document.getElementById('overtitle');
-       ttl.innerText = "BibTeX Code:";
-	   alrt.value = ($(this).attr("bibtexcode").split("abstract")[0] + '}');
-       openNav();
-      }
+	{
+      var alrt = document.getElementById('overtext');
+      var ttl = document.getElementById('overtitle');
+      ttl.innerText = "BibTeX Code:";
+	  alrt.value = ($(this).attr("bibtexcode").split("Abstract")[0] + '}');
+      openNav();
+	}
       );
-
+      
       tpl.find('.abstractCodeLink').attr("bibtexcode", bibTexCode);
       tpl.find('.abstractCodeLink').click(function() 
-	  {
-       var alrt = document.getElementById('overtext');
-       var ttl = document.getElementById('overtitle');
-       ttl.innerText = "Abstract:";
-	   alrt.value = ($(this).attr("bibtexcode").split("abstract")[1]).match(/\{(.*)\}/).pop();
-       openNav();
-	  }
+	{
+      var alrt = document.getElementById('overtext');
+      var ttl = document.getElementById('overtitle');
+      ttl.innerText = "Abstract:";
+	  alrt.value = ($(this).attr("bibtexcode").split("Abstract")[1]).match(/\{(.*)\}/).pop();
+      openNav();
+	}
       );
-            
       
       output.append(tpl);
       tpl.show();
