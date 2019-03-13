@@ -16,10 +16,8 @@
   Booktitle                = {Submitted to USENIX Security},
   Year                     = {2019},
   Abstract                 = {Spatial and temporal memory corruption vulnerabilities such as buffer overflows or use-after-free errors are a never-ending source of exploits and attacks against otherwise benign programs. They enable attackers to overwrite control-flow relevant data (e.g. the target location of indirect jump instructions) that are spatially or temporally located in close proximity to related user-controlled data, and thereby to subvert the control flow of the victim program. 
-
 Established defenses either seek to mitigate the impact of these attacks by restricting the range of possible targets or attempt to hide necessary information from the attacker. None of these defenses, however, tackle the underlying problem: instructions in a program can write to memory sections they should not be able to write at the point in time when they are executed.
-
-In this paper, we propose PROCONDA, a general approach for protecting control-flow relevant data. PROCONDA introduces and leverages the Write Instruction Origin (WIO) to determine which code location should have write access to a certain memory location.}  
+In this paper, we propose P RO C ON D A , a general approach for protecting control-flow relevant data. PROCONDA introduces and leverages the Write Instruction Origin (WIO) to determine which code location should have write access to a certain memory location.}
 }
 
 @InProceedings{llvm2018,
@@ -56,7 +54,8 @@ In this paper, we propose PROCONDA, a general approach for protecting control-fl
   Crossref                 = {DBLP:conf/post/2018},
   Doi                      = {10.1007/978-3-319-89722-6_5},
   Timestamp                = {Mon, 16 Apr 2018 13:28:26 +0200},
-  Url                      = {https://doi.org/10.1007/978-3-319-89722-6_5}
+  Url                      = {https://doi.org/10.1007/978-3-319-89722-6_5},
+  Abstract                 = {Formal verification of systems-level software such as hypervisors and operating systems can enhance system trustworthiness. However, without taking low level features like caches into account the verification may become unsound. While this is a well-known fact w.r.t. timing leaks, few works have addressed latent cache storage side-channels, whose effects are not limited to information leakage. We present a verification methodology to analyse soundness of countermeasures used to neutralise these channels. We apply the proposed methodology to existing countermeasures, showing that they allow to restore integrity of the system. We decompose the proof effort into verification conditions that allow for an easy adaption of our strategy to various software and hardware platforms. As case study, we extend the verification of an existing hypervisor whose integrity can be tampered using cache storage channels. We used the HOL4 theorem prover to validate our security analysis, applying the verification methodology to a generic hardware model.}  
 }
 
 @PhdThesis{DBLP:phd/basesearch/Nemati17,
