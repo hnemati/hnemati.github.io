@@ -34,8 +34,11 @@
          <div id="content_header"></div>
          <div id="site_content">
             <div id="myNav" class="overlay">
-               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-               <div id="overlay-content"><textarea id="overtext" rows=20> </textarea></div>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div id="overlay-content"> 
+                   <h2 id="overtitle"> Title </h2> 
+                   <textarea id="overtext" style="text-align:justify" rows=20> </textarea>
+                </div>
             </div>
             <div class="mainpage-section" id="contentt">
                <br />
@@ -45,7 +48,7 @@
                <div class="bibtex_template">
                   <li>
                      <a class="url"><span class="title"></span></a></br>
-                     <span class="author"></span></br>                     
+                     <b>With:</b><span class="author"></span></br>                     
                      <span class="booktitle"></span>
                      <span class="if publisher">
                      <span class="publisher"></span>.
@@ -56,9 +59,8 @@
                      <span class="if year">
                      <span class="year"></span></span>
                      </br>
-                     <a class="bibtexCodeLink">
-                     Bibtex
-                     </a>
+                     <a class="bibtexCodeLink"> Bibtex </a> &#160;
+                     <a class="abstractCodeLink" href="javascript:void(0)"> Abstract </a></br>
                      </br></br>
                   </li>
                </div>

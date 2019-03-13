@@ -175,7 +175,7 @@ function BibtexParser() {
   
   function takeCareAboutAccentsEtc(string)
   {
-      return string.replace(/\\c{c}/g, "ç").replace(/\"{a}/g, "ä").replace(/\\'{a}/g, "á");
+    return string.replace(/\\c{c}/g, "ç").replace(/\"{a}/g, "ä").replace(/\\'{a}/g, "á").replace("Hamed Nemati and", '').replace("and Hamed Nemati", '');
   }
 
 /*returns the value that has to be read (maybe in {..}, in "..." or juste a character)*/
@@ -407,13 +407,35 @@ function BibtexDisplay() {
       tpl.find('.bibtexCodeLink').attr("bibtexcode", bibTexCode);
       
       tpl.find('.bibtexCodeLink').click(function() 
-	{
-//       alert($(this).attr("bibtexcode").substring($(this).attr("bibtexcode").lastIndexOf("abstract") + 13,$(this).attr("bibtexcode").length - 3));
-      var alrt = document.getElementById('overtext');
-	  alrt.value = ($(this).attr("bibtexcode"));
-      openNav();
-	}
+      {
+        var alrt = document.getElementById('overtext');
+	    alrt.value = ($(this).attr("bibtexcode"));
+        openNav();
+	   }
       );
+      tpl.find('.bibtexCodeLink').attr("bibtexcode", bibTexCode);
+      tpl.find('.bibtexCodeLink').click(function() 
+	  {
+       var alrt = document.getElementById('overtext');
+       var ttl = document.getElementById('overtitle');
+       ttl.innerText = "BibTeX Code:";
+	   alrt.value = ($(this).attr("bibtexcode").split("abstract")[0] + '}');
+       openNav();
+      }
+      );
+
+      tpl.find('.abstractCodeLink').attr("bibtexcode", bibTexCode);
+      tpl.find('.abstractCodeLink').click(function() 
+	  {
+       var alrt = document.getElementById('overtext');
+       var ttl = document.getElementById('overtitle');
+       ttl.innerText = "Abstract:";
+	   alrt.value = ($(this).attr("bibtexcode").split("abstract")[1]).match(/\{(.*)\}/).pop();
+       openNav();
+	  }
+      );
+            
+      
       output.append(tpl);
       tpl.show();
     }
