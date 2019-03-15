@@ -454,6 +454,7 @@ function doCORSRequest(options, printResult) {
   }
   else {
       // code for IE6, IE5
+      alert("Sorry :(, IE is not supported at the moment. Please use another browser.");
       x = new ActiveXObject("Microsoft.XMLHTTP");
   }
   var overlay = new ItpOverlay();
