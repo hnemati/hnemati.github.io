@@ -446,7 +446,7 @@ function bibtex_js_draw() {
 }
 
 function doCORSRequest(options, printResult) {
-  
+  var overlay = new ItpOverlay();
   if (window.XMLHttpRequest) {
       // code for IE7+, Firefox, Chrome, Opera, Safari
       x = new XMLHttpRequest();
@@ -455,8 +455,6 @@ function doCORSRequest(options, printResult) {
       // code for IE6, IE5
       x = new ActiveXObject("Microsoft.XMLHTTP");
   }
-  var overlay = new ItpOverlay();
-
   x.open(options.method, options.url, true);
   x.onload = x.onerror = function() {
   printResult(
@@ -487,33 +485,33 @@ function loadFile() {
      })
 };
 
-function loadBib() {
-  var xmlhttp;
-  var overlay = new ItpOverlay();
-  if (window.XMLHttpRequest) {
-    xmlhttp = new XMLHttpRequest();
-  } else {
-    // code for older browsers
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById('bibtex_input').innerHTML =
-      this.responseText;
-    }
-  };
-  xmlhttp.onloadstart = function(e) {
-    overlay.show("body");
-  };
-  
-  xmlhttp.onloadend = function(e) {
-    overlay.hide("body");
-    bibtex_js_draw();
-  };
-  
-  xmlhttp.open("GET", "https://raw.githubusercontent.com/hnemati/hnemati.github.io/master/biblio.bib", true);
-  xmlhttp.send();
-}
+// function loadBib() {
+//   var xmlhttp;
+//   var overlay = new ItpOverlay();
+//   if (window.XMLHttpRequest) {
+//     xmlhttp = new XMLHttpRequest();
+//   } else {
+//     // code for older browsers
+//     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+//   }
+//   xmlhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//       document.getElementById('bibtex_input').innerHTML =
+//       this.responseText;
+//     }
+//   };
+//   xmlhttp.onloadstart = function(e) {
+//     overlay.show("body");
+//   };
+//   
+//   xmlhttp.onloadend = function(e) {
+//     overlay.hide("body");
+//     bibtex_js_draw();
+//   };
+//   
+//   xmlhttp.open("GET", "https://raw.githubusercontent.com/hnemati/hnemati.github.io/master/biblio.bib", true);
+//   xmlhttp.send();
+// }
 
 // check whether or not jquery is present
 if (typeof jQuery == 'undefined') {  
