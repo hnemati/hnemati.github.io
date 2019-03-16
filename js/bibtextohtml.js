@@ -445,48 +445,33 @@ function bibtex_js_draw() {
   bibtexShow($("#bibtex_input").val(), $("#bibtex_display"));
 }
 
-var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
-function doCORSRequest(options, printResult) {
-  
-  if (window.XMLHttpRequest) {
-      // code for IE7+, Firefox, Chrome, Opera, Safari
-      x = new XMLHttpRequest();
-  }
-  else {
-      // code for IE6, IE5
-      x = new ActiveXObject("Microsoft.XMLHTTP");
-  }
+function loadBib() {
+  var xmlhttp;
   var overlay = new ItpOverlay();
-
-  x.open(options.method, cors_api_url + options.url, true);
-  x.onload = x.onerror = function() {
-  printResult(
-    (x.responseText || '')
-   );
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for older browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById('bibtex_input').innerHTML =
+      this.responseText;
+    }
   };
-  
-  x.onloadstart = function(e) {
+  xmlhttp.onloadstart = function(e) {
     overlay.show("body");
   };
   
-  x.onloadend = function(e) {
+  xmlhttp.onloadend = function(e) {
     overlay.hide("body");
     bibtex_js_draw();
   };
   
-  x.send(options.data);
+  xmlhttp.open("GET", "https://raw.githubusercontent.com/hnemati/hnemati.github.io/master/biblio.bib", true);
+  xmlhttp.send();
 }
-
-function loadFile() {
-// Bind event
-  var outputField = document.getElementById('bibtex_input');
-  doCORSRequest({
-   method: 'GET',
-   url: 'https://raw.githubusercontent.com/hnemati/hnemati.github.io/master/biblio.bib',
-  }, function printResult(result) {
-       outputField.value = result;
-     })
-};
 
 // check whether or not jquery is present
 if (typeof jQuery == 'undefined') {  
@@ -500,6 +485,6 @@ if (typeof jQuery == 'undefined') {
     if ($(".bibtex_template").size() == 0) {
       $("body").append("<span class=\"tag\"></span><div class=\"bibtex_template\"><div class=\"if author\" style=\"font-weight: bold;\">\n  <span class=\"if year\">\n    <span class=\"year\"></span>, \n  </span>\n  <span class=\"author\"></span>\n  <span class=\"abstract\"></span>\n  <span class=\"if url\" style=\"margin-left: 20px\">\n    <a class=\"url\" style=\"color:black; font-size:10px\">(view online)</a>\n  </span>\n</div>\n<div style=\"margin-left: 10px; margin-bottom:5px;\">\n  <span class=\"title\"></span>\n</div></div>");
     };
-    loadFile();
+    loadBib();
   });
 }
