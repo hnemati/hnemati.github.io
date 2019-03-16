@@ -1,13 +1,13 @@
  
     .bibtexCodeLink
     {
-      text-decoration : underline;
+/*       text-decoration : underline; */
       cursor: pointer;
     }
     
     .abstractCodeLink
     {
-      text-decoration : underline;
+/*       text-decoration : underline; */
       cursor: pointer;
     }
     
