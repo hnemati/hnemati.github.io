@@ -1,54 +1,48 @@
 <!DOCTYPE HTML>
 <html>
-
-<head>
-  <title>Hamed Nemati</title>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" type="text/css" href="style/style.css" />
-  <link rel="stylesheet" type="text/css" href="style/stylebiblio.css" />
-  <link rel="stylesheet" type="text/css" href="style/overlay.css" />
-  <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-  <script type="text/javascript" src="js/bibtextohtml.js"></script>
-
-  
-</head>
-
-<body onload="bibtex_js_draw();">
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1>Hamed Nemati</h1>
-        </div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="index.html">Home</a></li>
-          <li class="selected"><a href="publications.html">Publication</a></li>
-          <!--li><a href="contact.html">Contact</a></li-->
-        </ul>
-      </div>
-    </div>
-    
-    <div id="content_header"></div>
-    <div id="site_content">
-
-    <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div id="overlay-content"> 
-          <h2 id="overtitle"> Test </h2> 
-          <textarea id="overtext" style="text-align:justify" rows=20> </textarea>
-      </div>
-    </div>
-      <div class="mainpage-section" id="contentt">
-      <br />
-       <h2> Publications </h2>
-        <!-- insert the page content here -->
-      <textarea hidden name="bibtex_input" id="bibtex_input" cols=50 rows=20>   
+   <head>
+      <title>Hamed Nemati</title>
+      <meta name="description" content="website description" />
+      <meta name="keywords" content="website keywords, website keywords" />
+      <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+      <link rel="stylesheet" type="text/css" href="style/style.css" />
+      <link rel="stylesheet" type="text/css" href="style/stylebiblio.css" />
+      <link rel="stylesheet" type="text/css" href="style/overlay.css" />
+      <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="js/bibtextohtml.js"></script>
+   </head>
+   <body onload="bibtex_js_draw();">
+      <div id="main">
+         <div id="header">
+            <div id="logo">
+               <div id="logo_text">
+                  <!-- class="logo_colour", allows you to change the colour of the text -->
+                  <h1>Hamed Nemati</h1>
+               </div>
+            </div>
+            <div id="menubar">
+               <ul id="menu">
+                  <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+                  <li><a href="index.html">Home</a></li>
+                  <li class="selected"><a href="publications.html">Publication</a></li>
+                  <!--li><a href="contact.html">Contact</a></li-->
+               </ul>
+            </div>
+         </div>
+         <div id="content_header"></div>
+         <div id="site_content">
+            <div id="myNav" class="overlay">
+               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+               <div id="overlay-content">
+                  <h2 id="overtitle"> Test </h2>
+                  <textarea id="overtext" style="text-align:justify" rows=20> </textarea>
+               </div>
+            </div>
+            <div class="mainpage-section" id="contentt">
+               <br />
+               <h2> Publications </h2>
+               <!-- insert the page content here -->
+               <textarea hidden name="bibtex_input" id="bibtex_input" cols=50 rows=20>   
 @InProceedings{KBRef2018,
   Title                    = {Verifying System Level Information Flow Using Confidentiality-Preserving Refinement},
   Author                   = {Christoph Baumann and Roberto Guanciale and Mads Dam and Hamed Nemati},
@@ -305,39 +299,34 @@
 }
 
       </textarea>
-
-  <div id="bibtex_errors"></div>
-
-  <div class="bibtex_template">
-    <li>
-        <a class="url"><span class="title"></span></a></br>
-        <b>With:</b><span class="author"></span></br>                     
-        <span class="booktitle"></span>
-        <span class="if publisher">
-        <span class="publisher"></span>.
-        </span>
-        <span class="if pages">
-        p. <span class="pages"></span>.
-        </span>
-        <span class="if year">
-        <span class="year"></span></span>
-        </br>
-        <a class="bibtexCodeLink"> Bibtex </a> &#160;
-        <a class="abstractCodeLink" href="#"> Abstract </a></br>
-        </br></br>
-  </li>
-
- </div>
- <ol id="bibtex_display"> </ol>
-
-  
+               <div id="bibtex_errors"></div>
+               <div class="bibtex_template">
+                  <li>
+                     <a class="url"><span class="title"></span></a></br>
+                     <b>With:</b><span class="author"></span></br>                     
+                     <span class="booktitle"></span>
+                     <span class="if publisher">
+                     <span class="publisher"></span>.
+                     </span>
+                     <span class="if pages">
+                     p. <span class="pages"></span>.
+                     </span>
+                     <span class="if year">
+                     <span class="year"></span></span>
+                     </br>
+                     <a class="bibtexCodeLink"> Bibtex </a> &#160;
+                     <a class="abstractCodeLink" href="#"> Abstract </a></br>
+                     </br></br>
+                  </li>
+               </div>
+               <ol id="bibtex_display"> </ol>
+            </div>
+         </div>
+         <div id="content_footer"></div>
+         <div id="footer">
+            <p> This is a personal webpage</p>
+         </div>
+         <p>&nbsp;</p>
       </div>
-    </div>
-    <div id="content_footer"></div>
-    <div id="footer">
-      <p> This is a personal webpage</p>
-    </div>
-    <p>&nbsp;</p>
-  </div>
-</body>
+   </body>
 </html>
