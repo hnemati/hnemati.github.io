@@ -117,7 +117,8 @@
   Crossref                 = {DBLP:conf/esorics/2015-1},
   Doi                      = {10.1007/978-3-319-24174-6_5},
   Timestamp                = {Tue, 23 May 2017 01:07:16 +0200},
-  Url                      = {https://doi.org/10.1007/978-3-319-24174-6_5}
+  Url                      = {https://doi.org/10.1007/978-3-319-24174-6_5},
+  Abstract                 = {We present MProsper, a trustworthy system to prevent code injection in Linux on embedded devices. MProsper is a formally verified run-time monitor, which forces an untrusted Linux to obey the executable space protection policy; a memory area can be either executable or writable, but cannot be both. The executable space protection allows the MProsper’s monitor to intercept every change to the executable code performed by a user application or by the Linux kernel. On top of this infrastructure, we use standard code signing to prevent code injection. MProsper is deployed on top of the Prosper hypervisor and is implemented as an isolated guest. Thus MProsper inherits the security property verified for the hypervisor: (i) Its code and data cannot be tampered by the untrusted Linux guest and (ii) all changes to the memory layout is intercepted, thus enabling MProsper to completely mediate every operation that can violate the desired security property. The verification of the monitor has been performed using the HOL4 theorem prover and by extending the existing formal model of the hypervisor with the formal specification of the high level model of the monitor.}
 }
 
 @InProceedings{DBLP:conf/trust/NematiDGDV15,
@@ -133,7 +134,8 @@
   Crossref                 = {DBLP:conf/trust/2015},
   Doi                      = {10.1007/978-3-319-22846-4_8},
   Timestamp                = {Tue, 23 May 2017 01:08:12 +0200},
-  Url                      = {https://doi.org/10.1007/978-3-319-22846-4_8}
+  Url                      = {https://doi.org/10.1007/978-3-319-22846-4_8},
+  Abstract                 = {The isolation of security critical components from an untrusted OS allows to both protect applications and to harden the OS itself, for instance by run-time monitoring. Virtualization of the memory subsystem is a key component to provide such isolation. We present the design, implementation and verification of a virtualization platform for the ARMv7-A processor family. Our design is based on direct paging, an MMU virtualization mechanism previously introduced by Xen for the x86 architecture, and used later with minor variants by the Secure Virtual Architecture, SVA. We show that the direct paging mechanism can be implemented using a compact design, suitable for formal verification down to a low level of abstraction, without penalizing system performance. The verification is performed using the HOL4 theorem prover and uses a detailed model of the ARMv7-A ISA, including the MMU. We prove memory isolation of the hosted components along with information flow security for an abstract top level model of the virtualization mechanism. The abstract model is refined down to a HOL4 transition system closely resembling a C implementation. The virtualization mechanism is demonstrated on real hardware via a hypervisor capable of hosting Linux as an untrusted guest.}
 }
 
 @InProceedings{DBLP:conf/sofsem/NematiGD15,
@@ -151,7 +153,8 @@
   Crossref                 = {DBLP:conf/sofsem/2015},
   Doi                      = {10.1007/978-3-662-46078-8_48},
   Timestamp                = {Thu, 15 Jun 2017 21:37:45 +0200},
-  Url                      = {https://doi.org/10.1007/978-3-662-46078-8_48}
+  Url                      = {https://doi.org/10.1007/978-3-662-46078-8_48},
+  Abstract                 = {In order to host a general purpose operating system, hypervisors need to virtualize the CPU memory subsystem. This entails dynamically changing MMU resources, in particular the page tables, to allow a hosted OS to recongure its own memory. In this paper we present the verication of the isolation properties of a hypervisor design that uses direct paging. This virtualization approach allows to host commodity OSs without requiring either shadow data structures or specialized hardware support. Our verication targets a system consisting of a commodity guest running Linux.The verication involves three steps: (i) Formalization of an ARMv7 CPU that includes the MMU, (ii) Formalization of a system behavior that includes the hypervisor and the untrusted guest (iii) Verication of the isolation properties. Formalization and proof are done in the HOL4 theorem prover, thus allowing to re-use the existing HOL4 ARMv7 model developed in Cambridge.}
 }
 
 @InProceedings{DBLP:conf/ccs/DamGKNS13,
@@ -167,7 +170,9 @@
   Crossref                 = {DBLP:conf/ccs/2013},
   Doi                      = {10.1145/2508859.2516702},
   Timestamp                = {Fri, 08 Nov 2013 09:43:20 +0100},
-  Url                      = {http://doi.acm.org/10.1145/2508859.2516702}
+  Url                      = {http://doi.acm.org/10.1145/2508859.2516702},
+  Abstract                 = {A separation kernel simulates a distributed environment using a single physical machine by executing partitions in isolation and appropriately controlling communication among them. We present a formal verification of information flow security for a simple separation kernel for ARMv7. Previous work on information flow kernel security leaves communication to be handled by model-external means, and cannot be used to draw conclusions when there is explicit interaction between partitions. We propose a different approach where communication between partitions is made explicit and the information flow is analyzed in the presence of such a channel. Limiting the kernel functionality as much as meaningfully possible, we accomplish a detailed analysis and verification of the system, proving its correctness at the level of the ARMv7 assembly. As a sanity check we show how the security condition is reduced to noninterference in the special case where no communication takes place. The verification is done in HOL4 taking the Cambridge model of ARM as basis, transferring verification tasks on the actual assembly code to an adaptation of the BAP binary analysis tool developed at CMU.},
+  Bibsource                = {dblp computer science bibliography, https://dblp.org}
 }
 
 @InProceedings{DBLP:conf/ccs/DamGN13,
@@ -184,7 +189,9 @@
   Crossref                 = {DBLP:conf/ccs/2013trusted},
   Doi                      = {10.1145/2517300.2517302},
   Timestamp                = {Fri, 31 Jan 2014 10:38:00 +0100},
-  Url                      = {http://doi.acm.org/10.1145/2517300.2517302}
+  Url                      = {http://doi.acm.org/10.1145/2517300.2517302},
+  Abstract                 = {Hypervisors are low level execution platforms that provide isolated partitions on shared resources, allowing to design secure systems without using dedicated hardware devices. A key requirement of this kind of solution is the formal verification of the software trusted computing base, preferably at the binary level. We accomplish a detailed verification of an ARMv7 tiny hypervisor, proving its correctness at the machine code level. We present our verification strategy, which mixes the usage of the theorem prover HOL4, the computation of weakest preconditions, and the use of SMT solvers to largely automate the verification process. The automation relies on an integration of HOL4 with BAP, the Binary Analysis Platform developed at CMU. To enable the adoption of the BAP back-ends to compute weakest preconditions and control flow graphs, a HOL4-based tool was implemented that transforms ARMv7 assembly programs to the BAP Intermediate Language. Since verifying contracts by computing the weakest precondition depends on resolving indirect jumps, we implemented a procedure that integrates SMT solvers and BAP to discover all the possible assignments to the indirect jumps under the contract precondition.},
+  Bibsource                = {dblp computer science bibliography, https://dblp.org}
 }
 
 @Article{DBLP:journals/ics/afzali2012,
