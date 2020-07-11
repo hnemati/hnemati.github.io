@@ -1,17 +1,53 @@
 % This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
+@InProceedings{KBRef2021,
+  Title                    = {On Compositional Information Flow Aware Refinement},
+  Author                   = {Christoph Baumann and Mads Dam and Roberto Guanciale and Hamed Nemati},
+  Booktitle                = {IEEE Computer Security Foundations Symposium (CSF)},
+  Year                     = {2021},
+  Abstract                 = {The concepts of information flow security and refinement are known to have had a troubled relationship ever since the seminal work of McLean. In this work we study refinements that support changes in data representation and semantics, including the addition of state variables that may induce new observational power or side channels. We propose a new epistemic approach to ignorance-preserving refinement where an abstract model is used
+as a specification of a system’s permitted information flows, that may include the declassification of secret information. The core idea is to require that refinement steps must not induce observer knowledge that is not already available in the abstract model. Our study is set in the context of a class of shared variable multi-agent models similar to interpreted systems in epistemic logic. We demonstrate the expressiveness of our framework through a series of small examples and compare our approach to existing, stricter notions of information-flow secure refinement based on bisimulations and noninterference preservation. Interestingly, noninterference preservation is not supported “out of the box” in our setting, because refinement steps may introduce new secrets that are independent of secrets already present at abstract level. To support verification, we first introduce a “cube-shaped” unwinding condition related to conditions recently studied in the context of value-dependent noninterference, kernel verification, and secure compilation. A fundamental problem with ignorance-preserving refinement, caused by the support for general data and observation refinement, is that sequential composability is lost. We propose a solution based on relational pre- and post-conditions and illustrate its use together with unwinding on the oblivious RAM construction of Chung and Pass.}  
+}
+
+@InProceedings{SCAM-V20,
+  Title                    = {Validation of abstract Side-channel Models for Computer Architectures},
+  Author                   = {Hamed Nemati and Pablo Buiras and Andreas Lindner and Roberto Guanciale and Swen Jacobs},
+  Booktitle                = {International Conference on Computer-Aided Verification (CAV)},
+  Year                     = {2019},
+
+  Abstract                 = {Observational models make tractable the analysis of information flow properties by providing an abstraction of side channels. We introduce a methodology and a tool, Scam-V, to validate observational models for modern computer architectures. We combine symbolic execution, relational analysis, and different program generation techniques to generate experiments and validate the models. An experiment consists of a randomly generated program together with two inputs that are observationally equivalent according to the model under the test. Validation is done by checking indistinguishability of the two inputs on real hardware by executing the program and analyzing the side channel. We have evaluated our framework by validating models that abstract the data-cache side channel of a Raspberry Pi 3 board with a processor implementing the ARMv8-A architecture. Our results show that Scam-V can identify bugs in the implementation of the models and generate test programs which invalidate the models due to hidden microarchitectural behavior.}
+}
+
 @InProceedings{mitb19,
   Title                    = {MAC-in-the-Box: Verifying the Security of a Minimalistic Hardware Design for MAC Computation},
   Author                   = {Robert K{\"u}nnemann and Hamed Nemati},
-  Booktitle                = {Submitted manuscript},
-  Year                     = {2019},
+  Booktitle                = {European Symposium on Research in Computer Security (ESORICS)},
+  Year                     = {2020},
 
   Abstract                 = {In this work, we study the verification of security properties of a minimalistic hardware design called the MAC-in-the-Box. This device computes a message authentication code based on the SHA-3 hash function and a key that is stored on device, but never output directly. It is designed for secure password storage, but may also be used for secure key-exchange and second-factor authentication. We formally verify that no outside observer can distinguish this device from an ideal functionality that provides only access to a hashing oracle.}
 }
 
+@inproceedings{DBLP:conf/tap/KhosrowjerdiNM20,
+  author    = {Hojat Khosrowjerdi and
+               Hamed Nemati and
+               Karl Meinke},
+  title     = {Spatio-Temporal Model-Checking of Cyber-Physical Systems Using Graph
+               Queries},
+  booktitle = {Tests and Proofs - 14th International Conference, TAP@STAF 2020, Bergen,
+               Norway, June 22-23, 2020, Proceedings [postponed]},
+  pages     = {59--79},
+  year      = {2020},
+  crossref  = {DBLP:conf/tap/2020},
+  url       = {https://doi.org/10.1007/978-3-030-50995-8\_4},
+  doi       = {10.1007/978-3-030-50995-8\_4},
+  timestamp = {Tue, 23 Jun 2020 17:11:48 +0200},
+  biburl    = {https://dblp.org/rec/conf/tap/KhosrowjerdiNM20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
 @InProceedings{SCAM-V19,
-  Title                    = {Validation of abstract Side-channel Models for Computer Architectures},
+  Title                    = {Validation of abstract Side-channel Models for Computer Architectures (short paper)},
   Author                   = {Andreas Lindner and Hamed Nemati and Pablo Buiras and Roberto Guanciale and Swen Jacobs},
   Booktitle                = {Submitted manuscript},
   Year                     = {2019},
@@ -19,13 +55,7 @@
   Abstract                 = {Modern computer architectures include complex features that make it infeasible to analyze their effects on channels that may compromise program security. abstract side channel models have been proposed to approximate these flows in terms of system state observations, thus making the analysis tractable. However, using these models to verify security properties relies on the assumption that states with equivalent observations would be indistinguishable to the attacker on real hardware. In this work, we introduce a methodology and tool to validate side-channel models, testing program inputs that lead to equivalent observations in automatically-generated programs, and measuring against channels on the hardware. We partition the input state space based on the observation model and rely on an adaptive refinement of the model to guide the validation.}
 }
 
-@InProceedings{KBRef2018,
-  Title                    = {Verifying System Level Information Flow Using Confidentiality-Preserving Refinement},
-  Author                   = {Christoph Baumann and Roberto Guanciale and Mads Dam and Hamed Nemati},
-  Booktitle                = {Submitted manuscript},
-  Year                     = {2019},
-  Abstract                 = {The concepts of information flow security and refinement are known to have had a troubled relationship ever since the seminal work of McLean. In this work we study refinements that support changes in data representation, including the addition of state variables that may induce new observational power or side channels. We propose a new epistemic approach to confidentiality-preserving refinement where an abstract model  is used as a specification of a system’s permitted information flows, that may include the declassification of secret information. The core idea is to require that refinement steps must not induce observer knowledge that is not available in the abstract model. When verifying complex systems, a basic problem is that confidentiality-preserving refinement is not horizontally composable, since sequentially composed refinement instances may violate confidentiality preservation. To overcome this issue, we employ a sound overapproximation that does allow horizontal composition and enables the verification to go through, thanks to a novel unwinding condition, refined noninterference, developed in the paper. We demonstrate the resulting verification framework on a multi-process system with flat memory and no timing information that is refined by a model hardware equipped with a cache and a set of local clocks, exhibiting insecure cache timing channels. We show that with proper countermeasures in place, for instance a combination of cache coloring and constant time execution, the resulting refined model is a confidentiality-preserving refinement of the abstract specification.}  
-}
+
 
 @InProceedings{proconda,
   Title                    = {ProConDa: Taming the Root Cause of Control Flow Attacks},
