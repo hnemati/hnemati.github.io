@@ -6,6 +6,7 @@
   Author                   = {Christoph Baumann and Mads Dam and Roberto Guanciale and Hamed Nemati},
   Booktitle                = {IEEE Computer Security Foundations Symposium (CSF)},
   Year                     = {2021},
+  url                      = {paper/InfoFlowRefinement.pdf},
   Abstract                 = {The concepts of information flow security and refinement are known to have had a troubled relationship ever since the seminal work of McLean. In this work we study refinements that support changes in data representation and semantics, including the addition of state variables that may induce new observational power or side channels. We propose a new epistemic approach to ignorance-preserving refinement where an abstract model is used as a specification of a system’s permitted information flows, that may include the declassification of secret information. The core idea is to require that refinement steps must not induce observer knowledge that is not already available in the abstract model. Our study is set in the context of a class of shared variable multi-agent models similar to interpreted systems in epistemic logic. We demonstrate the expressiveness of our framework through a series of small examples and compare our approach to existing, stricter notions of information-flow secure refinement based on bisimulations and noninterference preservation. Interestingly, noninterference preservation is not supported “out of the box” in our setting, because refinement steps may introduce new secrets that are independent of secrets already present at abstract level. To support verification, we first introduce a “cube-shaped” unwinding condition related to conditions recently studied in the context of value-dependent noninterference, kernel verification, and secure compilation. A fundamental problem with ignorance-preserving refinement, caused by the support for general data and observation refinement, is that sequential composability is lost. We propose a solution based on relational pre- and post-conditions and illustrate its use together with unwinding on the oblivious RAM construction of Chung and Pass.}  
 }
 
@@ -14,7 +15,7 @@
   Author                   = {Hamed Nemati and Pablo Buiras and Andreas Lindner and Roberto Guanciale and Swen Jacobs},
   Booktitle                = {International Conference on Computer-Aided Verification (CAV)},
   Year                     = {2020},
-
+  url                      = {paper/scamv.pdf},
   Abstract                 = {Observational models make tractable the analysis of information flow properties by providing an abstraction of side channels. We introduce a methodology and a tool, Scam-V, to validate observational models for modern computer architectures. We combine symbolic execution, relational analysis, and different program generation techniques to generate experiments and validate the models. An experiment consists of a randomly generated program together with two inputs that are observationally equivalent according to the model under the test. Validation is done by checking indistinguishability of the two inputs on real hardware by executing the program and analyzing the side channel. We have evaluated our framework by validating models that abstract the data-cache side channel of a Raspberry Pi 3 board with a processor implementing the ARMv8-A architecture. Our results show that Scam-V can identify bugs in the implementation of the models and generate test programs which invalidate the models due to hidden microarchitectural behavior.}
 }
 
@@ -48,9 +49,8 @@
 @InProceedings{SCAM-V19,
   Title                    = {Validation of abstract Side-channel Models for Computer Architectures (short paper)},
   Author                   = {Andreas Lindner and Hamed Nemati and Pablo Buiras and Roberto Guanciale and Swen Jacobs},
-  Booktitle                = {Submitted manuscript},
-  Year                     = {2019},
-
+  Booktitle                = {ENTROPY online proceeding},
+  Year                     = {ENTROPY Workshop 2019@EuroS&P},
   Abstract                 = {Modern computer architectures include complex features that make it infeasible to analyze their effects on channels that may compromise program security. abstract side channel models have been proposed to approximate these flows in terms of system state observations, thus making the analysis tractable. However, using these models to verify security properties relies on the assumption that states with equivalent observations would be indistinguishable to the attacker on real hardware. In this work, we introduce a methodology and tool to validate side-channel models, testing program inputs that lead to equivalent observations in automatically-generated programs, and measuring against channels on the hardware. We partition the input state space based on the observation model and rely on an adaptive refinement of the model to guide the validation.}
 }
 
