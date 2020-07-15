@@ -10,6 +10,18 @@
   Abstract                 = {The concepts of information flow security and refinement are known to have had a troubled relationship ever since the seminal work of McLean. In this work we study refinements that support changes in data representation and semantics, including the addition of state variables that may induce new observational power or side channels. We propose a new epistemic approach to ignorance-preserving refinement where an abstract model is used as a specification of a system’s permitted information flows, that may include the declassification of secret information. The core idea is to require that refinement steps must not induce observer knowledge that is not already available in the abstract model. Our study is set in the context of a class of shared variable multi-agent models similar to interpreted systems in epistemic logic. We demonstrate the expressiveness of our framework through a series of small examples and compare our approach to existing, stricter notions of information-flow secure refinement based on bisimulations and noninterference preservation. Interestingly, noninterference preservation is not supported “out of the box” in our setting, because refinement steps may introduce new secrets that are independent of secrets already present at abstract level. To support verification, we first introduce a “cube-shaped” unwinding condition related to conditions recently studied in the context of value-dependent noninterference, kernel verification, and secure compilation. A fundamental problem with ignorance-preserving refinement, caused by the support for general data and observation refinement, is that sequential composability is lost. We propose a solution based on relational pre- and post-conditions and illustrate its use together with unwinding on the oblivious RAM construction of Chung and Pass.}  
 }
 
+
+@misc{nemati2020speculative,
+    title={Speculative Leakage in ARM Cortex-A53},
+    author={Hamed Nemati and Roberto Guanciale and Pablo Buiras and Andreas Lindner},
+    year={2020},
+    eprint={2007.06865},
+    Url = {https://arxiv.org/abs/2007.06865},
+    archivePrefix={arXiv},
+    primaryClass={cs.CR},
+    Abstract = {The recent Spectre attacks have demonstrated that modern microarchitectural optimizations can make software insecure. These attacks use features like pipelining, out-of-order and speculation to extract information about the memory contents of a process via side-channels. In this paper we demonstrate that Cortex-A53 is affected by speculative leakage even if the microarchitecture does not support out-of-order execution. We named this new class of vulnerabilities SiSCloak.}
+}
+
 @InProceedings{SCAM-V20,
   Title                    = {Validation of abstract Side-channel Models for Computer Architectures},
   Author                   = {Hamed Nemati and Pablo Buiras and Andreas Lindner and Roberto Guanciale and Swen Jacobs},
