@@ -86,7 +86,7 @@
   articleno                = {4},
   numpages                 = {15},
   location                 = {Dresden, Germany},
-  series                   = {EuroSys ’19}
+  series                   = {EuroSys ’19},
   Abstract                 = {We present a compiler-based scheme for protecting the confidentiality of sensitive data in low-level applications (e.g. those written in C) in the presence of an active adversary. In  our scheme, the programmer marks sensitive data by writing lightweight annotations on the top-level definitions in the source code. The compiler then uses a combination of static dataflow analysis and runtime instrumentation to prevent data leaks even in the presence of low-level attacks. To reduce runtime overheads, the compiler uses a novel memory layout and a taint-aware form of control flow integrity. We formalize our scheme and prove its security. We have also implemented our scheme within the LLVM compiler and  evaluated it on the CPU-intensive SPEC micro-benchmarks, and on larger, real-world applications, including the NGINX webserver and the OpenLDAP directory server. We find that performance overheads introduced by our instrumentation are moderate (average 12% on SPEC), and the programmer effort to port the applications is minimal.}  
 }
 
