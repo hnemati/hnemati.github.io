@@ -73,7 +73,7 @@
   Abstract                 = {Spatial and temporal memory corruption vulnerabilities such as buffer overflows or use-after-free errors are a never-ending source of exploits and attacks against otherwise benign programs. They enable attackers to overwrite control-flow relevant data (e.g. the target location of indirect jump instructions) that are spatially or temporally located in close proximity to related user-controlled data, and thereby to subvert the control flow of the victim program. Established defenses either seek to mitigate the impact of these attacks by restricting the range of possible targets or attempt to hide necessary information from the attacker. None of these defenses, however, tackle the underlying problem: instructions in a program can write to memory sections they should not be able to write at the point in time when they are executed. In this paper, we propose PROCONDA, a general approach for protecting control-flow relevant data. PROCONDA introduces and leverages the Write Instruction Origin (WIO) to determine which code location should have write access to a certain memory location.}
 }
 
-@InProceedings{10.1145/3302424.3303952,
+@InProceedings{confllvm19,
   author                   = {Brahmakshatriya, Ajay and Kedia, Piyus and McKee, Derrick P. and Garg, Deepak and Lal, Akash and Rastogi, Aseem and Nemati, Hamed and Panda, Anmol and Bhatu, Pratik},
   title                    = {ConfLLVM: A Compiler for Enforcing Data Confidentiality in Low-Level Code},
   year                     = {2019},
