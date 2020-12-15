@@ -1,6 +1,17 @@
 % This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
+@InProceedings{cispa3208,
+  month                    = {September},
+  author                   = {Rahul Gopinath and Hamed Nemati and Andreas Zeller},
+  journal                  = {International Conference on Software Engineering (ICSE)},
+  title                    = {Input Algebras},
+  booktitle                = {International Conference on Software Engineering (ICSE)},
+  year                     = {2020},
+  abstract                 = {Grammar-based test generators are highly efficient in producing syntactically valid test inputs, and give their user precise control over which test inputs should be generated. Adapting a grammar or a test generator towards a particular testing goal can be tedious, though. We introduce the concept of a grammar transformer, specializing a grammar towards inclusion or exclusion of specific patterns: ?The phone number must not start with 011 or +1?. To the best of our knowledge, ours is the first approach to allow for arbitrary Boolean combinations of patterns, giving testers unprecedented flexibility in creating targeted software tests. The resulting specialized grammars can be used with any grammar-based fuzzer for targeted test generation, but also as validators to check whether the given specialization is met or not, opening up additional usage scenarios. In our evaluation on real-world bugs, we show that specialized grammars are accurate both in producing and validating targeted inputs.},
+  url                      = {https://publications.cispa.saarland/3208/}
+}
+
 @InProceedings{KBRef2021,
   Title                    = {On Compositional Information Flow Aware Refinement},
   Author                   = {Christoph Baumann and Mads Dam and Roberto Guanciale and Hamed Nemati},
@@ -9,7 +20,6 @@
   url                      = {paper/InfoFlowRefinement.pdf},
   Abstract                 = {The concepts of information flow security and refinement are known to have had a troubled relationship ever since the seminal work of McLean. In this work we study refinements that support changes in data representation and semantics, including the addition of state variables that may induce new observational power or side channels. We propose a new epistemic approach to ignorance-preserving refinement where an abstract model is used as a specification of a system’s permitted information flows, that may include the declassification of secret information. The core idea is to require that refinement steps must not induce observer knowledge that is not already available in the abstract model. Our study is set in the context of a class of shared variable multi-agent models similar to interpreted systems in epistemic logic. We demonstrate the expressiveness of our framework through a series of small examples and compare our approach to existing, stricter notions of information-flow secure refinement based on bisimulations and noninterference preservation. Interestingly, noninterference preservation is not supported “out of the box” in our setting, because refinement steps may introduce new secrets that are independent of secrets already present at abstract level. To support verification, we first introduce a “cube-shaped” unwinding condition related to conditions recently studied in the context of value-dependent noninterference, kernel verification, and secure compilation. A fundamental problem with ignorance-preserving refinement, caused by the support for general data and observation refinement, is that sequential composability is lost. We propose a solution based on relational pre- and post-conditions and illustrate its use together with unwinding on the oblivious RAM construction of Chung and Pass.}  
 }
-
 
 @misc{nemati2020speculative,
     title={Speculative Leakage in ARM Cortex-A53},
