@@ -409,7 +409,7 @@ function BibtexDisplay() {
       var alrt = document.getElementById('overtext');
       var ttl = document.getElementById('overtitle');
       ttl.innerText = "BibTeX Code:";
-	  alrt.value = ($(this).attr("bibtexcode").split("Abstract")[0] + '}');
+	  alrt.value = ($(this).attr("bibtexcode").split("Abstract")[0] + '}').split("  ").join("");
       openNav();
 	}
       );
