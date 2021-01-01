@@ -89,18 +89,18 @@ ol li
 #header
 { //background: #6F655F url(../img/trees1.jpg);
   background: rgb(236,231,231);
-  background: linear-gradient(207deg, rgba(236,231,231,1) 0%, rgba(110,108,108,1) 0%, rgba(0,0,0,1) 100%);	
-  height: 270px;
+  background: linear-gradient(207deg, rgba(236,231,231,1) 0%, rgba(110,108,108,1) 0%, rgba(0,0,0,1) 100%);
+  height: 180px;
   border-bottom: 1px solid #FFF;}
 
 #logo
 { width: 840px;
   position: relative;
-  height: 147px;}
+  height: 70px;}
 
 #logo #logo_text 
 { position: absolute; 
-  top: 27px;
+  top: 16px;
   left: 0;}
 
 #logo h1, #logo h2
@@ -139,18 +139,18 @@ ul#menu li
   padding: 0 0 0 6px;
   list-style: none;
   margin: 3px 2px 0 0;
-  background: #484848 url(tab.png) no-repeat 0 0;}
+  background: #484848  no-repeat 0 0;}
 
 ul#menu li a
-{ font: normal 100% 'trebuchet ms', arial, sans-serif;
+{ font: normal 110% 'trebuchet ms', arial, sans-serif;
   display: block; 
   float: left; 
-  height: 20px;
-  padding: 7px 32px 4px 26px;
+  height: 0px;
+  padding: 0px 1px 0px 20px;
   text-align: center;
   color: #FFF;
   text-decoration: none;
-  background: #484848 url(tab.png) no-repeat 100% 0;} 
+  background: #484848  no-repeat 100% 0;} 
 
 ul#menu li.selected
 { margin: 3px 3px 0 0;
@@ -167,7 +167,7 @@ ul#menu li a:hover
 { width: 928px;
   background: url(content_header.png) no-repeat;
   height: 15px;
-  margin-top: -90px;}
+  margin-top: -85px;}
 
 #content_footer
 { background: url(content_footer.png) no-repeat;
@@ -227,7 +227,7 @@ ul#menu li a:hover
 
 #content
 { text-align: left;
-  width: 613px;
+  width: 820px;
   padding: 0;}
 
 
