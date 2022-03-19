@@ -1,6 +1,23 @@
 % This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
+@inproceedings{DBLP:conf/isca/Nicholas22,
+  author    = {Nicholas Mosier and Hanna Lachnitt and Hamed Nemati and Caroline Trippel},
+  title     = {Axiomatic Hardware-Software Contracts for Security},
+  booktitle = {49th {ACM/IEEE} Annual International Symposium on Computer Architecture, {ISCA} 2022},
+  Abstract                 = {We propose leakage containment models (LCMs)- novel axiomatic security contracts which support formally reasoning about the security guarantees of programs when they run on particular microarchitectures. Our core contribution is an axiomatic vocabulary for formally defining LCMs, derived from the established axiomatic vocabulary used to formalize processor memory consistency models. Using this vocabulary, we formalize microarchitectural leakage—focusing on leakage through hardware memory systems—so that it can be automatically detected in programs. To illustrate the efficacy of LCMs, we first demonstrate that our leakage definition faithfully captures a sampling of (transient and non-transient) microarchitectural attacks from the literature. Second, we develop a static analysis tool based on LCMs which automatically identifies Spectre vulnerabilities in programs and scales to analyze real-world crypto-libraries.}
+}  
+
+@InProceedings{SCAM-V22,
+	Title                    = {A Case Study in Information Flow Refinement for Low Level Systems},
+	Author                   = {Roberto Guanciale and Christoph Baumann and Pablo Buiras and Mads Dam and Hamed Nemati},
+	Booktitle                = {Lecture Notes in Computer Science, Springer, Theory and Practice of Formal Methods},
+	Year                     = {2022},
+	Abstract                 = {In this work we employ information-flow-aware refinement to study security properties of a separation kernel. We focus on refinements that support changes in data representation and semantics, including the addition of state variables that may induce new observational power or side channels. We leverage an epistemic approach to ignorance-preserving refinement where an abstract model is used as a specification of a system's permitted information flows that may include the declassification of secret information. The core idea is to require that refinement steps must not induce observer knowledge that is not already available in the abstract model. In particular, we show that a simple key manager may cause information leakage via a refinement that includes cache and timing information. Finally, we show that deploying standard countermeasures against cache-based timing channels regains ignorance preservation.}
+}
+
+
+
 @InProceedings{micro21,
 	month                    = {October},
 	author                   = {Hamed Nemati and Pablo Buiras and Andreas Lindner and Roberto Guanciale},
