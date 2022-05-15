@@ -1,148 +1,95 @@
-@InProceedings{DBLP:conf/icitst/RezaeiMNA10,
-	Title                    = {TCvisor: {A} hypervisor level secure storage},
-	Author                   = {Mohammad Rezaei and Nafise Sadat Moosavi and Hamed Nemati and Reza Azmi},
-	Booktitle                = {5th International Conference for Internet Technology and Secured Transactions, {ICITST} 2010, London, United Kingdom, November 8-10, 2010},
-	Year                     = {2010},
-	Pages                    = {1--9},
-	
-	Bibsource                = {dblp computer science bibliography, https://dblp.org},
-	Biburl                   = {https://dblp.org/rec/bib/conf/icitst/RezaeiMNA10},
-	Crossref                 = {DBLP:conf/icitst/2010},
-	Timestamp                = {Sat, 29 Apr 2017 01:00:00 +0200},
-	Url                      = {http://ieeexplore.ieee.org/document/5678529/},
-	Abstract                 = {In this paper, we present design and implementation of TCvisor, a new trusted hypervisor. To this end, TCvisor provides a secure storage with different isolated view per user by using para-passthrough and combined key. In this regard, virtualization technology of processors has been used for complete isolation from operating system. By combining TPM base key, user's password and geo function key, TCvisor provides a secure storage in an environment with split data. We have applied feature wise security analysis TCvisor's secure storage from software system layers point then we have compared performance of TCvisor to selected candidates of existing layers.}
+% This file was created with JabRef 2.10.
+% Encoding: UTF-8
+
+@inproceedings{DBLP:conf/isca/Nicholas22,
+        author                   = {Nicholas Mosier and Hanna Lachnitt and Hamed Nemati and Caroline Trippel},
+        title                    = {Axiomatic Hardware-Software Contracts for Security},
+        booktitle                = {49th {ACM/IEEE} Annual International Symposium on Computer Architecture({ISCA})},
+        Year                     = {2022},
+	url                      = {paper/lcms_ISCA22_cameraready.pdf},
+        Abstract                 = {We propose leakage containment models (LCMs)- novel axiomatic security contracts which support formally reasoning about the security guarantees of programs when they run on particular microarchitectures. Our core contribution is an axiomatic vocabulary for formally defining LCMs, derived from the established axiomatic vocabulary used to formalize processor memory consistency models. Using this vocabulary, we formalize microarchitectural leakage—focusing on leakage through hardware memory systems—so that it can be automatically detected in programs. To illustrate the efficacy of LCMs, we first demonstrate that our leakage definition faithfully captures a sampling of (transient and non-transient) microarchitectural attacks from the literature. Second, we develop a static analysis tool based on LCMs which automatically identifies Spectre vulnerabilities in programs and scales to analyze real-world crypto-libraries.}
+}  
+
+@InProceedings{SCAM-V22,
+	Title                    = {A Case Study in Information Flow Refinement for Low Level Systems},
+	Author                   = {Roberto Guanciale and Christoph Baumann and Pablo Buiras and Mads Dam and Hamed Nemati},
+	Booktitle                = {Lecture Notes in Computer Science, Springer, Theory and Practice of Formal Methods},
+	Year                     = {2022},
+	url                      = {paper/InfoFlowRefinementcasestudy.pdf},	
+	Abstract                 = {In this work we employ information-flow-aware refinement to study security properties of a separation kernel. We focus on refinements that support changes in data representation and semantics, including the addition of state variables that may induce new observational power or side channels. We leverage an epistemic approach to ignorance-preserving refinement where an abstract model is used as a specification of a system's permitted information flows that may include the declassification of secret information. The core idea is to require that refinement steps must not induce observer knowledge that is not already available in the abstract model. In particular, we show that a simple key manager may cause information leakage via a refinement that includes cache and timing information. Finally, we show that deploying standard countermeasures against cache-based timing channels regains ignorance preservation.}
 }
 
-@InProceedings{DBLP:conf/worldcis/BorgheiAGN11,
-	Title                    = {Virtual machine based security architecture},
-	Author                   = {Elahe Borghei and Reza Azmi and Alireza Ghahremanian and Hamed Nemati},
-	Booktitle                = {2011 World Congress on Internet Security, WorldCIS 2011, London, UK, February 21-23, 2011},
-	Year                     = {2011},
-	Pages                    = {210--215},
-	
-	Bibsource                = {dblp computer science bibliography, https://dblp.org},
-	Biburl                   = {https://dblp.org/rec/bib/conf/worldcis/BorgheiAGN11},
-	Crossref                 = {DBLP:conf/worldcis/2011},
-	Timestamp                = {Sat, 29 Apr 2017 01:00:00 +0200},
-	Url                      = {http://ieeexplore.ieee.org/document/5749853/},
-	Abstract                 = {In this paper a new approach based on using reference validation mechanism to improve system reliability is proposed. Since device drivers are the main cause of system failure, they are chosen as case study. Thus by improving driver reliability, security of the whole system is improved. To monitor driver functionality and also manage kernel memory, lightweight hypervisor layer is used, and reference validation mechanism is implemented in this layer.}
+
+
+@InProceedings{micro21,
+	month                    = {October},
+	author                   = {Hamed Nemati and Pablo Buiras and Andreas Lindner and Roberto Guanciale},
+	journal                  = {IEEE/ACM International Symposium on Microarchitecture},
+	title                    = {Validation of Side-Channel Models via Observation Refinement},
+	booktitle                = {2021 54th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)},
+	year                     = {2021},
+	url                      = {},
+	Abstract                 = {Observational models enable the analysis of information flow properties against side channels. Relational testing has been used to validate the soundness of these models by measuring the side channel on states that the model considers indistinguishable. However, unguided search can generate test states that are too similar to each other to invalidate the model. To address this we introduce observation refinement, a technique to guide the exploration of the state space to focus on hardware features of interest. We refine observational models to include fine-grained observations that characterize behavior that we want to exclude. States that yield equivalent refined observations are then ruled out, reducing the size of the space.}
 }
 
-@InProceedings{DBLP:conf/ccs/DamGN13,
-	Title                    = {Machine code verification of a tiny {ARM} hypervisor},
-	Author                   = {Mads Dam and Roberto Guanciale and Hamed Nemati},
-	Booktitle                = {TrustED'13, Proceedings of the 2013 {ACM} Workshop on Trustworthy Embedded Devices, Co-located with {CCS} 2013, November 4, 2013, Berlin,  Germany},
-	Year                     = {2013},
-	Pages                    = {3--12},
-	
-	Bibsource                = {dblp computer science bibliography, https://dblp.org},
-	Biburl                   = {https://dblp.org/rec/bib/conf/ccs/DamGN13},
-	Crossref                 = {DBLP:conf/ccs/2013trusted},
-	Doi                      = {10.1145/2517300.2517302},
-	Timestamp                = {Fri, 31 Jan 2014 10:38:00 +0100},
-	Url                      = {http://doi.acm.org/10.1145/2517300.2517302},
-	Abstract                 = {Hypervisors are low level execution platforms that provide isolated partitions on shared resources, allowing to design secure systems without using dedicated hardware devices. A key requirement of this kind of solution is the formal verification of the software trusted computing base, preferably at the binary level. We accomplish a detailed verification of an ARMv7 tiny hypervisor, proving its correctness at the machine code level. We present our verification strategy, which mixes the usage of the theorem prover HOL4, the computation of weakest preconditions, and the use of SMT solvers to largely automate the verification process. The automation relies on an integration of HOL4 with BAP, the Binary Analysis Platform developed at CMU. To enable the adoption of the BAP back-ends to compute weakest preconditions and control flow graphs, a HOL4-based tool was implemented that transforms ARMv7 assembly programs to the BAP Intermediate Language. Since verifying contracts by computing the weakest precondition depends on resolving indirect jumps, we implemented a procedure that integrates SMT solvers and BAP to discover all the possible assignments to the indirect jumps under the contract precondition.},
-  Bibsource                = {dblp computer science bibliography, https://dblp.org}
+@InProceedings{usenix21,
+	month                    = {August},
+	author                   = {Daniel Weber and Ahmad Ibrahim and Hamed Nemati and Michael Schwarz and Christian Rossow},
+	journal                  = {USENIX Security Symposium},
+	title                    = {Osiris: Automated Discovery of Microarchitectural Side Channels},
+	booktitle                = {USENIX Security Symposium},
+	year                     = {2021},
+	url                      = {https://publications.cispa.saarland/3431/1/main.pdf},
+	Abstract                 = {In the last years, a plurality of side channels has been discovered on CPUs. These side channels have been used in powerful attacks, e.g., on cryptographic implementations, or as building blocks in transient-execution attacks such as Spectre or Meltdown. However, in many cases, discovering side channels is still a tedious manual process. In this paper, we present Osiris, a fuzzing-based framework to automatically discover microarchitectural side channels. Based on a machine-readable specification of a CPU's ISA, Osiris generates instruction-sequence triples and automatically tests whether they form a timing-based covert channel. Furthermore, Osiris evaluates their usability as a covert channel in transient-execution attacks, i.e., as the microarchitectural encoding for attacks like Spectre. In total, we discover four novel timing-based side channels on Intel and AMD CPUs. Based on these side channels, we demonstrate exploitation in three case studies. We show that our microarchitectural KASLR break using non-temporal loads, FlushConflict, is currently the only one that works on the new Intel Ice Lake and Comet Lake microarchitectures. We present a cross-core cross-VM covert channel that is not relying on the memory subsystem and transmits up to 1 kbit/s. We demonstrate this channel on the AWS cloud, showing that it is stealthy and noise resistant. Finally, we demonstrate Stream+Reload, a covert channel for transient-execution attacks that, on average, allows leaking 7.83 bytes within a transient window, improving state-of-the-art attacks that only leak up to 3 bytes.}
 }
 
-@InProceedings{DBLP:conf/ccs/DamGKNS13,
-	Title                    = {Formal verification of information flow security for a simple arm-based separation kernel},
-	Author                   = {Mads Dam and Roberto Guanciale and Narges Khakpour and Hamed Nemati and Oliver Schwarz},
-	Booktitle                = {2013 {ACM} {SIGSAC} Conference on Computer and Communications Security, CCS'13, Berlin, Germany, November 4-8, 2013},
-	Year                     = {2013},
-	Pages                    = {223--234},
-	
-	Bibsource                = {dblp computer science bibliography, https://dblp.org},
-	Biburl                   = {https://dblp.org/rec/bib/conf/ccs/DamGKNS13},
-	Crossref                 = {DBLP:conf/ccs/2013},
-	Doi                      = {10.1145/2508859.2516702},
-	Timestamp                = {Fri, 08 Nov 2013 09:43:20 +0100},
-	Url                      = {http://doi.acm.org/10.1145/2508859.2516702},
-	Abstract                 = {A separation kernel simulates a distributed environment using a single physical machine by executing partitions in isolation and appropriately controlling communication among them. We present a formal verification of information flow security for a simple separation kernel for ARMv7. Previous work on information flow kernel security leaves communication to be handled by model-external means, and cannot be used to draw conclusions when there is explicit interaction between partitions. We propose a different approach where communication between partitions is made explicit and the information flow is analyzed in the presence of such a channel. Limiting the kernel functionality as much as meaningfully possible, we accomplish a detailed analysis and verification of the system, proving its correctness at the level of the ARMv7 assembly. As a sanity check we show how the security condition is reduced to noninterference in the special case where no communication takes place. The verification is done in HOL4 taking the Cambridge model of ARM as basis, transferring verification tasks on the actual assembly code to an adaptation of the BAP binary analysis tool developed at CMU.},
-	  Bibsource                = {dblp computer science bibliography, https://dblp.org}
+@InProceedings{icse3208,
+	month                    = {September},
+	author                   = {Rahul Gopinath and Hamed Nemati and Andreas Zeller},
+	journal                  = {International Conference on Software Engineering (ICSE)},
+	title                    = {Input Algebras},
+	booktitle                = {International Conference on Software Engineering (ICSE)},
+	year                     = {2021},
+	url                      = {https://publications.cispa.saarland/3208/},
+	Abstract                 = {Grammar-based test generators are highly efficient in producing syntactically valid test inputs, and give their user precise control over which test inputs should be generated. Adapting a grammar or a test generator towards a particular testing goal can be tedious, though. We introduce the concept of a grammar transformer, specializing a grammar towards inclusion or exclusion of specific patterns: "The phone number must not start with 011 or +1". To the best of our knowledge, ours is the first approach to allow for arbitrary Boolean combinations of patterns, giving testers unprecedented flexibility in creating targeted software tests. The resulting specialized grammars can be used with any grammar-based fuzzer for targeted test generation, but also as validators to check whether the given specialization is met or not, opening up additional usage scenarios. In our evaluation on real-world bugs, we show that specialized grammars are accurate both in producing and validating targeted inputs.}
 }
 
-@InProceedings{DBLP:conf/sofsem/NematiGD15,
-	Title                    = {Trustworthy Virtualization of the ARMv7 Memory Subsystem},
-	Author                   = {Hamed Nemati and Roberto Guanciale and Mads Dam},
-	Booktitle                = {{SOFSEM} 2015: Theory and Practice of Computer Science - 41st International Conference on Current Trends in Theory and Practice of Computer Science,  Pec pod Sn{\v{e}}{\v{z}}kou, Czech Republic, January 24-29, 2015. Proceedings},
-	Year                     = {2015},
-	Pages                    = {578--589},
-	
-	Bibsource                = {dblp computer science bibliography, https://dblp.org},
-	Biburl                   = {https://dblp.org/rec/bib/conf/sofsem/NematiGD15},
-	Crossref                 = {DBLP:conf/sofsem/2015},
-	Doi                      = {10.1007/978-3-662-46078-8_48},
-	Timestamp                = {Thu, 15 Jun 2017 21:37:45 +0200},
-	Url                      = {https://doi.org/10.1007/978-3-662-46078-8_48},
-	Abstract                 = {In order to host a general purpose operating system, hypervisors need to virtualize the CPU memory subsystem. This entails dynamically changing MMU resources, in particular the page tables, to allow a hosted OS to recongure its own memory. In this paper we present the verication of the isolation properties of a hypervisor design that uses direct paging. This virtualization approach allows to host commodity OSs without requiring either shadow data structures or specialized hardware support. Our verication targets a system consisting of a commodity guest running Linux.The verication involves three steps: (i) Formalization of an ARMv7 CPU that includes the MMU, (ii) Formalization of a system behavior that includes the hypervisor and the untrusted guest (iii) Verication of the isolation properties. Formalization and proof are done in the HOL4 theorem prover, thus allowing to re-use the existing HOL4 ARMv7 model developed in Cambridge.}
+@InProceedings{KBRef2021,
+	Title                    = {On Compositional Information Flow Aware Refinement},
+	Author                   = {Christoph Baumann and Mads Dam and Roberto Guanciale and Hamed Nemati},
+	Booktitle                = {IEEE Computer Security Foundations Symposium (CSF)},
+	Year                     = {2021},
+	url                      = {paper/InfoFlowRefinement.pdf},
+	Abstract                 = {The concepts of information flow security and refinement are known to have had a troubled relationship ever since the seminal work of McLean. In this work we study refinements that support changes in data representation and semantics, including the addition of state variables that may induce new observational power or side channels. We propose a new epistemic approach to ignorance-preserving refinement where an abstract model is used as a specification of a system’s permitted information flows, that may include the declassification of secret information. The core idea is to require that refinement steps must not induce observer knowledge that is not already available in the abstract model. Our study is set in the context of a class of shared variable multi-agent models similar to interpreted systems in epistemic logic. We demonstrate the expressiveness of our framework through a series of small examples and compare our approach to existing, stricter notions of information-flow secure refinement based on bisimulations and noninterference preservation. Interestingly, noninterference preservation is not supported “out of the box” in our setting, because refinement steps may introduce new secrets that are independent of secrets already present at abstract level. To support verification, we first introduce a “cube-shaped” unwinding condition related to conditions recently studied in the context of value-dependent noninterference, kernel verification, and secure compilation. A fundamental problem with ignorance-preserving refinement, caused by the support for general data and observation refinement, is that sequential composability is lost. We propose a solution based on relational pre- and post-conditions and illustrate its use together with unwinding on the oblivious RAM construction of Chung and Pass.}  
 }
 
-@InProceedings{DBLP:conf/esorics/ChfoukaNGDE15,
-	Title                    = {Trustworthy Prevention of Code Injection in Linux on Embedded Devices},
-	Author                   = {Hind Chfouka and Hamed Nemati and Roberto Guanciale and Mads Dam and Patrik Ekdahl},
-	Booktitle                = {Computer Security - {ESORICS} 2015 - 20th European Symposium on Research in Computer Security, Vienna, Austria, September 21-25, 2015, Proceedings, Part {I}},
-	Year                     = {2015},
-	Pages                    = {90--107},
-	
-	Bibsource                = {dblp computer science bibliography, https://dblp.org},
-	Biburl                   = {https://dblp.org/rec/bib/conf/esorics/ChfoukaNGDE15},
-	Crossref                 = {DBLP:conf/esorics/2015-1},
-	Doi                      = {10.1007/978-3-319-24174-6_5},
-	Timestamp                = {Tue, 23 May 2017 01:07:16 +0200},
-	Url                      = {https://doi.org/10.1007/978-3-319-24174-6_5},
-	Abstract                 = {We present MProsper, a trustworthy system to prevent code injection in Linux on embedded devices. MProsper is a formally verified run-time monitor, which forces an untrusted Linux to obey the executable space protection policy; a memory area can be either executable or writable, but cannot be both. The executable space protection allows the MProsper’s monitor to intercept every change to the executable code performed by a user application or by the Linux kernel. On top of this infrastructure, we use standard code signing to prevent code injection. MProsper is deployed on top of the Prosper hypervisor and is implemented as an isolated guest. Thus MProsper inherits the security property verified for the hypervisor: (i) Its code and data cannot be tampered by the untrusted Linux guest and (ii) all changes to the memory layout is intercepted, thus enabling MProsper to completely mediate every operation that can violate the desired security property. The verification of the monitor has been performed using the HOL4 theorem prover and by extending the existing formal model of the hypervisor with the formal specification of the high level model of the monitor.}
+@misc{nemati2020speculative,
+	title={Speculative Leakage in ARM Cortex-A53 (short paper)},
+	author={Hamed Nemati and Roberto Guanciale and Pablo Buiras and Andreas Lindner},
+	year={2020},
+	eprint={2007.06865},
+	Url = {https://arxiv.org/abs/2007.06865},
+	archivePrefix={arXiv},
+	primaryClass={cs.CR},
+	Abstract = {The recent Spectre attacks have demonstrated that modern microarchitectural optimizations can make software insecure. These attacks use features like pipelining, out-of-order and speculation to extract information about the memory contents of a process via side-channels. In this paper we demonstrate that Cortex-A53 is affected by speculative leakage even if the microarchitecture does not support out-of-order execution. We named this new class of vulnerabilities SiSCloak.}
 }
 
-@InProceedings{DBLP:conf/trust/NematiDGDV15,
-	Title                    = {Trustworthy Memory Isolation of Linux on Embedded Devices},
-	Author                   = {Hamed Nemati and Mads Dam and Roberto Guanciale and Viktor Do and Arash Vahidi},
-	Booktitle                = {Trust and Trustworthy Computing - 8th International Conference, {TRUST} 2015, Heraklion, Greece, August 24-26, 2015, Proceedings},
-	Year                     = {2015},
-	Pages                    = {125--142},
-	
-	Bibsource                = {dblp computer science bibliography, https://dblp.org},
-	Biburl                   = {https://dblp.org/rec/bib/conf/trust/NematiDGDV15},
-	Crossref                 = {DBLP:conf/trust/2015},
-	Doi                      = {10.1007/978-3-319-22846-4_8},
-	Timestamp                = {Tue, 23 May 2017 01:08:12 +0200},
-	Url                      = {https://doi.org/10.1007/978-3-319-22846-4_8},
-	Abstract                 = {The isolation of security critical components from an untrusted OS allows to both protect applications and to harden the OS itself, for instance by run-time monitoring. Virtualization of the memory subsystem is a key component to provide such isolation. We present the design, implementation and verification of a virtualization platform for the ARMv7-A processor family. Our design is based on direct paging, an MMU virtualization mechanism previously introduced by Xen for the x86 architecture, and used later with minor variants by the Secure Virtual Architecture, SVA. We show that the direct paging mechanism can be implemented using a compact design, suitable for formal verification down to a low level of abstraction, without penalizing system performance. The verification is performed using the HOL4 theorem prover and uses a detailed model of the ARMv7-A ISA, including the MMU. We prove memory isolation of the hosted components along with information flow security for an abstract top level model of the virtualization mechanism. The abstract model is refined down to a HOL4 transition system closely resembling a C implementation. The virtualization mechanism is demonstrated on real hardware via a hypervisor capable of hosting Linux as an untrusted guest.}
+@InProceedings{SCAM-V20,
+	Title                    = {Validation of abstract Side-channel Models for Computer Architectures},
+	Author                   = {Hamed Nemati and Pablo Buiras and Andreas Lindner and Roberto Guanciale and Swen Jacobs},
+	Booktitle                = {International Conference on Computer-Aided Verification (CAV)},
+	Year                     = {2020},
+	url                      = {paper/scamv.pdf},
+	Abstract                 = {Observational models make tractable the analysis of information flow properties by providing an abstraction of side channels. We introduce a methodology and a tool, Scam-V, to validate observational models for modern computer architectures. We combine symbolic execution, relational analysis, and different program generation techniques to generate experiments and validate the models. An experiment consists of a randomly generated program together with two inputs that are observationally equivalent according to the model under the test. Validation is done by checking indistinguishability of the two inputs on real hardware by executing the program and analyzing the side channel. We have evaluated our framework by validating models that abstract the data-cache side channel of a Raspberry Pi 3 board with a processor implementing the ARMv8-A architecture. Our results show that Scam-V can identify bugs in the implementation of the models and generate test programs which invalidate the models due to hidden microarchitectural behavior.}
 }
 
-@InProceedings{DBLP:conf/sp/GuancialeNBD16,
-	Title                    = {Cache Storage Channels: Alias-Driven Attacks and Verified Countermeasures},
-	Author                   = {Roberto Guanciale and Hamed Nemati and Christoph Baumann and Mads Dam},
-	Booktitle                = {{IEEE} Symposium on Security and Privacy, {SP} 2016, San Jose, CA, USA, May 22-26, 2016},
-	Year                     = {2016},
-	Pages                    = {38--55},
-	Bibsource                = {dblp computer science bibliography, https://dblp.org},
-	Biburl                   = {https://dblp.org/rec/bib/conf/sp/GuancialeNBD16},
-	Crossref                 = {DBLP:conf/sp/2016},
-	Doi                      = {10.1109/SP.2016.11},
-	Timestamp                = {Fri, 26 May 2017 01:00:00 +0200},
-	Url                      = {https://doi.org/10.1109/SP.2016.11},
-	Abstract                 = {Caches pose a significant challenge to formal proofs of security for code executing on application processors, as the cache access pattern of security-critical services may leak secret information. This paper reveals a novel attack vector, exposing a low-noise cache storage channel that can be exploited by adapting well-known timing channel analysis techniques. The vector can also be used to attack various types of security-critical software such as hypervisors and application security monitors. The attack vector uses virtual aliases with mismatched memory attributes and self-modifying code to misconfigure the memory system, allowing an attacker to place incoherent copies of the same physical address into the caches and observe which addresses are stored in different levels of cache. We design and implement three different attacks using the new vector on trusted services and report on the discovery of an 128-bit key from an AES encryption service running in TrustZone on Raspberry Pi2. Moreover, we subvert the integrity properties of an ARMv7 hypervisor that was formally verified against a cache-less model. We evaluate well-known countermeasures against the new attack vector and propose a verification methodology that allows to formally prove the effectiveness of defence mechanisms on the binary code of the trusted software.}
-}
-
-@InProceedings{DBLP:conf/post/NematiBGD18,
-	  Title                    = {Formal Verification of Integrity-Preserving Countermeasures Against
-	 Cache Storage Side-Channels},
-	  Author                   = {Hamed Nemati and Christoph Baumann and Roberto Guanciale and Mads Dam},
-	  Booktitle                = {Principles of Security and Trust - 7th International Conference, {POST}
-	 2018, Held as Part of the European Joint Conferences on Theory and
-	 Practice of Software, {ETAPS} 2018, Thessaloniki, Greece, April 14-20,
-	 2018, Proceedings},
-	  Year                     = {2018},
-	  Pages                    = {109--133},
-	 
-	  Bibsource                = {dblp computer science bibliography, https://dblp.org},
-	  Biburl                   = {https://dblp.org/rec/bib/conf/post/NematiBGD18},
-	  Crossref                 = {DBLP:conf/post/2018},
-	  Doi                      = {10.1007/978-3-319-89722-6_5},
-	  Timestamp                = {Mon, 16 Apr 2018 13:28:26 +0200},
-	  Url                      = {https://doi.org/10.1007/978-3-319-89722-6_5},
-	  Abstract                 = {Formal verification of systems-level software such as hypervisors and operating systems can enhance system trustworthiness. However, without taking low level features like caches into account the verification may become unsound. While this is a well-known fact w.r.t. timing leaks, few works have addressed latent cache storage side-channels, whose effects are not limited to information leakage. We present a verification methodology to analyse soundness of countermeasures used to neutralise these channels. We apply the proposed methodology to existing countermeasures, showing that they allow to restore integrity of the system. We decompose the proof effort into verification conditions that allow for an easy adaption of our strategy to various software and hardware platforms. As case study, we extend the verification of an existing hypervisor whose integrity can be tampered using cache storage channels. We used the HOL4 theorem prover to validate our security analysis, applying the verification methodology to a generic hardware model.}  
+@InProceedings{mitb19,
+	Title                    = {MAC-in-the-Box: Verifying the Security of a Minimalistic Hardware Design for MAC Computation},
+	Author                   = {Robert K{\"u}nnemann and Hamed Nemati},
+	Booktitle                = {European Symposium on Research in Computer Security (ESORICS)},
+	Year                     = {2020},
+	Url                      = {paper/mitb-full.pdf},
+	Abstract                 = {In this work, we study the verification of security properties of a minimalistic hardware design called the MAC-in-the-Box. This device computes a message authentication code based on the SHA-3 hash function and a key that is stored on device, but never output directly. It is designed for secure password storage, but may also be used for secure key-exchange and second-factor authentication. We formally verify that no outside observer can distinguish this device from an ideal functionality that provides only access to a hashing oracle.}
 }
 
 @inproceedings{DBLP:conf/tap/KhosrowjerdiNM20,
@@ -158,78 +105,6 @@
 	biburl                   = {https://dblp.org/rec/conf/tap/KhosrowjerdiNM20.bib},
 	bibsource                = {dblp computer science bibliography, https://dblp.org},
 	Abstract                 = {We explore the application of graph database technology to spatio-temporal model checking of cooperating cyber-physical systems-of-systems such as vehicle platoons. We present a translation of spatio-temporal automata (STA) and the spatio-temporal logic STAL to semantically equivalent property graphs and graph queries respectively. We prove a sound reduction of the spatio-temporal verification problem to graph database query solving. The practicability and efficiency of this approach is evaluated by introducing NeoMC, a prototype implementation of our explicit model checking approach based on Neo4j. To evaluate NeoMC we consider case studies of verifying vehicle platooning models. Our evaluation demonstrates the effectiveness of our approach in terms of execution time and counterexample detection.}
-}
-
-@InProceedings{ISCC07_031,
-	Title                    = {Intrusion Detection Using VMM},
-	Author                   = {Hamed Nemati and Reza Azmi and Alireza Ghahramanian},
-	Booktitle                = {7th International ISC Conference on Information Security and Cryptology, {ISCC} 2010, Iran, [In Farsi].},
-	Year                     = {2010},
-	
-	Url                      = {https://bit.ly/2ForuvE}
-}
-
-{DBLP:journals/ics/afzali2012,
-	Title                    = {Private Key Based Query on Encrypted Data},
-	Author                   = {With: Hammad Afzali and Hamed Nemati and Reza Azmi},
-	Journal                  = {Journal of THE ISC INTERNATIONAL JOURNAL OF INFORMATION SECURITY},
-	Year                     = {2012},
-	Number                   = {1},
-	Pages                    = {41--50},
-	Volume                   = {4},
-	
-	Doi                      = {10.22042/isecure.2015.4.1.5},
-	Url                      = {} %%{http://www.sid.ir/En/Journal/ViewPaper.aspx?ID=346694}
-}
-
-@InProceedings{ISCEE15_017,
-	Title                    = {Reconstruction of OS Critical Data-Structure Using VMM},
-	Author                   = {Hammad Afzali and Hamed Nemati and Reza Azmi},
-	Booktitle                = {15th Iran Electrical Engeenring Conference, {ICEE} 2012, Iran, [In Farsi].},
-	Year                     = {2012},
-	
-	Url                      = {https://bit.ly/2FnwLEy}
-}
-
-@Article{DBLP:journals/jcs/GuancialeNDB16,
-	Title                    = {Provably secure memory isolation for Linux on {ARM}},
-	Author                   = {Roberto Guanciale and Hamed Nemati and Mads Dam and Christoph Baumann},
-	Journal                  = {Journal of Computer Security},
-	Year                     = {2016},
-	Number                   = {6},
-	Pages                    = {793--837},
-	Volume                   = {24},
-	
-	Bibsource                = {dblp computer science bibliography, https://dblp.org},
-	Biburl                   = {https://dblp.org/rec/bib/journals/jcs/GuancialeNDB16},
-	Doi                      = {10.3233/JCS-160558},
-	Timestamp                = {Fri, 26 May 2017 01:00:00 +0200},
-	Url                      = {https://doi.org/10.3233/JCS-160558},
-	Abstract                 = {The isolation of security critical components from an untrusted OS allows to both protect applications and to harden the OS itself. Virtualization of the memory subsystem is a key component to provide such isolation. We present the design, implementation and verification of a memory virtualization platform for ARMv7-A processors. The design is based on direct paging, an MMU virtualization mechanism previously introduced by Xen. It is shown that this mechanism can be implemented using a compact design, suitable for formal verification down to a low level of abstraction, without penalizing system performance. The verification is performed using the HOL4 theorem prover and uses a detailed model of the processor. We prove memory isolation along with information flow security for an abstract top-level model of the virtualization mechanism. The abstract model is refined down to a transition system closely resembling a C implementation. Additionally, it is demonstrated how the gap between the low-level abstraction and the binary level-can be filled, using tools that check Hoare contracts. The virtualization mechanism is demonstrated on real hardware via a hypervisor hosting Linux and supporting a tamper-proof run-time monitor that provably prevents code injection in the Linux guest.}  
-}
-
-@PhdThesis{DBLP:phd/basesearch/Nemati17,
-	Title                    = {Secure System Virtualization: End-to-End Verification of Memory Isolation},
-	Author                   = {Hamed Nemati},
-	School                   = {Royal Institute of Technology, Stockholm, Sweden},
-	Year                     = {2017},
-	
-	Bibsource                = {dblp computer science bibliography, https://dblp.org},
-	Biburl                   = {https://dblp.org/rec/bib/phd/basesearch/Nemati17},
-	Timestamp                = {Fri, 20 Oct 2017 01:00:00 +0200},
-	Url                      = {http://kth.diva-portal.org/smash/get/diva2:1136624/FULLTEXT03.pdf},
-	Urn                      = {urn:nbn:se:kth:diva-213030},
-	Abstract                 = {Over the last years, security kernels have played a promising role in reshaping the landscape of platform security on today’s ubiquitous embedded devices. Security kernels, such as separation kernels, enable constructing high-assurance mixed-criticality execution platforms. They reduce the software portion of the system’s trusted computing base to a thin layer, which enforces isolation between low- and high-criticality components. The reduced  trusted computing base minimizes the system attack surface and facilitates the use of formal methods to ensure functional correctness and security of the kernel. In this thesis, we explore various aspects of building a provably secure separation kernel using virtualization technology. In particular, we examine techniques related to the appropriate management of the memory subsystem. Once these techniques were implemented and functionally verified, they provide reliable a foundation for application scenarios that require strong guarantees of isolation and facilitate formal reasoning about the system’s overall security.}
-}
-
-@TechReport{Nemati1137182,
-    author                   = {Nemati, Hamed and Guanciale, Roberto and Baumann, Christoph and Dam, Mads},
-    institution              = {KTH, Theoretical Computer Science, TCS},
-    note                     = {QC 20170830},
-    title                    = {Formal Analysis of Countermeasures against Cache Storage Side Channels (technical report)},
-    Url                      = {paper/FormalAnalysisofCountermeasures.pdf},
-    year                     = {2017},
-    Abstract                 = {Formal verification of systems-level software such as hypervisors and operating systems can enhance system trustworthiness. However, without taking low level features like caches into account the verification may become unsound. While this is a well-known fact wrt. timing leaks, few works have addressed latent cache storage side-channels. We present a verification methodology to analyse soundness of countermeasures used to neutralise cache storage channels. We apply the proposed methodology to existing countermeasures, showing that they allow to restore integrity and prove confidentiality of the system. We decompose the proof effort into verification conditions that allow for an easy adaption of our strategy to various software and hardware platforms. As case study, we extend the verification of an existing hypervisor whose integrity can be tampered using cache storage channels. We used the HOL4 theorem prover to validate our security analysis, applying the verification methodology to formal models of ARMv7 and ARMv8}
 }
 
 @InProceedings{SCAM-V19,
@@ -266,96 +141,221 @@
 	Abstract                 = {We have developed a new formal framework to securely compile abstract specification (e.g. source language) to a refined model (e.g. assembly). Our goal is to prevent unintended leakage of secret data thus preserving the information flow of the abstract model, when they are transformed to a more refined system. The key idea of our approach is to use the abstract model as a specification of the permitted information flow, and then to ensure that this flow induces an upper bound on the corresponding flow in the refined model.},
 }
 
-@InProceedings{SCAM-V20,
-	Title                    = {Validation of abstract Side-channel Models for Computer Architectures},
-	Author                   = {Hamed Nemati and Pablo Buiras and Andreas Lindner and Roberto Guanciale and Swen Jacobs},
-	Booktitle                = {International Conference on Computer-Aided Verification (CAV)},
-	Year                     = {2020},
-	url                      = {paper/scamv.pdf},
-	Abstract                 = {Observational models make tractable the analysis of information flow properties by providing an abstraction of side channels. We introduce a methodology and a tool, Scam-V, to validate observational models for modern computer architectures. We combine symbolic execution, relational analysis, and different program generation techniques to generate experiments and validate the models. An experiment consists of a randomly generated program together with two inputs that are observationally equivalent according to the model under the test. Validation is done by checking indistinguishability of the two inputs on real hardware by executing the program and analyzing the side channel. We have evaluated our framework by validating models that abstract the data-cache side channel of a Raspberry Pi 3 board with a processor implementing the ARMv8-A architecture. Our results show that Scam-V can identify bugs in the implementation of the models and generate test programs which invalidate the models due to hidden microarchitectural behavior.}
+@InProceedings{DBLP:conf/post/NematiBGD18,
+	  Title                    = {Formal Verification of Integrity-Preserving Countermeasures Against
+	 Cache Storage Side-Channels},
+	  Author                   = {Hamed Nemati and Christoph Baumann and Roberto Guanciale and Mads Dam},
+	  Booktitle                = {Principles of Security and Trust - 7th International Conference, {POST}
+	 2018, Held as Part of the European Joint Conferences on Theory and
+	 Practice of Software, {ETAPS} 2018, Thessaloniki, Greece, April 14-20,
+	 2018, Proceedings},
+	  Year                     = {2018},
+	  Pages                    = {109--133},
+	 
+	  Bibsource                = {dblp computer science bibliography, https://dblp.org},
+	  Biburl                   = {https://dblp.org/rec/bib/conf/post/NematiBGD18},
+	  Crossref                 = {DBLP:conf/post/2018},
+	  Doi                      = {10.1007/978-3-319-89722-6_5},
+	  Timestamp                = {Mon, 16 Apr 2018 13:28:26 +0200},
+	  Url                      = {https://doi.org/10.1007/978-3-319-89722-6_5},
+	  Abstract                 = {Formal verification of systems-level software such as hypervisors and operating systems can enhance system trustworthiness. However, without taking low level features like caches into account the verification may become unsound. While this is a well-known fact w.r.t. timing leaks, few works have addressed latent cache storage side-channels, whose effects are not limited to information leakage. We present a verification methodology to analyse soundness of countermeasures used to neutralise these channels. We apply the proposed methodology to existing countermeasures, showing that they allow to restore integrity of the system. We decompose the proof effort into verification conditions that allow for an easy adaption of our strategy to various software and hardware platforms. As case study, we extend the verification of an existing hypervisor whose integrity can be tampered using cache storage channels. We used the HOL4 theorem prover to validate our security analysis, applying the verification methodology to a generic hardware model.}  
 }
 
-@misc{nemati2020speculative,
-	title={Speculative Leakage in ARM Cortex-A53 (short paper)},
-	author={Hamed Nemati and Roberto Guanciale and Pablo Buiras and Andreas Lindner},
-	year={2020},
-	eprint={2007.06865},
-	Url = {https://arxiv.org/abs/2007.06865},
-	archivePrefix={arXiv},
-	primaryClass={cs.CR},
-	Abstract = {The recent Spectre attacks have demonstrated that modern microarchitectural optimizations can make software insecure. These attacks use features like pipelining, out-of-order and speculation to extract information about the memory contents of a process via side-channels. In this paper we demonstrate that Cortex-A53 is affected by speculative leakage even if the microarchitecture does not support out-of-order execution. We named this new class of vulnerabilities SiSCloak.}
+@PhdThesis{DBLP:phd/basesearch/Nemati17,
+	Title                    = {Secure System Virtualization: End-to-End Verification of Memory Isolation},
+	Author                   = {Hamed Nemati},
+	School                   = {Royal Institute of Technology, Stockholm, Sweden},
+	Year                     = {2017},
+	
+	Bibsource                = {dblp computer science bibliography, https://dblp.org},
+	Biburl                   = {https://dblp.org/rec/bib/phd/basesearch/Nemati17},
+	Timestamp                = {Fri, 20 Oct 2017 01:00:00 +0200},
+	Url                      = {http://kth.diva-portal.org/smash/get/diva2:1136624/FULLTEXT03.pdf},
+	Urn                      = {urn:nbn:se:kth:diva-213030},
+	Abstract                 = {Over the last years, security kernels have played a promising role in reshaping the landscape of platform security on today’s ubiquitous embedded devices. Security kernels, such as separation kernels, enable constructing high-assurance mixed-criticality execution platforms. They reduce the software portion of the system’s trusted computing base to a thin layer, which enforces isolation between low- and high-criticality components. The reduced  trusted computing base minimizes the system attack surface and facilitates the use of formal methods to ensure functional correctness and security of the kernel. In this thesis, we explore various aspects of building a provably secure separation kernel using virtualization technology. In particular, we examine techniques related to the appropriate management of the memory subsystem. Once these techniques were implemented and functionally verified, they provide reliable a foundation for application scenarios that require strong guarantees of isolation and facilitate formal reasoning about the system’s overall security.}
 }
 
-@InProceedings{mitb19,
-	Title                    = {MAC-in-the-Box: Verifying the Security of a Minimalistic Hardware Design for MAC Computation},
-	Author                   = {Robert K{\"u}nnemann and Hamed Nemati},
-	Booktitle                = {European Symposium on Research in Computer Security (ESORICS)},
-	Year                     = {2020},
-	Url                      = {paper/mitb-full.pdf},
-	Abstract                 = {In this work, we study the verification of security properties of a minimalistic hardware design called the MAC-in-the-Box. This device computes a message authentication code based on the SHA-3 hash function and a key that is stored on device, but never output directly. It is designed for secure password storage, but may also be used for secure key-exchange and second-factor authentication. We formally verify that no outside observer can distinguish this device from an ideal functionality that provides only access to a hashing oracle.}
+@TechReport{Nemati1137182,
+    author                   = {Nemati, Hamed and Guanciale, Roberto and Baumann, Christoph and Dam, Mads},
+    institution              = {KTH, Theoretical Computer Science, TCS},
+    note                     = {QC 20170830},
+    title                    = {Formal Analysis of Countermeasures against Cache Storage Side Channels (technical report)},
+    Url                      = {paper/FormalAnalysisofCountermeasures.pdf},
+    year                     = {2017},
+    Abstract                 = {Formal verification of systems-level software such as hypervisors and operating systems can enhance system trustworthiness. However, without taking low level features like caches into account the verification may become unsound. While this is a well-known fact wrt. timing leaks, few works have addressed latent cache storage side-channels. We present a verification methodology to analyse soundness of countermeasures used to neutralise cache storage channels. We apply the proposed methodology to existing countermeasures, showing that they allow to restore integrity and prove confidentiality of the system. We decompose the proof effort into verification conditions that allow for an easy adaption of our strategy to various software and hardware platforms. As case study, we extend the verification of an existing hypervisor whose integrity can be tampered using cache storage channels. We used the HOL4 theorem prover to validate our security analysis, applying the verification methodology to formal models of ARMv7 and ARMv8}
 }
 
-
-
-@InProceedings{micro21,
-  author    = {Hamed Nemati and Pablo Buiras and Andreas Lindner and Roberto Guanciale},
-  booktitle = {2021 54th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)},
-  title     = {Validation of Side-Channel Models via Observation Refinement},
-  year      = {2021},
-  month     = oct,
-  abstract  = {Observational models enable the analysis of information flow properties against side channels. Relational testing has been used to validate the soundness of these models by measuring the side channel on states that the model considers indistinguishable. However, unguided search can generate test states that are too similar to each other to invalidate the model. To address this we introduce observation refinement, a technique to guide the exploration of the state space to focus on hardware features of interest. We refine observational models to include fine-grained observations that characterize behavior that we want to exclude. States that yield equivalent refined observations are then ruled out, reducing the size of the space.},
-  journal   = {IEEE/ACM International Symposium on Microarchitecture},
+@InProceedings{DBLP:conf/sp/GuancialeNBD16,
+	Title                    = {Cache Storage Channels: Alias-Driven Attacks and Verified Countermeasures},
+	Author                   = {Roberto Guanciale and Hamed Nemati and Christoph Baumann and Mads Dam},
+	Booktitle                = {{IEEE} Symposium on Security and Privacy, {SP} 2016, San Jose, CA, USA, May 22-26, 2016},
+	Year                     = {2016},
+	Pages                    = {38--55},
+	Bibsource                = {dblp computer science bibliography, https://dblp.org},
+	Biburl                   = {https://dblp.org/rec/bib/conf/sp/GuancialeNBD16},
+	Crossref                 = {DBLP:conf/sp/2016},
+	Doi                      = {10.1109/SP.2016.11},
+	Timestamp                = {Fri, 26 May 2017 01:00:00 +0200},
+	Url                      = {https://doi.org/10.1109/SP.2016.11},
+	Abstract                 = {Caches pose a significant challenge to formal proofs of security for code executing on application processors, as the cache access pattern of security-critical services may leak secret information. This paper reveals a novel attack vector, exposing a low-noise cache storage channel that can be exploited by adapting well-known timing channel analysis techniques. The vector can also be used to attack various types of security-critical software such as hypervisors and application security monitors. The attack vector uses virtual aliases with mismatched memory attributes and self-modifying code to misconfigure the memory system, allowing an attacker to place incoherent copies of the same physical address into the caches and observe which addresses are stored in different levels of cache. We design and implement three different attacks using the new vector on trusted services and report on the discovery of an 128-bit key from an AES encryption service running in TrustZone on Raspberry Pi2. Moreover, we subvert the integrity properties of an ARMv7 hypervisor that was formally verified against a cache-less model. We evaluate well-known countermeasures against the new attack vector and propose a verification methodology that allows to formally prove the effectiveness of defence mechanisms on the binary code of the trusted software.}
 }
 
-@InProceedings{usenix21,
-  author    = {Daniel Weber and Ahmad Ibrahim and Hamed Nemati and Michael Schwarz and Christian Rossow},
-  booktitle = {USENIX Security Symposium},
-  title     = {Osiris: Automated Discovery of Microarchitectural Side Channels},
-  year      = {2021},
-  month     = aug,
-  abstract  = {In the last years, a plurality of side channels has been discovered on CPUs. These side channels have been used in powerful attacks, e.g., on cryptographic implementations, or as building blocks in transient-execution attacks such as Spectre or Meltdown. However, in many cases, discovering side channels is still a tedious manual process. In this paper, we present Osiris, a fuzzing-based framework to automatically discover microarchitectural side channels. Based on a machine-readable specification of a CPU's ISA, Osiris generates instruction-sequence triples and automatically tests whether they form a timing-based covert channel. Furthermore, Osiris evaluates their usability as a covert channel in transient-execution attacks, i.e., as the microarchitectural encoding for attacks like Spectre. In total, we discover four novel timing-based side channels on Intel and AMD CPUs. Based on these side channels, we demonstrate exploitation in three case studies. We show that our microarchitectural KASLR break using non-temporal loads, FlushConflict, is currently the only one that works on the new Intel Ice Lake and Comet Lake microarchitectures. We present a cross-core cross-VM covert channel that is not relying on the memory subsystem and transmits up to 1 kbit/s. We demonstrate this channel on the AWS cloud, showing that it is stealthy and noise resistant. Finally, we demonstrate Stream+Reload, a covert channel for transient-execution attacks that, on average, allows leaking 7.83 bytes within a transient window, improving state-of-the-art attacks that only leak up to 3 bytes.},
-  journal   = {USENIX Security Symposium},
-  url       = {https://publications.cispa.saarland/3431/1/main.pdf},
+@Article{DBLP:journals/jcs/GuancialeNDB16,
+	Title                    = {Provably secure memory isolation for Linux on {ARM}},
+	Author                   = {Roberto Guanciale and Hamed Nemati and Mads Dam and Christoph Baumann},
+	Journal                  = {Journal of Computer Security},
+	Year                     = {2016},
+	Number                   = {6},
+	Pages                    = {793--837},
+	Volume                   = {24},
+	
+	Bibsource                = {dblp computer science bibliography, https://dblp.org},
+	Biburl                   = {https://dblp.org/rec/bib/journals/jcs/GuancialeNDB16},
+	Doi                      = {10.3233/JCS-160558},
+	Timestamp                = {Fri, 26 May 2017 01:00:00 +0200},
+	Url                      = {https://doi.org/10.3233/JCS-160558},
+	Abstract                 = {The isolation of security critical components from an untrusted OS allows to both protect applications and to harden the OS itself. Virtualization of the memory subsystem is a key component to provide such isolation. We present the design, implementation and verification of a memory virtualization platform for ARMv7-A processors. The design is based on direct paging, an MMU virtualization mechanism previously introduced by Xen. It is shown that this mechanism can be implemented using a compact design, suitable for formal verification down to a low level of abstraction, without penalizing system performance. The verification is performed using the HOL4 theorem prover and uses a detailed model of the processor. We prove memory isolation along with information flow security for an abstract top-level model of the virtualization mechanism. The abstract model is refined down to a transition system closely resembling a C implementation. Additionally, it is demonstrated how the gap between the low-level abstraction and the binary level-can be filled, using tools that check Hoare contracts. The virtualization mechanism is demonstrated on real hardware via a hypervisor hosting Linux and supporting a tamper-proof run-time monitor that provably prevents code injection in the Linux guest.}  
 }
 
-@InProceedings{KBRef2021,
-	Title                    = {On Compositional Information Flow Aware Refinement},
-	Author                   = {Christoph Baumann and Mads Dam and Roberto Guanciale and Hamed Nemati},
-	Booktitle                = {IEEE Computer Security Foundations Symposium (CSF)},
-	Year                     = {2021},
-	url                      = {paper/InfoFlowRefinement.pdf},
-	Abstract                 = {The concepts of information flow security and refinement are known to have had a troubled relationship ever since the seminal work of McLean. In this work we study refinements that support changes in data representation and semantics, including the addition of state variables that may induce new observational power or side channels. We propose a new epistemic approach to ignorance-preserving refinement where an abstract model is used as a specification of a system’s permitted information flows, that may include the declassification of secret information. The core idea is to require that refinement steps must not induce observer knowledge that is not already available in the abstract model. Our study is set in the context of a class of shared variable multi-agent models similar to interpreted systems in epistemic logic. We demonstrate the expressiveness of our framework through a series of small examples and compare our approach to existing, stricter notions of information-flow secure refinement based on bisimulations and noninterference preservation. Interestingly, noninterference preservation is not supported “out of the box” in our setting, because refinement steps may introduce new secrets that are independent of secrets already present at abstract level. To support verification, we first introduce a “cube-shaped” unwinding condition related to conditions recently studied in the context of value-dependent noninterference, kernel verification, and secure compilation. A fundamental problem with ignorance-preserving refinement, caused by the support for general data and observation refinement, is that sequential composability is lost. We propose a solution based on relational pre- and post-conditions and illustrate its use together with unwinding on the oblivious RAM construction of Chung and Pass.}  
+@InProceedings{DBLP:conf/esorics/ChfoukaNGDE15,
+	Title                    = {Trustworthy Prevention of Code Injection in Linux on Embedded Devices},
+	Author                   = {Hind Chfouka and Hamed Nemati and Roberto Guanciale and Mads Dam and Patrik Ekdahl},
+	Booktitle                = {Computer Security - {ESORICS} 2015 - 20th European Symposium on Research in Computer Security, Vienna, Austria, September 21-25, 2015, Proceedings, Part {I}},
+	Year                     = {2015},
+	Pages                    = {90--107},
+	
+	Bibsource                = {dblp computer science bibliography, https://dblp.org},
+	Biburl                   = {https://dblp.org/rec/bib/conf/esorics/ChfoukaNGDE15},
+	Crossref                 = {DBLP:conf/esorics/2015-1},
+	Doi                      = {10.1007/978-3-319-24174-6_5},
+	Timestamp                = {Tue, 23 May 2017 01:07:16 +0200},
+	Url                      = {https://doi.org/10.1007/978-3-319-24174-6_5},
+	Abstract                 = {We present MProsper, a trustworthy system to prevent code injection in Linux on embedded devices. MProsper is a formally verified run-time monitor, which forces an untrusted Linux to obey the executable space protection policy; a memory area can be either executable or writable, but cannot be both. The executable space protection allows the MProsper’s monitor to intercept every change to the executable code performed by a user application or by the Linux kernel. On top of this infrastructure, we use standard code signing to prevent code injection. MProsper is deployed on top of the Prosper hypervisor and is implemented as an isolated guest. Thus MProsper inherits the security property verified for the hypervisor: (i) Its code and data cannot be tampered by the untrusted Linux guest and (ii) all changes to the memory layout is intercepted, thus enabling MProsper to completely mediate every operation that can violate the desired security property. The verification of the monitor has been performed using the HOL4 theorem prover and by extending the existing formal model of the hypervisor with the formal specification of the high level model of the monitor.}
 }
 
-@InProceedings{icse3208,
-  author    = {Rahul Gopinath and Hamed Nemati and Andreas Zeller},
-  booktitle = {International Conference on Software Engineering (ICSE)},
-  title     = {Input Algebras},
-  year      = {2021},
-  month     = sep,
-  abstract  = {Grammar-based test generators are highly efficient in producing syntactically valid test inputs, and give their user precise control over which test inputs should be generated. Adapting a grammar or a test generator towards a particular testing goal can be tedious, though. We introduce the concept of a grammar transformer, specializing a grammar towards inclusion or exclusion of specific patterns: "The phone number must not start with 011 or +1". To the best of our knowledge, ours is the first approach to allow for arbitrary Boolean combinations of patterns, giving testers unprecedented flexibility in creating targeted software tests. The resulting specialized grammars can be used with any grammar-based fuzzer for targeted test generation, but also as validators to check whether the given specialization is met or not, opening up additional usage scenarios. In our evaluation on real-world bugs, we show that specialized grammars are accurate both in producing and validating targeted inputs.},
-  journal   = {International Conference on Software Engineering (ICSE)},
-  url       = {https://publications.cispa.saarland/3208/},
+@InProceedings{DBLP:conf/trust/NematiDGDV15,
+	Title                    = {Trustworthy Memory Isolation of Linux on Embedded Devices},
+	Author                   = {Hamed Nemati and Mads Dam and Roberto Guanciale and Viktor Do and Arash Vahidi},
+	Booktitle                = {Trust and Trustworthy Computing - 8th International Conference, {TRUST} 2015, Heraklion, Greece, August 24-26, 2015, Proceedings},
+	Year                     = {2015},
+	Pages                    = {125--142},
+	
+	Bibsource                = {dblp computer science bibliography, https://dblp.org},
+	Biburl                   = {https://dblp.org/rec/bib/conf/trust/NematiDGDV15},
+	Crossref                 = {DBLP:conf/trust/2015},
+	Doi                      = {10.1007/978-3-319-22846-4_8},
+	Timestamp                = {Tue, 23 May 2017 01:08:12 +0200},
+	Url                      = {https://doi.org/10.1007/978-3-319-22846-4_8},
+	Abstract                 = {The isolation of security critical components from an untrusted OS allows to both protect applications and to harden the OS itself, for instance by run-time monitoring. Virtualization of the memory subsystem is a key component to provide such isolation. We present the design, implementation and verification of a virtualization platform for the ARMv7-A processor family. Our design is based on direct paging, an MMU virtualization mechanism previously introduced by Xen for the x86 architecture, and used later with minor variants by the Secure Virtual Architecture, SVA. We show that the direct paging mechanism can be implemented using a compact design, suitable for formal verification down to a low level of abstraction, without penalizing system performance. The verification is performed using the HOL4 theorem prover and uses a detailed model of the ARMv7-A ISA, including the MMU. We prove memory isolation of the hosted components along with information flow security for an abstract top level model of the virtualization mechanism. The abstract model is refined down to a HOL4 transition system closely resembling a C implementation. The virtualization mechanism is demonstrated on real hardware via a hypervisor capable of hosting Linux as an untrusted guest.}
 }
 
-@inproceedings{DBLP:conf/isca/Nicholas22,
-        author                   = {Nicholas Mosier and Hanna Lachnitt and Hamed Nemati and Caroline Trippel},
-        title                    = {Axiomatic Hardware-Software Contracts for Security},
-        booktitle                = {49th {ACM/IEEE} Annual International Symposium on Computer Architecture({ISCA})},
-        Year                     = {2022},
-	url                      = {paper/lcms_ISCA22_cameraready.pdf},
-        Abstract                 = {We propose leakage containment models (LCMs)- novel axiomatic security contracts which support formally reasoning about the security guarantees of programs when they run on particular microarchitectures. Our core contribution is an axiomatic vocabulary for formally defining LCMs, derived from the established axiomatic vocabulary used to formalize processor memory consistency models. Using this vocabulary, we formalize microarchitectural leakage—focusing on leakage through hardware memory systems—so that it can be automatically detected in programs. To illustrate the efficacy of LCMs, we first demonstrate that our leakage definition faithfully captures a sampling of (transient and non-transient) microarchitectural attacks from the literature. Second, we develop a static analysis tool based on LCMs which automatically identifies Spectre vulnerabilities in programs and scales to analyze real-world crypto-libraries.}
-}  
-
-@InProceedings{SCAM-V22,
-	Title                    = {A Case Study in Information Flow Refinement for Low Level Systems},
-	Author                   = {Roberto Guanciale and Christoph Baumann and Pablo Buiras and Mads Dam and Hamed Nemati},
-	Booktitle                = {Lecture Notes in Computer Science, Springer, Theory and Practice of Formal Methods},
-	Year                     = {2022},
-	url                      = {paper/InfoFlowRefinementcasestudy.pdf},	
-	Abstract                 = {In this work we employ information-flow-aware refinement to study security properties of a separation kernel. We focus on refinements that support changes in data representation and semantics, including the addition of state variables that may induce new observational power or side channels. We leverage an epistemic approach to ignorance-preserving refinement where an abstract model is used as a specification of a system's permitted information flows that may include the declassification of secret information. The core idea is to require that refinement steps must not induce observer knowledge that is not already available in the abstract model. In particular, we show that a simple key manager may cause information leakage via a refinement that includes cache and timing information. Finally, we show that deploying standard countermeasures against cache-based timing channels regains ignorance preservation.}
+@InProceedings{DBLP:conf/sofsem/NematiGD15,
+	Title                    = {Trustworthy Virtualization of the ARMv7 Memory Subsystem},
+	Author                   = {Hamed Nemati and Roberto Guanciale and Mads Dam},
+	Booktitle                = {{SOFSEM} 2015: Theory and Practice of Computer Science - 41st International Conference on Current Trends in Theory and Practice of Computer Science,  Pec pod Sn{\v{e}}{\v{z}}kou, Czech Republic, January 24-29, 2015. Proceedings},
+	Year                     = {2015},
+	Pages                    = {578--589},
+	
+	Bibsource                = {dblp computer science bibliography, https://dblp.org},
+	Biburl                   = {https://dblp.org/rec/bib/conf/sofsem/NematiGD15},
+	Crossref                 = {DBLP:conf/sofsem/2015},
+	Doi                      = {10.1007/978-3-662-46078-8_48},
+	Timestamp                = {Thu, 15 Jun 2017 21:37:45 +0200},
+	Url                      = {https://doi.org/10.1007/978-3-662-46078-8_48},
+	Abstract                 = {In order to host a general purpose operating system, hypervisors need to virtualize the CPU memory subsystem. This entails dynamically changing MMU resources, in particular the page tables, to allow a hosted OS to recongure its own memory. In this paper we present the verication of the isolation properties of a hypervisor design that uses direct paging. This virtualization approach allows to host commodity OSs without requiring either shadow data structures or specialized hardware support. Our verication targets a system consisting of a commodity guest running Linux.The verication involves three steps: (i) Formalization of an ARMv7 CPU that includes the MMU, (ii) Formalization of a system behavior that includes the hypervisor and the untrusted guest (iii) Verication of the isolation properties. Formalization and proof are done in the HOL4 theorem prover, thus allowing to re-use the existing HOL4 ARMv7 model developed in Cambridge.}
 }
 
-@Comment{jabref-meta: databaseType:bibtex;}
+@InProceedings{DBLP:conf/ccs/DamGKNS13,
+	Title                    = {Formal verification of information flow security for a simple arm-based separation kernel},
+	Author                   = {Mads Dam and Roberto Guanciale and Narges Khakpour and Hamed Nemati and Oliver Schwarz},
+	Booktitle                = {2013 {ACM} {SIGSAC} Conference on Computer and Communications Security, CCS'13, Berlin, Germany, November 4-8, 2013},
+	Year                     = {2013},
+	Pages                    = {223--234},
+	
+	Bibsource                = {dblp computer science bibliography, https://dblp.org},
+	Biburl                   = {https://dblp.org/rec/bib/conf/ccs/DamGKNS13},
+	Crossref                 = {DBLP:conf/ccs/2013},
+	Doi                      = {10.1145/2508859.2516702},
+	Timestamp                = {Fri, 08 Nov 2013 09:43:20 +0100},
+	Url                      = {http://doi.acm.org/10.1145/2508859.2516702},
+	Abstract                 = {A separation kernel simulates a distributed environment using a single physical machine by executing partitions in isolation and appropriately controlling communication among them. We present a formal verification of information flow security for a simple separation kernel for ARMv7. Previous work on information flow kernel security leaves communication to be handled by model-external means, and cannot be used to draw conclusions when there is explicit interaction between partitions. We propose a different approach where communication between partitions is made explicit and the information flow is analyzed in the presence of such a channel. Limiting the kernel functionality as much as meaningfully possible, we accomplish a detailed analysis and verification of the system, proving its correctness at the level of the ARMv7 assembly. As a sanity check we show how the security condition is reduced to noninterference in the special case where no communication takes place. The verification is done in HOL4 taking the Cambridge model of ARM as basis, transferring verification tasks on the actual assembly code to an adaptation of the BAP binary analysis tool developed at CMU.},
+	  Bibsource                = {dblp computer science bibliography, https://dblp.org}
+}
 
-@Comment{jabref-meta: saveOrderConfig:specified;year;false;title;true;citationkey;false;}
+@InProceedings{DBLP:conf/ccs/DamGN13,
+	Title                    = {Machine code verification of a tiny {ARM} hypervisor},
+	Author                   = {Mads Dam and Roberto Guanciale and Hamed Nemati},
+	Booktitle                = {TrustED'13, Proceedings of the 2013 {ACM} Workshop on Trustworthy Embedded Devices, Co-located with {CCS} 2013, November 4, 2013, Berlin,  Germany},
+	Year                     = {2013},
+	Pages                    = {3--12},
+	
+	Bibsource                = {dblp computer science bibliography, https://dblp.org},
+	Biburl                   = {https://dblp.org/rec/bib/conf/ccs/DamGN13},
+	Crossref                 = {DBLP:conf/ccs/2013trusted},
+	Doi                      = {10.1145/2517300.2517302},
+	Timestamp                = {Fri, 31 Jan 2014 10:38:00 +0100},
+	Url                      = {http://doi.acm.org/10.1145/2517300.2517302},
+	Abstract                 = {Hypervisors are low level execution platforms that provide isolated partitions on shared resources, allowing to design secure systems without using dedicated hardware devices. A key requirement of this kind of solution is the formal verification of the software trusted computing base, preferably at the binary level. We accomplish a detailed verification of an ARMv7 tiny hypervisor, proving its correctness at the machine code level. We present our verification strategy, which mixes the usage of the theorem prover HOL4, the computation of weakest preconditions, and the use of SMT solvers to largely automate the verification process. The automation relies on an integration of HOL4 with BAP, the Binary Analysis Platform developed at CMU. To enable the adoption of the BAP back-ends to compute weakest preconditions and control flow graphs, a HOL4-based tool was implemented that transforms ARMv7 assembly programs to the BAP Intermediate Language. Since verifying contracts by computing the weakest precondition depends on resolving indirect jumps, we implemented a procedure that integrates SMT solvers and BAP to discover all the possible assignments to the indirect jumps under the contract precondition.},
+  Bibsource                = {dblp computer science bibliography, https://dblp.org}
+}
+
+@Article{DBLP:journals/ics/afzali2012,
+	Title                    = {Private Key Based Query on Encrypted Data},
+	Author                   = {With: Hammad Afzali and Hamed Nemati and Reza Azmi},
+	Journal                  = {Journal of THE ISC INTERNATIONAL JOURNAL OF INFORMATION SECURITY},
+	Year                     = {2012},
+	Number                   = {1},
+	Pages                    = {41--50},
+	Volume                   = {4},
+	
+	Doi                      = {10.22042/isecure.2015.4.1.5},
+	Url                      = {} %%{http://www.sid.ir/En/Journal/ViewPaper.aspx?ID=346694}
+}
+
+@InProceedings{ISCEE15_017,
+	Title                    = {Reconstruction of OS Critical Data-Structure Using VMM},
+	Author                   = {Hammad Afzali and Hamed Nemati and Reza Azmi},
+	Booktitle                = {15th Iran Electrical Engeenring Conference, {ICEE} 2012, Iran, [In Farsi].},
+	Year                     = {2012},
+	
+	Url                      = {https://bit.ly/2FnwLEy}
+}
+
+@InProceedings{DBLP:conf/worldcis/BorgheiAGN11,
+	Title                    = {Virtual machine based security architecture},
+	Author                   = {Elahe Borghei and Reza Azmi and Alireza Ghahremanian and Hamed Nemati},
+	Booktitle                = {2011 World Congress on Internet Security, WorldCIS 2011, London, UK, February 21-23, 2011},
+	Year                     = {2011},
+	Pages                    = {210--215},
+	
+	Bibsource                = {dblp computer science bibliography, https://dblp.org},
+	Biburl                   = {https://dblp.org/rec/bib/conf/worldcis/BorgheiAGN11},
+	Crossref                 = {DBLP:conf/worldcis/2011},
+	Timestamp                = {Sat, 29 Apr 2017 01:00:00 +0200},
+	Url                      = {http://ieeexplore.ieee.org/document/5749853/},
+	Abstract                 = {In this paper a new approach based on using reference validation mechanism to improve system reliability is proposed. Since device drivers are the main cause of system failure, they are chosen as case study. Thus by improving driver reliability, security of the whole system is improved. To monitor driver functionality and also manage kernel memory, lightweight hypervisor layer is used, and reference validation mechanism is implemented in this layer.}
+}
+
+@InProceedings{ISCC07_031,
+	Title                    = {Intrusion Detection Using VMM},
+	Author                   = {Hamed Nemati and Reza Azmi and Alireza Ghahramanian},
+	Booktitle                = {7th International ISC Conference on Information Security and Cryptology, {ISCC} 2010, Iran, [In Farsi].},
+	Year                     = {2010},
+	
+	Url                      = {https://bit.ly/2ForuvE}
+}
+
+@InProceedings{DBLP:conf/icitst/RezaeiMNA10,
+	Title                    = {TCvisor: {A} hypervisor level secure storage},
+	Author                   = {Mohammad Rezaei and Nafise Sadat Moosavi and Hamed Nemati and Reza Azmi},
+	Booktitle                = {5th International Conference for Internet Technology and Secured Transactions, {ICITST} 2010, London, United Kingdom, November 8-10, 2010},
+	Year                     = {2010},
+	Pages                    = {1--9},
+	
+	Bibsource                = {dblp computer science bibliography, https://dblp.org},
+	Biburl                   = {https://dblp.org/rec/bib/conf/icitst/RezaeiMNA10},
+	Crossref                 = {DBLP:conf/icitst/2010},
+	Timestamp                = {Sat, 29 Apr 2017 01:00:00 +0200},
+	Url                      = {http://ieeexplore.ieee.org/document/5678529/},
+	Abstract                 = {In this paper, we present design and implementation of TCvisor, a new trusted hypervisor. To this end, TCvisor provides a secure storage with different isolated view per user by using para-passthrough and combined key. In this regard, virtualization technology of processors has been used for complete isolation from operating system. By combining TPM base key, user's password and geo function key, TCvisor provides a secure storage in an environment with split data. We have applied feature wise security analysis TCvisor's secure storage from software system layers point then we have compared performance of TCvisor to selected candidates of existing layers.}
+}
