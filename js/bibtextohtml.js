@@ -339,7 +339,8 @@ function BibtexDisplay() {
     var b = new BibtexParser();
     b.setInput(input);
     b.bibtex();
-    
+    var counter = 0;
+    var eid = 'artifact';
 
     var yearOfPreviousEntry = undefined;
     // save old entries to remove them later
@@ -347,92 +348,125 @@ function BibtexDisplay() {
 
     // iterate over bibTeX entries
     var entries = b.getEntries();
-    for (var entryKey in entries) 
+    for (var entryKey in entries) {
 	if(!entries[entryKey]["BIBTEXCODE"].startsWith("@proceedings{")){
-      var entry = entries[entryKey];
+      	      var entry = entries[entryKey];
       
-      if(entry["YEAR"] != yearOfPreviousEntry)
-      {
-	    output.append("<div class='yearpublication'>" + entry["YEAR"] + "</div>");
-	    yearOfPreviousEntry = entry["YEAR"];
-      }
-      
-      // find template
-      var tpl = $(".bibtex_template").clone().removeClass('bibtex_template');
-      
-      // find all keys in the entry
-      var keys = [];
-      for (var key in entry) {
-        keys.push(key.toUpperCase());
-      }
-      
-      // find all ifs and check them
-      var removed = false;
-      do {
-        // find next if
-        var conds = tpl.find(".if");
-        if (conds.size() == 0) {
-          break;
-        }
-        
-        // check if
-        var cond = conds.first();
-        cond.removeClass("if");
-        var ifTrue = true;
-        var classList = cond.attr('class').split(' ');
-        $.each( classList, function(index, cls){
-          if(keys.indexOf(cls.toUpperCase()) < 0) {
-            ifTrue = false;
-          }
-          cond.removeClass(cls);
-        });
-        
-        // remove false ifs
-        if (!ifTrue) {
-          cond.remove();
-        }
-      } while (true);
-      
-      // fill in remaining fields 
-      for (var index in keys) {
-        var key = keys[index];
-        var value = entry[key] || "";
-        tpl.find("span:not(a)." + key.toLowerCase()).html(this.fixValue(value));
-        tpl.find("a." + key.toLowerCase()).attr('href', this.fixValue(value));
-      }
-      
-      bibTexCode =  entry['BIBTEXCODE'];
-    
-      tpl.find('.bibtexCodeLink').attr("bibtexcode", bibTexCode);
-      tpl.find('.bibtexCodeLink').click(function() 
-	{
-      var alrt = document.getElementById('overtext');
-      var ttl = document.getElementById('overtitle');
-      ttl.innerText = "BibTeX Code:";
-	  alrt.value = ($(this).attr("bibtexcode").split("Abstract")[0] + '}').split("  ").join("");
-      openNav();
-	}
-      );
-      
-      tpl.find('.abstractCodeLink').attr("bibtexcode", bibTexCode);
-      tpl.find('.abstractCodeLink').click(function() 
-	{
-      var alrt = document.getElementById('overtext');
-      var ttl = document.getElementById('overtitle');
-      ttl.innerText = "Abstract:";
-	  alrt.value = ($(this).attr("bibtexcode").split("Abstract")[1]).match(/\{(.*)\}/).pop();
-      openNav();
-	}
-      );
-      
-      output.append(tpl);
-      tpl.show();
-    }
-    
+	      if(entry["YEAR"] != yearOfPreviousEntry)
+	      {
+		    output.append("<div class='yearpublication'>" + entry["YEAR"] + "</div>");
+		    yearOfPreviousEntry = entry["YEAR"];
+	      }
+	      
+	      // find template
+	      var tpl = $(".bibtex_template").clone().removeClass('bibtex_template');
+	       
+	      
+	      // find all keys in the entry
+	      var keys = [];
+	      for (var key in entry) {
+		keys.push(key.toUpperCase());
+	      }
+	      
+	      // find all ifs and check them
+	      var removed = false;
+	      do {
+		// find next if
+		var conds = tpl.find(".if");
+		if (conds.size() == 0) {
+		  break;
+		}
+		
+		// check if
+		var cond = conds.first();
+		cond.removeClass("if");
+		var ifTrue = true;
+		var classList = cond.attr('class').split(' ');
+		$.each( classList, function(index, cls){
+		  if(keys.indexOf(cls.toUpperCase()) < 0) {
+		    ifTrue = false;
+		  }
+		  cond.removeClass(cls);
+		});
+		
+		// remove false ifs
+		if (!ifTrue) {
+		  cond.remove();
+		}
+	      } while (true);
+	      
+	      // fill in remaining fields 
+	      for (var index in keys) {
+		var key = keys[index];
+		var value = entry[key] || "";
+		tpl.find("span:not(a)." + key.toLowerCase()).html(this.fixValue(value));
+		tpl.find("a." + key.toLowerCase()).attr('href', this.fixValue(value));
+	      }
+	      
+	      bibTexCode =  entry['BIBTEXCODE'];
+	    
+	      tpl.find('.bibtexCodeLink').attr("bibtexcode", bibTexCode);
+	      tpl.find('.bibtexCodeLink').click(function() 
+		{
+		  var alrt = document.getElementById('overtext');
+		  var ttl = document.getElementById('overtitle');
+		  ttl.innerText = "BibTeX Code:";
+		  alrt.value = ($(this).attr("bibtexcode").split("Abstract")[0] + '}').split("  ").join("");
+		  openNav();
+		}
+	      );
+	      
+	      tpl.find('.abstractCodeLink').attr("bibtexcode", bibTexCode);
+	      tpl.find('.abstractCodeLink').click(function() 
+		{
+		  var alrt = document.getElementById('overtext');
+		  var ttl = document.getElementById('overtitle');
+		  ttl.innerText = "Abstract:";
+		  alrt.value = ($(this).attr("bibtexcode").split("Abstract")[1]).match(/\{(.*)\}/).pop();
+		  openNav();
+		}
+	      );
+		    
+	      tpl.find('.artifactCodeLink').attr("bibtexcode", bibTexCode); 
+	      if(tpl.find('.artifactCodeLink').attr("bibtexcode").includes("Artifact")){		
+	      	tpl.find('.artifactCodeLink').css('visibility', 'visible');
+	      }else{
+	      	tpl.find('.artifactCodeLink').css('visibility', 'hidden');
+	      } 	        
+	      tpl.find('.artifactCodeLink').click(function() 
+		{
+		  var alrt = document.getElementById('overtext');
+		  try {
+	  	     alrt.value = ($(this).attr("bibtexcode").split("Artifact")[1]).match(/\{(.*)\}/).pop();
+	  	     window.location.href = alrt.value;
+		  } catch(err) {
+
+		  }
+	       }
+	      );
+	      
+	      tpl.find('.prizeCodeLink').attr("bibtexcode", bibTexCode); 
+	      if(tpl.find('.prizeCodeLink').attr("bibtexcode").includes("Prize")){		
+	        tpl.find('.prizeCodeLink').css('visibility', 'visible');
+	      	try {
+	  	     tpl.find('.fas').attr('innerHTML', (" " + (tpl.find('.prizeCodeLink').attr("bibtexcode").split("Prize")[1]).match(/\{(.*)\}/).pop()));
+		  } catch(err) {
+
+		  }
+	      	
+	      }else{
+	      	tpl.find('.prizeCodeLink').css('visibility', 'hidden');
+	      } 	        
+		    
+	      output.append(tpl);	      
+	      tpl.show();
+	    }
+	}  
     // remove old entries
     old.remove();
   }
 }
+
 
 
 function bibtexShow(bibtexCode, div)

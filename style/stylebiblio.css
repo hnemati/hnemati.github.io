@@ -10,6 +10,18 @@
 /* text-decoration : underline; */
    cursor: pointer;
 }
+
+.artifactCodeLink
+{
+/* text-decoration : underline; */
+   cursor: pointer;
+}
+
+.prizeCodeLink
+{
+/* text-decoration : underline; */
+   cursor: pointer;
+}
     
 .url
 {
