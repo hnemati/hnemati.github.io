@@ -29,7 +29,7 @@
 	Year                     = {2021},
 	Url                      = {paper/micro21.pdf},
 	Abstract                 = {Observational models enable the analysis of information flow properties against side channels. Relational testing has been used to validate the soundness of these models by measuring the side channel on states that the model considers indistinguishable. However, unguided search can generate test states that are too similar to each other to invalidate the model. To address this we introduce observation refinement, a technique to guide the exploration of the state space to focus on hardware features of interest. We refine observational models to include fine-grained observations that characterize behavior that we want to exclude. States that yield equivalent refined observations are then ruled out, reducing the size of the space.},
-        Artifact                 = {https://github.com/kth-step/HolBA/tree/dev_scamv}
+        Artifact                 = {https://figshare.com/articles/software/Scam-V_MICRO_2021_artifact/15086895/3}
 }
 
 @InProceedings{usenix21,
@@ -53,7 +53,8 @@
 	BookTitle                = {International Conference on Software Engineering (ICSE)},
 	Year                     = {2021},
 	Url                      = {https://publications.cispa.saarland/3208/},
-	Abstract                 = {Grammar-based test generators are highly efficient in producing syntactically valid test inputs, and give their user precise control over which test inputs should be generated. Adapting a grammar or a test generator towards a particular testing goal can be tedious, though. We introduce the concept of a grammar transformer, specializing a grammar towards inclusion or exclusion of specific patterns: "The phone number must not start with 011 or +1". To the best of our knowledge, ours is the first approach to allow for arbitrary Boolean combinations of patterns, giving testers unprecedented flexibility in creating targeted software tests. The resulting specialized grammars can be used with any grammar-based fuzzer for targeted test generation, but also as validators to check whether the given specialization is met or not, opening up additional usage scenarios. In our evaluation on real-world bugs, we show that specialized grammars are accurate both in producing and validating targeted inputs.}
+	Abstract                 = {Grammar-based test generators are highly efficient in producing syntactically valid test inputs, and give their user precise control over which test inputs should be generated. Adapting a grammar or a test generator towards a particular testing goal can be tedious, though. We introduce the concept of a grammar transformer, specializing a grammar towards inclusion or exclusion of specific patterns: "The phone number must not start with 011 or +1". To the best of our knowledge, ours is the first approach to allow for arbitrary Boolean combinations of patterns, giving testers unprecedented flexibility in creating targeted software tests. The resulting specialized grammars can be used with any grammar-based fuzzer for targeted test generation, but also as validators to check whether the given specialization is met or not, opening up additional usage scenarios. In our evaluation on real-world bugs, we show that specialized grammars are accurate both in producing and validating targeted inputs.},
+	Artifact                 = {https://nbviewer.org/github/vrthra/Ewoks/blob/master/src/FAlgebra.ipynb}
 }
 
 @InProceedings{KBRef2021,
@@ -66,14 +67,14 @@
 }
 
 @misc{nemati2020speculative,
-	Title={Speculative Leakage in ARM Cortex-A53 (short paper)},
-	Author={Hamed Nemati and Roberto Guanciale and Pablo Buiras and Andreas Lindner},
-	Year={2020},
-	eprint={2007.06865},
-	Url = {https://arxiv.org/abs/2007.06865},
-	archivePrefix={arXiv},
-	primaryClass={cs.CR},
-	Abstract = {The recent Spectre attacks have demonstrated that modern microarchitectural optimizations can make software insecure. These attacks use features like pipelining, out-of-order and speculation to extract information about the memory contents of a process via side-channels. In this paper we demonstrate that Cortex-A53 is affected by speculative leakage even if the microarchitecture does not support out-of-order execution. We named this new class of vulnerabilities SiSCloak.}
+	Title                    = {Speculative Leakage in ARM Cortex-A53 (short paper)},
+	Author                   = {Hamed Nemati and Roberto Guanciale and Pablo Buiras and Andreas Lindner},
+	Year                     = {2020},
+	eprint                   ={2007.06865},
+	Url                      = {https://arxiv.org/abs/2007.06865},
+	archivePrefix            = {arXiv},
+	primaryClass             = {cs.CR},
+	Abstract = {The recent Spectre attacks have demonstrated that modern microarchitectural optimizations can make software insecure. These attacks use features like pipelining, out-of-order and speculation to extract information about the memory contents of a process via side-channels. In this paper we demonstrate that Cortex-A53 is affected by speculative leakage even if the microarchitecture does not support out-of-order execution. We named this new class of vulnerabilities SiSCloak.},
 }
 
 @InProceedings{SCAM-V20,
@@ -82,7 +83,8 @@
 	BookTitle                = {International Conference on Computer-Aided Verification (CAV)},
 	Year                     = {2020},
 	Url                      = {paper/scamv.pdf},
-	Abstract                 = {Observational models make tractable the analysis of information flow properties by providing an abstraction of side channels. We introduce a methodology and a tool, Scam-V, to validate observational models for modern computer architectures. We combine symbolic execution, relational analysis, and different program generation techniques to generate experiments and validate the models. An experiment consists of a randomly generated program together with two inputs that are observationally equivalent according to the model under the test. Validation is done by checking indistinguishability of the two inputs on real hardware by executing the program and analyzing the side channel. We have evaluated our framework by validating models that abstract the data-cache side channel of a Raspberry Pi 3 board with a processor implementing the ARMv8-A architecture. Our results show that Scam-V can identify bugs in the implementation of the models and generate test programs which invalidate the models due to hidden microarchitectural behavior.}
+	Abstract                 = {Observational models make tractable the analysis of information flow properties by providing an abstraction of side channels. We introduce a methodology and a tool, Scam-V, to validate observational models for modern computer architectures. We combine symbolic execution, relational analysis, and different program generation techniques to generate experiments and validate the models. An experiment consists of a randomly generated program together with two inputs that are observationally equivalent according to the model under the test. Validation is done by checking indistinguishability of the two inputs on real hardware by executing the program and analyzing the side channel. We have evaluated our framework by validating models that abstract the data-cache side channel of a Raspberry Pi 3 board with a processor implementing the ARMv8-A architecture. Our results show that Scam-V can identify bugs in the implementation of the models and generate test programs which invalidate the models due to hidden microarchitectural behavior.},
+	Artifact                 = {https://github.com/kth-step/HolBA/tree/dev_scamv}	
 }
 
 @InProceedings{mitb19,
@@ -91,7 +93,8 @@
 	BookTitle                = {European Symposium on Research in Computer Security (ESORICS)},
 	Year                     = {2020},
 	Url                      = {paper/mitb-full.pdf},
-	Abstract                 = {In this work, we study the verification of security properties of a minimalistic hardware design called the MAC-in-the-Box. This device computes a message authentication code based on the SHA-3 hash function and a key that is stored on device, but never output directly. It is designed for secure password storage, but may also be used for secure key-exchange and second-factor authentication. We formally verify that no outside observer can distinguish this device from an ideal functionality that provides only access to a hashing oracle.}
+	Abstract                 = {In this work, we study the verification of security properties of a minimalistic hardware design called the MAC-in-the-Box. This device computes a message authentication code based on the SHA-3 hash function and a key that is stored on device, but never output directly. It is designed for secure password storage, but may also be used for secure key-exchange and second-factor authentication. We formally verify that no outside observer can distinguish this device from an ideal functionality that provides only access to a hashing oracle.},
+	Artifact                 = {https://github.com/rkunnema/mitb}
 }
 
 @inproceedings{DBLP:conf/tap/KhosrowjerdiNM20,
@@ -160,7 +163,8 @@
 	  Doi                      = {10.1007/978-3-319-89722-6_5},
 	  Timestamp                = {Mon, 16 Apr 2018 13:28:26 +0200},
 	  Url                      = {https://doi.org/10.1007/978-3-319-89722-6_5},
-	  Abstract                 = {Formal verification of systems-level software such as hypervisors and operating systems can enhance system trustworthiness. However, without taking low level features like caches into account the verification may become unsound. While this is a well-known fact w.r.t. timing leaks, few works have addressed latent cache storage side-channels, whose effects are not limited to information leakage. We present a verification methodology to analyse soundness of countermeasures used to neutralise these channels. We apply the proposed methodology to existing countermeasures, showing that they allow to restore integrity of the system. We decompose the proof effort into verification conditions that allow for an easy adaption of our strategy to various software and hardware platforms. As case study, we extend the verification of an existing hypervisor whose integrity can be tampered using cache storage channels. We used the HOL4 theorem prover to validate our security analysis, applying the verification methodology to a generic hardware model.}  
+	  Abstract                 = {Formal verification of systems-level software such as hypervisors and operating systems can enhance system trustworthiness. However, without taking low level features like caches into account the verification may become unsound. While this is a well-known fact w.r.t. timing leaks, few works have addressed latent cache storage side-channels, whose effects are not limited to information leakage. We present a verification methodology to analyse soundness of countermeasures used to neutralise these channels. We apply the proposed methodology to existing countermeasures, showing that they allow to restore integrity of the system. We decompose the proof effort into verification conditions that allow for an easy adaption of our strategy to various software and hardware platforms. As case study, we extend the verification of an existing hypervisor whose integrity can be tampered using cache storage channels. We used the HOL4 theorem prover to validate our security analysis, applying the verification methodology to a generic hardware model.},
+	  Artifact                 = {https://github.com/rauhbein/cacheproofs}  
 }
 
 @PhdThesis{DBLP:phd/basesearch/Nemati17,
