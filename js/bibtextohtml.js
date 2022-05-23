@@ -314,6 +314,64 @@ function closeNav() {
   document.getElementById("myNav").style.height = "0%";
 }
 
+function displayBibtex(tpl, bibTexCode) {
+  tpl.find('.bibtexCodeLink').attr("bibtexcode", bibTexCode);
+  tpl.find('.bibtexCodeLink').click(function() 
+  {
+    var alrt = document.getElementById('overtext');
+    var ttl = document.getElementById('overtitle');
+    ttl.innerText = "BibTeX Code:";
+    alrt.value = ($(this).attr("bibtexcode").split("Abstract")[0] + '}').split("  ").join("");
+    openNav();
+  }
+ );
+}
+
+function displayAbstract(tpl, bibTexCode) {
+  tpl.find('.abstractCodeLink').attr("bibtexcode", bibTexCode);
+  tpl.find('.abstractCodeLink').click(function() 
+  {
+    var alrt = document.getElementById('overtext');
+    var ttl = document.getElementById('overtitle');
+    ttl.innerText = "Abstract:";
+    alrt.value = ($(this).attr("bibtexcode").split("Abstract")[1]).match(/\{(.*)\}/).pop();
+    openNav();
+  }
+ );
+}
+
+function displayArtifact(tpl, bibTexCode) {
+  tpl.find('.artifactCodeLink').attr("bibtexcode", bibTexCode); 
+  if(tpl.find('.artifactCodeLink').attr("bibtexcode").includes("Artifact")){		
+     tpl.find('.artifactCodeLink').css('visibility', 'visible');
+  }else{
+     tpl.find('.artifactCodeLink').css('visibility', 'hidden');
+  } 	        
+  tpl.find('.artifactCodeLink').click(function() 
+  {
+    var alrt = document.getElementById('overtext');
+    try {
+          alrt.value = ($(this).attr("bibtexcode").split("Artifact")[1]).match(/\{(.*)\}/).pop();
+	  window.location.href = alrt.value;
+    } catch(err) {
+    }
+  }
+ );
+}
+
+function displayAward(tpl, bibTexCode) {
+  tpl.find('.prizeCodeLink').attr("bibtexcode", bibTexCode); 
+  if(tpl.find('.prizeCodeLink').attr("bibtexcode").includes("Prize")){		
+     tpl.find('.prizeCodeLink').css('visibility', 'visible');
+     try {
+	  tpl.find('.fas').attr('innerHTML', (" " + (tpl.find('.prizeCodeLink').attr("bibtexcode").split("Prize")[1]).match(/\{(.*)\}/).pop()));
+	  } catch(err) {
+	  }
+     	
+  }else{
+     	tpl.find('.prizeCodeLink').css('visibility', 'hidden');
+  }
+}
 
 function BibtexDisplay() {
   this.fixValue = function (value) {
@@ -404,60 +462,15 @@ function BibtexDisplay() {
 	      }
 	      
 	      bibTexCode =  entry['BIBTEXCODE'];
-	    
-	      tpl.find('.bibtexCodeLink').attr("bibtexcode", bibTexCode);
-	      tpl.find('.bibtexCodeLink').click(function() 
-		{
-		  var alrt = document.getElementById('overtext');
-		  var ttl = document.getElementById('overtitle');
-		  ttl.innerText = "BibTeX Code:";
-		  alrt.value = ($(this).attr("bibtexcode").split("Abstract")[0] + '}').split("  ").join("");
-		  openNav();
-		}
-	      );
-	      
-	      tpl.find('.abstractCodeLink').attr("bibtexcode", bibTexCode);
-	      tpl.find('.abstractCodeLink').click(function() 
-		{
-		  var alrt = document.getElementById('overtext');
-		  var ttl = document.getElementById('overtitle');
-		  ttl.innerText = "Abstract:";
-		  alrt.value = ($(this).attr("bibtexcode").split("Abstract")[1]).match(/\{(.*)\}/).pop();
-		  openNav();
-		}
-	      );
-		    
-	      tpl.find('.artifactCodeLink').attr("bibtexcode", bibTexCode); 
-	      if(tpl.find('.artifactCodeLink').attr("bibtexcode").includes("Artifact")){		
-	      	tpl.find('.artifactCodeLink').css('visibility', 'visible');
-	      }else{
-	      	tpl.find('.artifactCodeLink').css('visibility', 'hidden');
-	      } 	        
-	      tpl.find('.artifactCodeLink').click(function() 
-		{
-		  var alrt = document.getElementById('overtext');
-		  try {
-	  	     alrt.value = ($(this).attr("bibtexcode").split("Artifact")[1]).match(/\{(.*)\}/).pop();
-	  	     window.location.href = alrt.value;
-		  } catch(err) {
-
-		  }
-	       }
-	      );
-	      
-	      tpl.find('.prizeCodeLink').attr("bibtexcode", bibTexCode); 
-	      if(tpl.find('.prizeCodeLink').attr("bibtexcode").includes("Prize")){		
-	        tpl.find('.prizeCodeLink').css('visibility', 'visible');
-	      	try {
-	  	     tpl.find('.fas').attr('innerHTML', (" " + (tpl.find('.prizeCodeLink').attr("bibtexcode").split("Prize")[1]).match(/\{(.*)\}/).pop()));
-		  } catch(err) {
-
-		  }
-	      	
-	      }else{
-	      	tpl.find('.prizeCodeLink').css('visibility', 'hidden');
-	      } 	        
-		    
+	      // Display biblio
+	      displayBibtex(tpl, bibTexCode);
+	      // Display Abstract
+	      displayAbstract(tpl, bibTexCode);
+	      // Dispaly Artifact
+	      displayArtifact(tpl, bibTexCode);
+	      // Display Awards
+	      displayAward(tpl, bibTexCode);	    
+	    	    
 	      output.append(tpl);	      
 	      tpl.show();
 	    }
@@ -555,10 +568,6 @@ if (typeof jQuery == 'undefined') {
 } else {
   // draw bibtex when loaded
   $(document).ready(function () {
-    // check for template, add default //<a class=\"aurl\" style=\"color:black; font-size:10px\">(abs online)</a>\n
-    if ($(".bibtex_template").size() == 0) {
-      $("body").append("<span class=\"tag\"></span><div class=\"bibtex_template\"><div class=\"if author\" style=\"font-weight: bold;\">\n  <span class=\"if year\">\n    <span class=\"year\"></span>, \n  </span>\n  <span class=\"author\"></span>\n  <span class=\"abstract\"></span>\n  <span class=\"if url\" style=\"margin-left: 20px\">\n    <a class=\"url\" style=\"color:black; font-size:10px\">(view online)</a>\n  </span>\n</div>\n<div style=\"margin-left: 10px; margin-bottom:5px;\">\n  <span class=\"title\"></span>\n</div></div>");
-    };
     loadFile();
   });
 }
