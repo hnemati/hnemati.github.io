@@ -1,6 +1,9 @@
 /*
 this code comes from http://code.google.com/p/bibtex-js/
 comments by François Schwarzentruber
+
+this code has been modified and improved by Hamed Nemati
+email: hnsnemati@gmail.com
 */
 
 // Issues:
