@@ -367,12 +367,26 @@ function displayAward(tpl, bibTexCode) {
   if(tpl.find('.prizeCodeLink').attr("bibtexcode").includes("Prize")){		
      tpl.find('.prizeCodeLink').css('visibility', 'visible');
      try {
-	  tpl.find('.fas').attr('innerHTML', (" " + (tpl.find('.prizeCodeLink').attr("bibtexcode").split("Prize")[1]).match(/\{(.*)\}/).pop()));
+	  tpl.find('.fa-trophy').attr('innerHTML', (" " + (tpl.find('.prizeCodeLink').attr("bibtexcode").split("Prize")[1]).match(/\{(.*)\}/).pop()));
 	  } catch(err) {
 	  }
      	
   }else{
      	tpl.find('.prizeCodeLink').css('visibility', 'hidden');
+  }
+}
+
+function displayInfo(tpl, bibTexCode) {
+  tpl.find('.infoCodeLink').attr("bibtexcode", bibTexCode); 
+  if(tpl.find('.infoCodeLink').attr("bibtexcode").includes("Miscellaneous")){		
+     tpl.find('.infoCodeLink').css('visibility', 'visible');
+     try {
+	  tpl.find('.fa-blog').attr('innerHTML', (" " + (tpl.find('.infoCodeLink').attr("bibtexcode").split("Miscellaneous")[1]).match(/\{(.*)\}/).pop()));
+	  } catch(err) {
+	  }
+     	
+  }else{
+     	tpl.find('.infoCodeLink').css('visibility', 'hidden');
   }
 }
 
@@ -472,7 +486,9 @@ function BibtexDisplay() {
 	      // Dispaly Artifact
 	      displayArtifact(tpl, bibTexCode);
 	      // Display Awards
-	      displayAward(tpl, bibTexCode);	    
+	      displayAward(tpl, bibTexCode);
+	      // Display additional info
+	      displayInfo(tpl, bibTexCode);	    
 	    	    
 	      output.append(tpl);	      
 	      tpl.show();

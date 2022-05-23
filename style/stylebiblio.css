@@ -22,6 +22,12 @@
 /* text-decoration : underline; */
    cursor: pointer;
 }
+
+.infoCodeLink
+{
+/* text-decoration : underline; */
+   cursor: pointer;
+}
     
 .url
 {
