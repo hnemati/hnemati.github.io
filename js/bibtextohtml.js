@@ -348,7 +348,7 @@ function displayArtifact(tpl, bibTexCode) {
   if(tpl.find('.artifactCodeLink').attr("bibtexcode").includes("Artifact")){		
      tpl.find('.artifactCodeLink').css('visibility', 'visible');
   }else{
-     tpl.find('.artifactCodeLink').css('visibility', 'hidden');
+     tpl.find('.artifactCodeLink').remove();
   } 	        
   tpl.find('.artifactCodeLink').click(function() 
   {
@@ -372,7 +372,7 @@ function displayAward(tpl, bibTexCode) {
 	  }
      	
   }else{
-     	tpl.find('.prizeCodeLink').css('visibility', 'hidden');
+     	tpl.find('.prizeCodeLink').remove();
   }
 }
 
@@ -386,7 +386,7 @@ function displayInfo(tpl, bibTexCode) {
 	  }
      	
   }else{
-     	tpl.find('.infoCodeLink').css('visibility', 'hidden');
+     	tpl.find('.infoCodeLink').remove();
   }
 }
 
