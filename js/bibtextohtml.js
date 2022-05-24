@@ -360,15 +360,15 @@ function displayArtifact(tpl, bibTexCode) {
 }
 
 function displayAward(tpl, bibTexCode) {
-  if(bibTexCode.includes("Prize")){		
-     tpl.find('.prizeCodeLink').css('visibility', 'visible');
+  if(bibTexCode.includes("Award")){		
+     tpl.find('.awardCodeLink').css('visibility', 'visible');
      try {
-	  tpl.find('.fa-trophy').attr('innerHTML', (" " + (bibTexCode.split("Prize")[1]).match(/\{(.*)\}/).pop()));
+	  tpl.find('.fa-trophy').attr('innerHTML', (" " + (bibTexCode.split("Award")[1]).match(/\{(.*)\}/).pop()));
 	  } catch(err) {
 	  }
      	
   }else{
-     	tpl.find('.prizeCodeLink').remove();
+     	tpl.find('.awardCodeLink').remove();
   }
 }
 
@@ -376,7 +376,7 @@ function displayInfo(tpl, bibTexCode) {
   if(bibTexCode.includes("Miscellaneous")){		
      tpl.find('.infoCodeLink').css('visibility', 'visible');
      try {
-	  tpl.find('.fa-blog').attr('innerHTML', (" " + (bibTexCode.split("Miscellaneous")[1]).match(/\{(.*)\}/).pop()));
+	  tpl.find('.infoCodeLink').attr('innerHTML', (" " + (bibTexCode.split("Miscellaneous")[1]).match(/\{(.*)\}/).pop()));
 	  } catch(err) {
 	  }
      	
