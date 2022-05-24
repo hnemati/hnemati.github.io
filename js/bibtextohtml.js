@@ -318,34 +318,31 @@ function closeNav() {
 }
 
 function displayBibtex(tpl, bibTexCode) {
-  tpl.find('.bibtexCodeLink').attr("bibtexcode", bibTexCode);
   tpl.find('.bibtexCodeLink').click(function() 
   {
     var alrt = document.getElementById('overtext');
     var ttl = document.getElementById('overtitle');
     ttl.innerText = "BibTeX Code:";
-    alrt.value = ($(this).attr("bibtexcode").split("Abstract")[0] + '}').split("  ").join("");
+    alrt.value = (bibTexCode.split("Abstract")[0] + '}').split("  ").join("");
     openNav();
   }
  );
 }
 
 function displayAbstract(tpl, bibTexCode) {
-  tpl.find('.abstractCodeLink').attr("bibtexcode", bibTexCode);
   tpl.find('.abstractCodeLink').click(function() 
   {
     var alrt = document.getElementById('overtext');
     var ttl = document.getElementById('overtitle');
     ttl.innerText = "Abstract:";
-    alrt.value = ($(this).attr("bibtexcode").split("Abstract")[1]).match(/\{(.*)\}/).pop();
+    alrt.value = (bibTexCode.split("Abstract")[1]).match(/\{(.*)\}/).pop();
     openNav();
   }
  );
 }
 
 function displayArtifact(tpl, bibTexCode) {
-  tpl.find('.artifactCodeLink').attr("bibtexcode", bibTexCode); 
-  if(tpl.find('.artifactCodeLink').attr("bibtexcode").includes("Artifact")){		
+  if(bibTexCode.includes("Artifact")){		
      tpl.find('.artifactCodeLink').css('visibility', 'visible');
   }else{
      tpl.find('.artifactCodeLink').remove();
@@ -354,7 +351,7 @@ function displayArtifact(tpl, bibTexCode) {
   {
     var alrt = document.getElementById('overtext');
     try {
-          alrt.value = ($(this).attr("bibtexcode").split("Artifact")[1]).match(/\{(.*)\}/).pop();
+          alrt.value = (bibTexCode.split("Artifact")[1]).match(/\{(.*)\}/).pop();
 	  window.location.href = alrt.value;
     } catch(err) {
     }
@@ -363,11 +360,10 @@ function displayArtifact(tpl, bibTexCode) {
 }
 
 function displayAward(tpl, bibTexCode) {
-  tpl.find('.prizeCodeLink').attr("bibtexcode", bibTexCode); 
-  if(tpl.find('.prizeCodeLink').attr("bibtexcode").includes("Prize")){		
+  if(bibTexCode.includes("Prize")){		
      tpl.find('.prizeCodeLink').css('visibility', 'visible');
      try {
-	  tpl.find('.fa-trophy').attr('innerHTML', (" " + (tpl.find('.prizeCodeLink').attr("bibtexcode").split("Prize")[1]).match(/\{(.*)\}/).pop()));
+	  tpl.find('.fa-trophy').attr('innerHTML', (" " + (bibTexCode.split("Prize")[1]).match(/\{(.*)\}/).pop()));
 	  } catch(err) {
 	  }
      	
@@ -377,11 +373,10 @@ function displayAward(tpl, bibTexCode) {
 }
 
 function displayInfo(tpl, bibTexCode) {
-  tpl.find('.infoCodeLink').attr("bibtexcode", bibTexCode); 
-  if(tpl.find('.infoCodeLink').attr("bibtexcode").includes("Miscellaneous")){		
+  if(bibTexCode.includes("Miscellaneous")){		
      tpl.find('.infoCodeLink').css('visibility', 'visible');
      try {
-	  tpl.find('.fa-blog').attr('innerHTML', (" " + (tpl.find('.infoCodeLink').attr("bibtexcode").split("Miscellaneous")[1]).match(/\{(.*)\}/).pop()));
+	  tpl.find('.fa-blog').attr('innerHTML', (" " + (bibTexCode.split("Miscellaneous")[1]).match(/\{(.*)\}/).pop()));
 	  } catch(err) {
 	  }
      	
