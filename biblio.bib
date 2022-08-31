@@ -2,11 +2,11 @@
 % Encoding: UTF-8
 
 @InProceedings{nemati:microleakagetemplate,
-  Author                         = {Hamed Nemati and Ahmad Ibrahim and Till Sch{\"u}ter and Nils Ole Tippenhauer and Christian Rossow},
-  Title                          = {Microarchitectural Leakage Templates and Their Application to Cache Based Side Channels},
-  Booktitle                      = {Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security},  
-  Year                           = {2022},
-  Abstract                       = {The complexity of modern processor architectures has given rise to sophisticated interactions among their components. Such interactions may result in potential attack vectors in terms of side channels, possibly available to userland exploits to leak secret data. Exploitation and countering of such side channels requires a detailed understanding of the target component. However, such detailed information is commonly unpublished for many CPUs. In this paper, we introduce the concept of Leakage Templates to abstractly describe specific side channels and identify their occurrences in binary applications. We design and implement Plumber, a framework to derive the generic Leakage Templates from individual code sequences that are known to cause leakage (e.g., found by prior work). Plumber uses a combination of instruction fuzzing, instructions’ operand mutation and statistical analysis to explore undocumented behavior of microarchitectural optimizations and derive sufficient conditions on vulnerable code inputs that if hold can trigger a distinguishing behavior. Using Plumber we dentified novel leakage primitives based on Leakage Templates (for ARM Cortex-A53 and -A72 cores), in articular related to previction (a new premature cache eviction), and prefetching behavior. We show the utility of Leakage Templates by re-identifying a prefetcher-based vulnerability in OpenSSL 1.1.0g first reported by Shin et al.}
+	Author                   = {Hamed Nemati and Ahmad Ibrahim and Till Sch{\"u}ter and Nils Ole Tippenhauer and Christian Rossow},
+	Title                    = {Microarchitectural Leakage Templates and Their Application to Cache Based Side Channels},
+	Booktitle                = {Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security},  
+	Year                     = {2022},
+	Abstract                 = {The complexity of modern processor architectures has given rise to sophisticated interactions among their components. Such interactions may result in potential attack vectors in terms of side channels, possibly available to userland exploits to leak secret data. Exploitation and countering of such side channels requires a detailed understanding of the target component. However, such detailed information is commonly unpublished for many CPUs. In this paper, we introduce the concept of Leakage Templates to abstractly describe specific side channels and identify their occurrences in binary applications. We design and implement Plumber, a framework to derive the generic Leakage Templates from individual code sequences that are known to cause leakage (e.g., found by prior work). Plumber uses a combination of instruction fuzzing, instructions’ operand mutation and statistical analysis to explore undocumented behavior of microarchitectural optimizations and derive sufficient conditions on vulnerable code inputs that if hold can trigger a distinguishing behavior. Using Plumber we dentified novel leakage primitives based on Leakage Templates (for ARM Cortex-A53 and -A72 cores), in articular related to previction (a new premature cache eviction), and prefetching behavior. We show the utility of Leakage Templates by re-identifying a prefetcher-based vulnerability in OpenSSL 1.1.0g first reported by Shin et al.}
 }
 
 @InProceedings{DBLP:conf/isca/Nicholas22,
@@ -21,14 +21,14 @@
 }  
 
 @InProceedings{comprefinement22,
-        Author    = {Guanciale, Roberto and Baumann, Christoph and Buiras, Pablo and Dam, Mads and Nemati, Hamed},
-        Title     = {A Case Study in Information Flow Refinement for Low Level Systems},
-        Booktitle = {The Logic of Software. A Tasting Menu of Formal Methods: Essays Dedicated to Reiner H{\"a}hnle on the Occasion of His 60th Birthday},
-        Year      = {2022},
-        doi       = {10.1007/978-3-031-08166-8_4},
-        Isbn      = {978-3-031-08166-8},
-        Pages     = {54--79},
-        Publisher = {Springer International Publishing},
+	Author                   = {Guanciale, Roberto and Baumann, Christoph and Buiras, Pablo and Dam, Mads and Nemati, Hamed},
+	Title                    = {A Case Study in Information Flow Refinement for Low Level Systems},
+	Booktitle                = {The Logic of Software. A Tasting Menu of Formal Methods},
+	Year                     = {2022},
+	doi                      = {10.1007/978-3-031-08166-8_4},
+	Isbn                     = {978-3-031-08166-8},
+	Pages                    = {54--79},
+	Publisher                = {Springer International Publishing},
 	Url                      = {paper/InfoFlowRefinementcasestudy.pdf},	
 	Abstract                 = {In this work we employ information-flow-aware refinement to study security properties of a separation kernel. We focus on refinements that support changes in data representation and semantics, including the addition of state variables that may induce new observational power or side channels. We leverage an epistemic approach to ignorance-preserving refinement where an abstract model is used as a specification of a system's permitted information flows that may include the declassification of secret information. The core idea is to require that refinement steps must not induce observer knowledge that is not already available in the abstract model. In particular, we show that a simple key manager may cause information leakage via a refinement that includes cache and timing information. Finally, we show that deploying standard countermeasures against cache-based timing channels regains ignorance preservation.}
 }
