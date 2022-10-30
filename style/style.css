@@ -385,3 +385,11 @@ div.mainpage-section {
   border-bottom: 1px solid #00BFFF;
   border-left: 1px solid #00BFFF;
 }
+
+.fa-twitter {
+  color: rgb(29, 135, 236);
+}
+
+.fa-linkedin {
+  color: rgb(14, 79, 181);
+}
