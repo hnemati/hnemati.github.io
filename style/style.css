@@ -393,3 +393,18 @@ div.mainpage-section {
 .fa-linkedin {
   color: rgb(14, 79, 181);
 }
+
+.fa-gscholar {
+  margin:-8px 0px;
+  width:36px;
+  height:36px;
+  content:url("../img/gscholar.svg");
+}
+
+.fa-dblp {
+  margin:-8px 0px;
+  width:36px;
+  height:36px;
+  vertical-align:middle;
+  content:url("../img/dblp.svg");
+}
