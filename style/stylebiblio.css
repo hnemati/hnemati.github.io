@@ -48,11 +48,12 @@
    
 .yearpublication
 {
+   border-radius: 5px;
    background-color: #DDDDDD;
    font-weight: bold;
-   font-size: 12pt;
-   margin-top:20px;  
-   margin-bottom:10px; 
+   font-size: 12pt;  
+   margin-bottom:10px;
+   margin-left: -20px; 
    padding: 8px;
 }
 
