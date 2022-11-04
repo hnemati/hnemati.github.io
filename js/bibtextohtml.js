@@ -427,7 +427,7 @@ function BibtexDisplay() {
 		    output.append("<div class='yearpublication'>" + entry["YEAR"] + "</div>");
 		    yearOfPreviousEntry = entry["YEAR"];
 	      }
-	      
+
 	      // find template
 	      var tpl = $(".bibtex_template").clone().removeClass('bibtex_template');
 	       
@@ -443,7 +443,7 @@ function BibtexDisplay() {
 	      do {
 		// find next if
 		var conds = tpl.find(".if");
-		if (conds.size() == 0) {
+		if (conds.length == 0) {
 		  break;
 		}
 		
