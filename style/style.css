@@ -31,9 +31,8 @@ h1, h2, h3, h4, h5, h6
   padding: 15px 0 5px 0;}
 
 h2
-{ font: normal 160% arial, sans-serif;
-  color: #B60000;
-  font-variant-caps: petite-caps;}
+{ font: normal 145% 'century gothic', arial, sans-serif;
+  color: #B60000;}
 
 h3
 { font: normal 125% 'century gothic', arial, sans-serif;}
@@ -92,7 +91,7 @@ ol li
   background: rgb(236,231,231);
   background: linear-gradient(207deg, rgba(236,231,231,1) 0%, rgba(110,108,108,1) 0%, rgba(0,0,0,1) 100%);
   height: 180px;
-  box-shadow:0 .125rem .25rem rgba(0,0,0,.40)}
+  border-bottom: 1px solid #FFF;}
 
 #logo
 { width: 840px;
@@ -162,7 +161,7 @@ ul#menu li.selected a, ul#menu li.selected a:hover
   color: #111;}
 
 ul#menu li a:hover
-{ color: #999999;}
+{ color: #40D8FE;}
 
 #content_header, #content_footer
 { width: 928px;
@@ -337,7 +336,7 @@ table tr td
 div.mainpage-section {
   border-style: none;
   border-width: 2px;
-  border-radius: 10px;
+  border-radius: 25px;
   border-top: ridge 1px;
   border-bottom: ridge 1px;
   padding-top: 1px;
