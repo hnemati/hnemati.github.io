@@ -335,11 +335,9 @@ table tr td
   border-top: 1px solid #FFF;}
 
 div.mainpage-section {
-  border-style: none;
-  border-width: 2px;
   border-radius: 10px;
-  border-top: ridge 2px;
-  border-bottom: ridge 2px;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
   padding-top: 1px;
   padding-left: 10px;
   padding-right: 10px;
