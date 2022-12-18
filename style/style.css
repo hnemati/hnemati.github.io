@@ -409,3 +409,12 @@ div.mainpage-section {
   vertical-align:middle;
   content:url("../img/dblp.svg");
 }
+
+.fa-mastadon {
+  margin:-8px 0px;
+  width:36px;
+  height:36px;
+  vertical-align:middle;
+  content:url("../img/mastadon.svg");
+}
+
