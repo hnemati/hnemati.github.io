@@ -1,36 +1,7 @@
 % This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
-@InProceedings{serberus:sp24,
-        author                   = {Nicholas Mosier and Hamed Nemati and John Mitchell and Caroline Trippel},
-        title                    = {Serberus: Protecting Cryptographic Code from Spectres at Compile-Time},
-        booktitle                = {Proceedings of the 45th IEEE Symposium on Security and Privacy},
-        year                     = {2024},
-  	Abstract                 = {We design and formally prove the completeness of Serberus, the first comprehensive mitigation for hardening constant-time (CT) code against Spectre attacks (involving the PHT, BTB, RSB, STL, and/or PSF speculation primitives) on existing hardware. Serberus is based on three insights. First, hardware control-flow integrity (CFI) protections restrict transient control-flow to the extent that it may be comprehensively considered by software analyses. Second, conformance to the accepted CT code discipline permits two code patterns that are unsafe in the post-Spectre era. Finally, once these code patterns are addressed, all Spectre leakage of secrets in CT programs can be attributed to one of four classes of taint primitives, instructions which can transiently assign a secret value to a publicly-typed variable. We empirically evaluate Serberus on cryptographic primitives in the OpenSSL, Libsodium, and HACL libraries. Serberus introduces 20.4 runtime overhead on average, compared to 24.9 for the next closest state-of-the-art software mitigation, which features weaker security guarantees.}
-}
 
-@InProceedings{cryptobap:ccs23,
-        author                   = {Faezeh Nasrabadi and Robert K{\"u}nnemann and Hamed Nemati},
-        title                    = {{CryptoBap}: A Binary Analysis Platform for Cryptographic Protocols},
-        booktitle                = {Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security(CCS)},
-        year                     = {2023},
-  	Abstract                 = {We introduce CryptoBap, a platform to verify weak secrecy and authentication for the (ARMv8 and RISC-V) machine code of cryptographic protocols. We achieve this by first transpiling the binary of protocols into an intermediate representation and then performing a crypto-aware symbolic execution to automatically extract a model of the protocol that represents all its execution paths. Our symbolic execution resolves indirect jumps and supports bounded loops using the loop-summarization technique, which we fully automate. The extracted model is then translated into models amenable to automated verification via ProVerif and CryptoVerif using a third-party toolchain. We prove the soundness of the proposed approach and used CryptoBap to verify multiple case studies ranging from toy examples to real-world protocols, TinySSH, an implementation of SSH, and WireGaurd, a modern VPN protocol.}
-}
-
-@InProceedings{rasifard:capaccesscontrol,
-        author                   = {Hamed Rasifard and Rahul Gopinath and Michael Backes and Hamed Nemati},
-        title                    = {{SEAL}: Capability-Based Access Control for Data-Analytic Scenarios},
-        booktitle                = {Proceedings of the 28th {ACM} Symposium on Access Control Models and Technologies, {SACMAT} 2023, Trento, Italy, June 7-9, 2023},
-        pages                    = {67--78},
-        year                     = {2023},
-        crossref                 = {DBLP:conf/sacmat/2023},
-        url                      = {https://doi.org/10.1145/3589608.3593838},
-        doi                      = {10.1145/3589608.3593838},
-        timestamp                = {Fri, 02 Jun 2023 21:24:02 +0200},
-        biburl                   = {https://dblp.org/rec/conf/sacmat/RasifardG0N23.bib},
-        bibsource                = {dblp computer science bibliography, https://dblp.org},
-  	Abstract                 = {Data science is the basis for various disciplines in the Big-Data era. Due to the high volume, velocity, and variety of big data, data owners often store their data in data servers. Past few years, many computation techniques have emerged to protect the security and privacy of such shared data while enabling analysis thereon. Hence, access-control systems must provide a fine-grained, multi-layer mechanism to protect data. However, the existing systems and frameworks fail to satisfy all these requirements and resolve the trust issue between data owners and analysts. In this paper, we propose SEAL as a framework to protect the security and privacy of shared data. SEAL enables computations on shared data while they remain under the complete control of data owners through pre-defined policies. Our framework employs the capability-object model to define flexible access policies. SEAL's access-control system supports delegating and revoking access privileges and other access-control customizations. In addition, SEAL can assign security labels to privacy-sensitive data and track them to enable data owners to define where and when a data analyst can access their data. We demonstrate the practicability of our approach by presenting a prototype implementation of SEAL. Furthermore, we display the flexibility of our framework by implementing multiple data-analytic scenarios, which cover different applications.}
-}
 
 @InProceedings{nemati:microleakagetemplate,
 	Author                   = {Hamed Nemati and Ahmad Ibrahim and Till Sch{\"u}ter and Nils Ole Tippenhauer and Christian Rossow},
