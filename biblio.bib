@@ -1,6 +1,14 @@
 % This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
+@InProceedings{eslh:asiaccs23,
+	author                   = {Tiziano Marinaro and Pablo Buiras and Andreas Lindner and Roberto Guanciale and Hamed Nemati},
+	title                    = {Beyond Over-Protection: A Targeted Approach to Spectre Mitigation and Performance Optimization},
+	booktitle                = {Proceedings of the 2024 ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS)},
+	year                     = {2024},
+	Abstract                 = {Spectre attacks are side-channel vulnerabilities that have significantly impacted and reshaped the landscape of computer microarchitecture security. Researchers and practitioners have developed a range of hardware and software measures to counter these attacks. A prime example of such mitigation is speculative load hardening in LLVM, which protects against leaks by tracking the speculation state and masking values during misspeculation. LLVM relies on static analysis to harden programs using slh that often results in over-protection, which incurs performance overhead. In this paper, we extended an existing side-channel model validation framework, Scam-V, to check the vulnerability of programs to Spectre-PHT attacks and optimize the protection of programs using the slh approach. We illustrate the efficacy of Scam-V by first demonstrating that it can automatically identify Spectre vulnerabilities in real programs, e.g., fragments of crypto-libraries. We then develop an optimization mechanism that validates the necessity of slh hardening w.r.t. the target hardware platform. Our experiments showed that hardening introduced by LLVM in most cases could be significantly improved when the underlying microarchitecture properties are considered.}
+}
+
 @InProceedings{serberus:sp24,
 	author                   = {Nicholas Mosier and Hamed Nemati and John Mitchell and Caroline Trippel},
 	title                    = {Serberus: Protecting Cryptographic Code from Spectres at Compile-Time},
