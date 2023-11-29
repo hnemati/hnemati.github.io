@@ -31,10 +31,9 @@
 	author                   = {Till Schlüter and Amit Choudhari and Lorenz Hetterich and Leon Trampert and Hamed Nemati and Ahmad Ibrahim and Michael Schwarz and Christian Rossow and Nils Ole Tippenhauer},
 	title                    = {FetchBench: Systematic Identification and Characterization of Proprietary Prefetchers},
 	booktitle                = {Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security(CCS)},
-	url                      = {paper/ccs23-fetchbench.pdf},	
+	year                     = {2023},
 	Abstract                 = {Prefetchers are features in modern CPUs that allow speculative fetching of memory based on predictions on future memory use of applications. Different CPU models may use different prefetcher types, and two implementations of the same prefetcher can differ in detail in their characteristics, leading to distinct runtime behavior. For a few implementations, security researchers showed through manual analysis how to exploit specific prefetchers to leak secret data. Identifying such vulnerabilities required tedious reverse-engineering as prefetcher implementations are proprietary and undocumented. So far, no systematic study of prefetchers in common CPUs is available, preventing further security assessment. In this work, we address the following question: How can we systematically identify and characterize under-specified prefetchers in proprietary processors? To answer this question, we systematically analyze approaches to prefetching, design cross-platform tests to identify and characterize them on a given CPU, and demonstrate that our implementation FetchBench can characterize prefetchers on 14 different ARM and x86-64 CPUs. For example, FetchBench uncovers and characterizes a previously unknown replay-based prefetcher on the ARM Cortex-A72 CPU. Based on these findings, we demonstrate two novel attacks that exploit this undocumented prefetcher as a side channel to leak secret information, even from the secure TrustZone into normal world.},
-	Miscellaneous            = {<a class="fas fa-bug" aria-hidden="true" href='#' style='color:#e4077d'> CVE-2023-33936 </a>},
-	year                     = {2023}
+	Miscellaneous            = {<a class="fas fa-bug" aria-hidden="true" href='#' style='color:#e4077d'> CVE-2023-33936 </a>}
 }
 
 @InProceedings{hwswspectremitigation:plarch23,
