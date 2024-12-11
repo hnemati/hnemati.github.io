@@ -19,6 +19,15 @@
 	Abstract                 = {We design and formally prove the completeness of Serberus, the first comprehensive mitigation for hardening constant-time (CT) code against Spectre attacks (involving the PHT, BTB, RSB, STL, and/or PSF speculation primitives) on existing hardware. Serberus is based on three insights. First, hardware control-flow integrity (CFI) protections restrict transient control-flow to the extent that it may be comprehensively considered by software analyses. Second, conformance to the accepted CT code discipline permits two code patterns that are unsafe in the post-Spectre era. Finally, once these code patterns are addressed, all Spectre leakage of secrets in CT programs can be attributed to one of four classes of taint primitives, instructions which can transiently assign a secret value to a publicly-typed variable. We empirically evaluate Serberus on cryptographic primitives in the OpenSSL, Libsodium, and HACL libraries. Serberus introduces 20.4 runtime overhead on average, compared to 24.9 for the next closest state-of-the-art software mitigation, which features weaker security guarantees.}
 }
 
+@InProceedings{kconcurrency,
+	author                   = {Mads Dam and Hamed Nemati},
+	title                    = {Compositional Verification Using Past-Time Epistemic Temporal Logic},
+	booktitle                = {Authors draft},
+	year                     = {2024},
+	url                      = {paper/k_concureny.pdf},
+	Abstract                 = {Reasoning about shared variable concurrent programs poses significant challenges due to the need to account for interference between concurrently executing threads. Traditional verification approaches often fall short in terms of modularity and composability, which are essential for scalable and maintainable verification. We present a method for modular and compositional verification of concurrent programs using \textit{past-time temporal epistemic logic}. Our approach builds on Halpern and Moses' epistemic logic framework and incorporates past-time temporal operators to capture the temporal context of thread interactions. We formalize the semantics of our logic, introduce a compositional proof system for reasoning about concurrent programs, and demonstrate its application using examples. The expressiveness of our proposed logic provides a rigorous foundation to verify concurrent systems compositionally.}
+}
+
 @InProceedings{cryptobap:ccs23,
 	author                   = {Faezeh Nasrabadi and Robert K{\"u}nnemann and Hamed Nemati},
 	title                    = {CryptoBap: A Binary Analysis Platform for Cryptographic Protocols},
