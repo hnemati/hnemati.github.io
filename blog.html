@@ -9,6 +9,7 @@
 <body>
     <h1>My Microblog</h1>
     <div id="posts"></div>
+    
     <script>
         async function loadPosts() {
             const response = await fetch("microblog/posts.json");
@@ -17,8 +18,8 @@
             
             postsContainer.innerHTML = posts.map(post => `
                 <div class="post">
-                    <p>${post.text}</p>
                     ${post.image ? `<img src="${post.image}" alt="Post Image">` : ""}
+                    <p>${post.text}</p>
                 </div>
             `).join("");
         }
