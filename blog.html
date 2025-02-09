@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Microblog</title>
+    <link rel="stylesheet" href="microblog/style.css">
+</head>
+<body>
+    <h1>My Microblog</h1>
+    <div id="posts"></div>
+    <script>
+        async function loadPosts() {
+            const response = await fetch("microblog/posts.json");
+            const posts = await response.json();
+            const postsContainer = document.getElementById("posts");
+            postsContainer.innerHTML = posts.map(post => `<p>${post.text}</p>`).join("");
+        }
+        loadPosts();
+    </script>
+</body>
+</html>
