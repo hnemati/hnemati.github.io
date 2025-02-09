@@ -15,11 +15,11 @@
             const response = await fetch("microblog/posts.json");
             const posts = await response.json();
             const postsContainer = document.getElementById("posts");
-            
+
             postsContainer.innerHTML = posts.map(post => `
                 <div class="post">
                     ${post.image ? `<img src="${post.image}" alt="Post Image">` : ""}
-                    <p>${post.text}</p>
+                    <p>${post.text.replace(/\n/g, '<br>')}</p> <!-- Fixes line breaks -->
                 </div>
             `).join("");
         }
