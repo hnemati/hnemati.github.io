@@ -11,9 +11,9 @@
     <div id="posts"></div>
     <script>
         async function loadPosts() {
-            const response = await fetch("posts.json");
+            const response = await fetch("microblog/posts.json");
             const posts = await response.json();
-            const postsContainer = document.getElementById("microblog/posts.json");
+            const postsContainer = document.getElementById("posts");
             
             postsContainer.innerHTML = posts.map(post => `
                 <div class="post">
