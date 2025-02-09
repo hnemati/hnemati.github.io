@@ -1,5 +1,5 @@
 [
-    { "text": "Hello, world! This is my first microblog post.", "image": "" },
+    { "text": "Hello, world! This is my first microblog post.\n and here is test Photo:", "image": "https://cdn.varbi.com/177/ed1ff0c4d39f0d6d223ce07fef09c312.jpg" },
     { "text": "GitHub Pages makes it easy to host a simple blog!", "image": "" },
-    { "text": "Check out this cool sunset!", "image": "https://hnemati.github.io/img/me2.jpg" }
+    { "text": "Check out this cool sunset!", "image": "" }
 ]
