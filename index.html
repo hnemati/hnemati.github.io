@@ -10,6 +10,28 @@
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <!--script type="text/javascript" src="https://bitbucket.org/hnemati/gaconfig/raw/master/gaconfig.js"></script-->
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("microblog/posts.json")  // Adjust path if necessary
+                .then(response => response.json())
+                .then(posts => {
+                    if (posts.length > 0) {
+                        const latestPost = posts[0];  // Assume first post is newest
+
+                        document.getElementById("post-text").innerHTML = latestPost.text;
+                        document.getElementById("post-link").href = "/blog"; // Full blog page
+
+                        const imageElement = document.getElementById("post-image");
+                        if (latestPost.image) {
+                            imageElement.src = latestPost.image;
+                        } else {
+                            imageElement.src = "https://via.placeholder.com/300"; // Default image
+                        }
+                    }
+                })
+                .catch(error => console.error("Error fetching latest post:", error));
+        });
+  </script>
 </head>
 
 <body>
@@ -45,53 +67,48 @@
          </tr>  
         </table>
       </div>
-      <!-- div class="mainpage-section" id="content">  
-        <br /><h2>Open Positions</h2>
-        <table>
-         <tr>
-          <td> <p> I have several PhD and Postdoc positions available. Candidates interested in topics related to <b>systems security</b>, <b>formal verification</b>, and their intersection with <b>ML</b> should contact me. <a href="positions.html"> Read more </a> </p></td>
-         </tr>     
+<!-- Contact Information & Blog Preview (Split Horizontally) -->
+      <div class="mainpage-section" id="content">
+        <h2>Contact & Latest Blog Post</h2>
+        <table width="100%">
+          <tr>
+            <!-- Left: Contact Info -->
+            <td width="50%" valign="top">
+              <h3>Contact Information</h3>
+              <table>
+                <tr>
+                  <td>Email:</td>
+                  <td><img src="img/email.png" alt=":-)" height="14" width="160" /></td>
+                </tr>
+                <tr>
+                  <td>Phone:</td>
+                  <td>+46-701667438</td>
+                </tr>
+                <tr>
+                  <td>Address:</td>
+                  <td>Teknikringen 33, 11428 Stockholm, Sweden</td>
+                </tr>
+                <tr>
+                  <td>Find me on:</td>
+                  <td>
+                    <a href="https://www.linkedin.com/in/hamed-nemati-61b8904b"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/hnemati"><i class="fab fa-github fa-2x"></i></a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+            <!-- Right: Blog Preview -->
+            <td width="50%" valign="top" class="preview-card">
+              <h3>Latest Blog Post</h3>
+              <a id="post-link" href="blog.html" class="post-link">
+                <img id="post-image" src="" alt="Latest Post Image" width="100%">
+              </a>
+              <p id="post-text" class="post-link">Loading latest post...</p>
+            </td>
+          </tr>
         </table>
-      </div-->
-      <div class="mainpage-section" id="content">  
-        <br /><h2>Contact Information	  
-	</h2> 
-        <table>
-         <!--tr>
-          <td> <p> Postal address: </p></td>
-          <td>
-           <p>
-           	CISPA Helmholtz Center for Information Security, Stuhlsatzenhaus 5, Saarland Informatics Campus E9 1, 66123 Saarbrucken, Germany
-           </p>
-          </td>
-         </tr-->
-         <tr>
-          <td> &nbsp;&nbsp; Email : </td>
-          <td> <img src="img/email.png" alt=":-)" height="14" width="160"/> </td>
-         </tr>
-         <tr>
-          <td> &nbsp;&nbsp; Phone : </td>
-          <td>+46-701667438</td>
-         </tr>
-         <tr>
-          <td> &nbsp;&nbsp; Address : </td>
-          <td> Teknikringen 33, 11428 Stockholm, Sweden</td>
-         </tr>         
-         <tr>
-          <td> &nbsp;&nbsp; I am also on : </td>
-          <td> <!--a href="https://twitter.com/intent/follow?screen_name=HamedNematti" ><i class="fab fa-twitter fa-2x"></i></a>
-            &nbsp;&nbsp;
-	    <a href="https://infosec.exchange/invite/MPjGv6Ht" ><i class="fa-mastadon"></i></a>
-            &nbsp;&nbsp;-->
-            <a href="https://www.linkedin.com/in/hamed-nemati-61b8904b" ><i class="fab fa-linkedin fa-2x"></i></a>
-            <!--&nbsp;&nbsp;               
-	    <a href="https://scholar.google.com/citations?hl=en&user=E9nMgpgAAAAJ" ><img class="fa-gscholar"></a-->
-            &nbsp;&nbsp;  
-	    <a href="https://github.com/hnemati" ><i class="fab fa-github fa-2x"></i></a>
-          </td>
-         </tr>              
-        </table> 
-       </div>
+      </div>
     </div>
     <div id="content_footer"></div>
     <div id="footer">
