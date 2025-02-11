@@ -9,23 +9,7 @@
   <link rel="stylesheet" type="text/css" href="style/style.css" />
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <!--script type="text/javascript" src="https://bitbucket.org/hnemati/gaconfig/raw/master/gaconfig.js"></script-->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        fetch("microblog/posts.json")  
-            .then(response => response.json())
-            .then(posts => {
-                if (posts.length > 0) {
-                    const latestPost = posts[0];
-                    const words = latestPost.text.split(" ").slice(0, 30).join(" ") + "...";
-
-                    document.getElementById("post-preview").innerText = words;
-                    document.getElementById("post-link").href = "blog.html"; 
-                }
-            })
-            .catch(error => console.error("Error fetching latest post:", error));
-    });
-  </script>
+  <script type="text/javascript" src="js/blog.js"></script>
 </head>
 
 <body>
@@ -63,7 +47,7 @@
       </div>
 <!-- Contact Information & Blog Preview (Split Horizontally) -->
       <div class="mainpage-section" id="content">
-        <h2>Contact & Latest News</h2>
+        <h2>Contact & News</h2>
         <table width="100%">
           <tr>
             <!-- Left: Contact Info -->
