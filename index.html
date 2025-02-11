@@ -11,26 +11,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <!--script type="text/javascript" src="https://bitbucket.org/hnemati/gaconfig/raw/master/gaconfig.js"></script-->
   <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("microblog/posts.json")  // Adjust path if necessary
-                .then(response => response.json())
-                .then(posts => {
-                    if (posts.length > 0) {
-                        const latestPost = posts[0];  // Assume first post is newest
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("posts.json")  
+            .then(response => response.json())
+            .then(posts => {
+                if (posts.length > 0) {
+                    const latestPost = posts[0];
+                    const words = latestPost.text.split(" ").slice(0, 30).join(" ") + "...";
 
-                        document.getElementById("post-text").innerHTML = latestPost.text;
-                        document.getElementById("post-link").href = "/blog"; // Full blog page
-
-                        const imageElement = document.getElementById("post-image");
-                        if (latestPost.image) {
-                            imageElement.src = latestPost.image;
-                        } else {
-                            imageElement.src = "https://via.placeholder.com/300"; // Default image
-                        }
-                    }
-                })
-                .catch(error => console.error("Error fetching latest post:", error));
-        });
+                    document.getElementById("post-preview").innerText = words;
+                    document.getElementById("post-link").href = "blog.html"; 
+                }
+            })
+            .catch(error => console.error("Error fetching latest post:", error));
+    });
   </script>
 </head>
 
@@ -69,7 +63,7 @@
       </div>
 <!-- Contact Information & Blog Preview (Split Horizontally) -->
       <div class="mainpage-section" id="content">
-        <h2>Contact & Latest Blog Post</h2>
+        <h2>Contact & Latest News</h2>
         <table width="100%">
           <tr>
             <!-- Left: Contact Info -->
@@ -100,10 +94,11 @@
 
            <!-- Right: Blog Preview -->
             <td width="50%" valign="top">
-              <h3>Latest Blog Post</h3>
-              <a id="post-link" href="blog.html">
-                <p id="post-text">Loading latest post...</p>
-              </a>
+              <h3>Latest News</h3>
+              <div class="preview-card">
+                <p id="post-preview">Loading latest post...</p>
+                <a id="post-link" href="blog.html">Read More</a>
+              </div>
             </td>
           </tr>
         </table>
