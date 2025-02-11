@@ -20,6 +20,13 @@
 
                         document.getElementById("post-text").innerHTML = latestPost.text;
                         document.getElementById("post-link").href = "/blog"; // Full blog page
+
+                        const imageElement = document.getElementById("post-image");
+                        if (latestPost.image) {
+                            imageElement.src = latestPost.image;
+                        } else {
+                            imageElement.src = "https://via.placeholder.com/300"; // Default image
+                        }
                     }
                 })
                 .catch(error => console.error("Error fetching latest post:", error));
@@ -91,12 +98,12 @@
               </table>
             </td>
 
-            <!-- Right: Blog Preview -->
-            <td width="50%" valign="top" class="preview-card">
+           <!-- Right: Blog Preview -->
+            <td width="50%" valign="top">
               <h3>Latest Blog Post</h3>
-              <a id="post-link" href="blog.html" class="post-link">
+              <a id="post-link" href="blog.html">
+                <p id="post-text">Loading latest post...</p>
               </a>
-              <p id="post-text" class="post-link">Loading latest post...</p>
             </td>
           </tr>
         </table>
