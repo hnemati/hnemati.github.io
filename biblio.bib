@@ -24,6 +24,16 @@
 	Abstract                 = {We extract the first formal model of WhatsApp from its implementation by combining binary-level analysis (via CryptoBap) with reverse engineering (via Ghidra) to handle this large closed-source application. Using this model, we prove forward secrecy, identify a known clone-attack against post-compromise security and discover functional gaps between WhatsApp's implementation and its specification. We further introduce a methodology to analyze cryptographic protocol implementations for their resilience to side-channel attacks. This is achieved by extending the CryptoBap framework to integrate hardware leakage contracts into the protocol model, which we then pass to the state-of-the-art protocol prover, DeepSec. This enables a detailed security analysis against both functional bugs and microarchitectural side-channel attacks. Using this methodology, we identify a privacy attack in WhatsApp that allows a side-channel attacker to learn the victim's contacts and confirm a known unlinkability attack on the BAC protocol used in electronic passports. Key contributions include (1) the first formal model of WhatsApp, extracted from its binary, (2) a framework to integrate side-channel leakage contracts into protocol models for the first time, and (3) revealing critical vulnerabilities invisible to specification-based methods.}
 }
 
+@InProceedings{mosier:oscar25,
+	author                   = {Nicholas Mosier and Hamed Nemati and John C. Mitchell and Caroline Trippel},
+	title                    = {Fast, Accurate, and Novel Performance Evaluations with {PinCPU}},
+	booktitle                = {Open-Source Computer Architecture Research ({OSCAR}) 2025 Workshop, Tokyo, Japan, June 21, 2025 (co-located with {ISCA} 2025)},
+	year                     = {2025},
+	url                      = {https://oscar-workshop.github.io/files/OSCAR_2025_paper_9.pdf},
+	Artifact                 = {https://github.com/StanfordPLArchSec/pincpu-gem5},
+	Abstract                 = {We present {PinCPU}, the first fast-forwarding processor model for {gem5} to allow users to dynamically instrument {x86-64} userspace workloads. {PinCPU} uses Intel Pin to enable users to fast-forward {gem5} simulations at near-native speeds and exposes a plugin interface that allows users to register their own instrumentation callbacks at runtime. First, we overview {PinCPU}'s design. Then, we describe how researchers can use {PinCPU} plugins to (i) generate simpoints quickly and accurately, (ii) translate simpoints between binaries compiled from the same source for novel hardware-software performance comparisons, and (iii) fast-forward binaries featuring custom {ISA} extensions. We have open sourced {PinCPU} and plan on upstreaming it into {gem5}.}
+}
+
 @misc{palmskog2025trustworthyverificationriscvbinaries,
 	Title                    = {Trustworthy Verification of {RISC-V} Binaries Using Symbolic Execution in {HolBA}},
 	Author                   = {Karl Palmskog and Andreas Lindner and Scott Constable and Roberto Guanciale and Hamed Nemati},
