@@ -1,6 +1,51 @@
 % This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
+@InProceedings{DBLP:conf/csfw/NasrabadiKN25,
+	author                   = {Faezeh Nasrabadi and Robert K{\"u}nnemann and Hamed Nemati},
+	title                    = {Symbolic Parallel Composition for Multi-language Protocol Verification},
+	booktitle                = {38th {IEEE} Computer Security Foundations Symposium ({CSF} 2025), Santa Cruz, CA, USA, June 16--20, 2025},
+	pages                    = {378--393},
+	publisher                = {IEEE},
+	year                     = {2025},
+	url                      = {https://doi.org/10.1109/CSF64896.2025.00030},
+	doi                      = {10.1109/CSF64896.2025.00030},
+	Abstract                 = {The implementation of security protocols often combines different languages. This practice, however, poses a challenge to traditional verification techniques, which typically assume a single-language environment and, therefore, are insufficient to handle challenges presented by the interplay of different languages. To address this issue, we establish principles for combining multiple programming languages operating on different atomic types using a symbolic execution semantics. This facilitates the (parallel) composition of labeled transition systems, improving the analysis of complex systems by streamlining communication between diverse programming languages. By treating the Dolev-Yao (DY) model as a symbolic abstraction, our approach eliminates the need for translation between different base types, such as bitstrings and DY terms. Our technique provides a foundation for securing interactions in multi-language environments, enhancing program verification and system analysis in complex, interconnected systems.}
+}
+
+@misc{nasrabadi2025automatedsidechannelanalysiscryptographic,
+	Title                    = {Automated Side-Channel Analysis of Cryptographic Protocol Implementations},
+	Author                   = {Faezeh Nasrabadi and Robert K{\"u}nnemann and Hamed Nemati},
+	Year                     = {2025},
+	eprint                   = {2511.11385},
+	Url                      = {https://arxiv.org/abs/2511.11385},
+	archivePrefix            = {arXiv},
+	primaryClass             = {cs.CR},
+	Abstract                 = {We extract the first formal model of WhatsApp from its implementation by combining binary-level analysis (via CryptoBap) with reverse engineering (via Ghidra) to handle this large closed-source application. Using this model, we prove forward secrecy, identify a known clone-attack against post-compromise security and discover functional gaps between WhatsApp's implementation and its specification. We further introduce a methodology to analyze cryptographic protocol implementations for their resilience to side-channel attacks. This is achieved by extending the CryptoBap framework to integrate hardware leakage contracts into the protocol model, which we then pass to the state-of-the-art protocol prover, DeepSec. This enables a detailed security analysis against both functional bugs and microarchitectural side-channel attacks. Using this methodology, we identify a privacy attack in WhatsApp that allows a side-channel attacker to learn the victim's contacts and confirm a known unlinkability attack on the BAC protocol used in electronic passports. Key contributions include (1) the first formal model of WhatsApp, extracted from its binary, (2) a framework to integrate side-channel leakage contracts into protocol models for the first time, and (3) revealing critical vulnerabilities invisible to specification-based methods.}
+}
+
+@misc{palmskog2025trustworthyverificationriscvbinaries,
+	Title                    = {Trustworthy Verification of {RISC-V} Binaries Using Symbolic Execution in {HolBA}},
+	Author                   = {Karl Palmskog and Andreas Lindner and Scott Constable and Roberto Guanciale and Hamed Nemati},
+	Year                     = {2025},
+	eprint                   = {2503.14135},
+	Url                      = {https://arxiv.org/abs/2503.14135},
+	archivePrefix            = {arXiv},
+	primaryClass             = {cs.LO},
+	Abstract                 = {Many types of formal verification establish properties about abstract high-level program representations, leaving a large gap to programs at runtime. Although gaps can sometimes be narrowed by techniques such as refinement, a verified program's trusted computing base may still include compilers and inlined assembly. In contrast, verification of binaries following an Instruction Set Architecture (ISA) such as RISC-V can ensure that machine code behaves as expected on real hardware. While binary analysis is useful and sometimes even necessary for ensuring trustworthiness of software systems, existing tools do not have a formal foundation or lack automation for verification. We present a workflow and toolchain based on the HOL4 theorem prover and the HolBA binary analysis library for trustworthy formal verification of RISC-V binaries. The toolchain automates proofs of binary contracts by forward symbolic execution of programs in HolBA's intermediate language, BIR. We validated our toolchain by verifying correctness of RISC-V binaries with (1) an implementation of the ChaCha20 stream cipher and (2) hand-written assembly for context switching in an operating system kernel.}
+}
+
+@misc{mosier2025analyzingexploitingbranchmispredictions,
+	Title                    = {Analyzing and Exploiting Branch Mispredictions in Microcode},
+	Author                   = {Nicholas Mosier and Hamed Nemati and John C. Mitchell and Caroline Trippel},
+	Year                     = {2025},
+	eprint                   = {2501.12890},
+	Url                      = {https://arxiv.org/abs/2501.12890},
+	archivePrefix            = {arXiv},
+	primaryClass             = {cs.CR},
+	Abstract                 = {We present uSpectre, a new class of transient execution attacks that exploit microcode branch mispredictions to transiently leak sensitive data. We find that many long-known and recently-discovered transient execution attacks, which were previously categorized as Spectre or Meltdown variants, are actually instances of uSpectre on some Intel microarchitectures. Based on our observations, we discover multiple new uSpectre attacks and present a defense against uSpectre vulnerabilities, called uSLH.}
+}
+
 @InProceedings{eslh:asiaccs23,
 	author                   = {Tiziano Marinaro and Pablo Buiras and Andreas Lindner and Roberto Guanciale and Hamed Nemati},
 	title                    = {Beyond Over-Protection: A Targeted Approach to Spectre Mitigation and Performance Optimization},
