@@ -1,6 +1,32 @@
 % This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
+@InProceedings{protean25,
+	author                   = {Nicholas Mosier and Hamed Nemati and John C. Mitchell and Caroline Trippel},
+	title                    = {{Protean}: A Programmable Spectre Defense},
+	booktitle                = {32nd {IEEE} International Symposium on High-Performance Computer Architecture ({HPCA} 2026), Sydney, Australia, January 31--February 4, 2026},
+	publisher                = {{IEEE}},
+	year                     = {2026},
+	url                      = {https://oscar-workshop.github.io/paper/protean.pdf}
+}
+
+@InProceedings{10.1007/978-3-032-15700-3_8,
+	author                   = {Andreas Lindner and Karl Palmskog and Scott Constable and Mads Dam and Roberto Guanciale and Hamed Nemati},
+	editor                   = {Yu-Fang Chen and Thomas Jensen and Ond{\v{r}}ej Leng{\'a}l},
+	title                    = {Forward Symbolic Execution for Trustworthy Automation of Binary Code Verification},
+	booktitle                = {Verification, Model Checking, and Abstract Interpretation},
+	year                     = {2026},
+	publisher                = {Springer Nature Switzerland},
+	address                  = {Cham},
+	pages                    = {147--172},
+	series                   = {Lecture Notes in Computer Science},
+	volume                   = {16417},
+	doi                      = {10.1007/978-3-032-15700-3_8},
+	url                      = {https://doi.org/10.1007/978-3-032-15700-3_8},
+	isbn                     = {978-3-032-15700-3},
+	Abstract                 = {Control flow in unstructured programs can be complex and dynamic, which makes static analysis difficult. Yet, automated reasoning about unstructured control flow is important when certifying properties of binary (machine) code in trustworthy systems, e.g., cryptographic routines. We present a theory of forward symbolic execution for unstructured programs suitable for use in theorem provers that enables automated verification of both functional and non-functional program properties. The theory's foundation is a set of inference rules where each member corresponds to an operation in a symbolic execution engine. The rules are designed to give control over the tradeoff between the preservation of precision and introduction of overapproximation. We instantiate our theory for BIR, a previously proposed intermediate language for binary analysis. We demonstrate how symbolic executors can be constructed for BIR with common optimizations such as pruning of infeasible symbolic states. We implemented our theory in the HOL4 theorem prover using the HolBA binary analysis library, obtaining machine-checked proofs of soundness of symbolic execution for BIR. We practically evaluated two applications of our theory: verification of functional properties of {RISC-V} binaries and verification of execution time bounds of programs running on the {ARM} {Cortex-M0} processor. The evaluation shows that such verification can be automated with moderate overhead on medium-sized programs.}
+}
+
 @InProceedings{DBLP:conf/csfw/NasrabadiKN25,
 	author                   = {Faezeh Nasrabadi and Robert K{\"u}nnemann and Hamed Nemati},
 	title                    = {Symbolic Parallel Composition for Multi-language Protocol Verification},
@@ -27,9 +53,9 @@
 @InProceedings{mosier:oscar25,
 	author                   = {Nicholas Mosier and Hamed Nemati and John C. Mitchell and Caroline Trippel},
 	title                    = {Fast, Accurate, and Novel Performance Evaluations with {PinCPU}},
-	booktitle                = {Open-Source Computer Architecture Research ({OSCAR}) 2025 Workshop, Tokyo, Japan, June 21, 2025 (co-located with {ISCA} 2025)},
+	booktitle                = {Open-Source Computer Architecture Research ({OSCAR}) 2025 Workshop, Tokyo, Japan, June 21, 2025},
 	year                     = {2025},
-	url                      = {https://oscar-workshop.github.io/files/OSCAR_2025_paper_9.pdf},
+	url                      = {https://oscar-workshop.github.io/paper/OSCAR_2025_paper_9.pdf},
 	Artifact                 = {https://github.com/StanfordPLArchSec/pincpu-gem5},
 	Abstract                 = {We present {PinCPU}, the first fast-forwarding processor model for {gem5} to allow users to dynamically instrument {x86-64} userspace workloads. {PinCPU} uses Intel Pin to enable users to fast-forward {gem5} simulations at near-native speeds and exposes a plugin interface that allows users to register their own instrumentation callbacks at runtime. First, we overview {PinCPU}'s design. Then, we describe how researchers can use {PinCPU} plugins to (i) generate simpoints quickly and accurately, (ii) translate simpoints between binaries compiled from the same source for novel hardware-software performance comparisons, and (iii) fast-forward binaries featuring custom {ISA} extensions. We have open sourced {PinCPU} and plan on upstreaming it into {gem5}.}
 }
